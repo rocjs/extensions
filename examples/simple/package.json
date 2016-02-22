@@ -1,0 +1,16 @@
+{
+  "name": "roc-package-module-test",
+  "version": "1.0.0",
+  "description": "Test of roc-package-module",
+  "main": "lib/es5/index.js",
+  "jsnext:main": "lib/es6/index.js",
+  "scripts": {
+    "build": "roc-package-module-dev build",
+    "dev": "roc-package-module-dev dev"
+  },
+  "author": "VG",
+  "license": "MIT",
+  "devDependencies": {
+    "roc-package-module-dev": "*"
+  }
+}
