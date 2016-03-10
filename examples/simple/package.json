@@ -1,0 +1,17 @@
+{
+  "name": "browser",
+  "version": "1.0.0",
+  "description": "Roc browser example",
+  "scripts": {
+    "build": "roc-package-webpack-web-dev build",
+    "dev": "roc-package-webpack-web-dev dev"
+  },
+  "keywords": [
+    "roc"
+  ],
+  "author": "VG",
+  "license": "MIT",
+  "devDependencies": {
+    "roc-package-webpack-web-dev": "*"
+  }
+}

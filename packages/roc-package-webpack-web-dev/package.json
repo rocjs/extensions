@@ -1,0 +1,47 @@
+{
+  "name": "roc-package-webpack-web-dev",
+  "version": "1.0.0-alpha.0",
+  "description": "Package providing browser support through Webpack for Roc (Development)",
+  "main": "lib/index.js",
+  "bin": "bin/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "npm run lint"
+  },
+  "files": [
+    "bin",
+    "lib"
+  ],
+  "keywords": [
+    "roc",
+    "roc-package",
+    "webpack",
+    "roc-dev",
+    "client",
+    "browser"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rocjs/roc-package-webpack-web.git"
+  },
+  "author": "VG",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "~1.1.1",
+    "debug": "~2.2.0",
+    "dev-ip": "~1.0.1",
+    "koa": "~1.1.1",
+    "koa-webpack-dev-middleware": "~1.1.0",
+    "qs": "~6.1.0",
+    "roc": "^1.0.0-rc",
+    "roc-package-webpack-dev": "^1.0.0-alpha",
+    "roc-package-webpack-web": "^1.0.0-alpha",
+    "webpack": "~1.12.2",
+    "webpack-hot-middleware": "~2.6.4"
+  },
+  "devDependencies": {
+    "babel-eslint": "~5.0.0",
+    "eslint": "~1.10.3",
+    "eslint-config-vgno": "~5.0.0"
+  }
+}
