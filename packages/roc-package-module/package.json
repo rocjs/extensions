@@ -1,0 +1,35 @@
+{
+  "name": "roc-package-module",
+  "version": "1.0.0-alpha.1",
+  "description": "Package providing module support for Roc",
+  "main": "lib/index.js",
+  "bin": "bin/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "npm run lint"
+  },
+  "files": [
+    "bin",
+    "lib"
+  ],
+  "keywords": [
+    "roc",
+    "roc-package",
+    "babel"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rocjs/roc-package-module.git"
+  },
+  "author": "VG",
+  "license": "MIT",
+  "dependencies": {
+    "roc": "*",
+    "roc-package-core": "^1.0.0-alpha"
+  },
+  "devDependencies": {
+    "babel-eslint": "~5.0.0",
+    "eslint": "~1.10.3",
+    "eslint-config-vgno": "~5.0.0"
+  }
+}
