@@ -41,20 +41,20 @@ __Expected return value:__ `[String]`
 
 #### Arguments
 
-| Name   | Description                            | Type     |
-| ------ | -------------------------------------- | -------- |
-| target | The target, will be either es5 or es6. | `String` |
+| Name   | Description                                       | Type     |
+| ------ | ------------------------------------------------- | -------- |
+| target | The target, will by default be either es5 or es6. | `String` |
 
 ### babel-load-presets
 
 Expected to return a presets to add to the array of presets to use.
 
 __Initial value:__ `[]`  
-__Expected return value:__ `String / [String]`
+__Expected return value:__ `[String]`
 
 #### Arguments
 
-| Name   | Description                            | Type     |
-| ------ | -------------------------------------- | -------- |
-| target | The target, will be either es5 or es6. | `String` |
+| Name   | Description                                       | Type     |
+| ------ | ------------------------------------------------- | -------- |
+| target | The target, will by default be either es5 or es6. | `String` |
 

@@ -38,8 +38,16 @@ export default function build({
             /* eslint-enable */
             const startTime = process.hrtime();
 
-            await execute(`${babel} ${src} --out-dir ${out} --presets=${presets.join(',')} ` +
-                `--plugins=${plugins.join(',')} --source-maps --copy-files`);
+            try {
+                await execute(`${babel} ${src} --out-dir ${out} --presets=${presets.join(',')} ` +
+                    `--plugins=${plugins.join(',')} --source-maps --copy-files`);
+            } catch (err) {
+                console.log(chalk.red(`The ${target.toUpperCase()} build failed. ` +
+                    `All other potential builds will be canceled.`));
+                /* eslint-disable no-process-exit */
+                process.exit(err);
+                /* eslint-enable */
+            }
 
             const totalTime = process.hrtime(startTime);
 
