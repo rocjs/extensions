@@ -42,9 +42,9 @@ export default function build({
                 await execute(`${babel} ${src} --out-dir ${out} --presets=${presets.join(',')} ` +
                     `--plugins=${plugins.join(',')} --source-maps --copy-files`);
             } catch (err) {
+                /* eslint-disable no-console, no-process-exit */
                 console.log(chalk.red(`The ${target.toUpperCase()} build failed. ` +
                     `All other potential builds will be canceled.`));
-                /* eslint-disable no-process-exit */
                 process.exit(err);
                 /* eslint-enable */
             }
