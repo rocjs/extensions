@@ -11,7 +11,7 @@ It may or may not provide additional exports.
 ## Documentation
 - [Action](/packages/roc-package-module/docs/Actions.md) _(Has no actions)_
 - [Commands](/packages/roc-package-module/docs/Commands.md)
-- [Hooks](/packages/roc-package-core/module/Hooks.md) _(Has no hooks)_
+- [Hooks](/packages/roc-package-module/docs/Hooks.md) _(Has no hooks)_
 - [Settings](/packages/roc-package-module/docs/Settings.md) _(Has no settings)_
 
 ## Development
