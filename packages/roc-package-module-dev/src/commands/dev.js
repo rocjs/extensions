@@ -24,7 +24,7 @@ export default function dev({
         const presets = invokeHook('babel-load-presets', target);
         const plugins = invokeHook('babel-load-plugins', target);
 
-        const babel = path.join(__dirname, '..', '..', 'node_modules', '.bin', 'babel');
+        const babel = require.resolve('babel-cli/bin/babel');
         const src = getAbsolutePath(getValueFromPotentialObject(configObject.settings.build.input, target));
         const out = getAbsolutePath(getValueFromPotentialObject(configObject.settings.build.output, target));
 
