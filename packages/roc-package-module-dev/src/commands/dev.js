@@ -1,5 +1,3 @@
-import path from 'path';
-
 import { execute, getAbsolutePath } from 'roc';
 import { getValueFromPotentialObject } from 'roc-package-core-dev';
 
