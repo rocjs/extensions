@@ -11,6 +11,6 @@
   "author": "VG",
   "license": "MIT",
   "devDependencies": {
-    "roc-package-module-dev": "*"
+    "roc-package-module-dev": "^1.0.0-alpha"
   }
 }
