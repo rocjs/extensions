@@ -5,7 +5,7 @@ import {
 
 import {
     toArray
-} from 'roc/convertors';
+} from 'roc/converters';
 
 const defaultSettings = {
     settings: ['build'],
@@ -13,7 +13,7 @@ const defaultSettings = {
         name: 'targets',
         validation: isArray(/^es5$|^es6$/),
         description: 'For what targets the project should be built for, overrides the settings if provided.',
-        convertor: toArray
+        converter: toArray
     }]
 };
 

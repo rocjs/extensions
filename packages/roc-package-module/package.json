@@ -24,7 +24,7 @@
   "author": "VG",
   "license": "MIT",
   "dependencies": {
-    "roc": "*",
+    "roc": "^1.0.0-rc",
     "roc-package-core": "^1.0.0-alpha"
   },
   "devDependencies": {

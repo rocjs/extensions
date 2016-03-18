@@ -27,6 +27,8 @@ __Connects to hook:__ `before-clean`
 
 ### babelPresets
 
-__Connects to extension:__ Not specified  
-__Connects to hook:__ Not specified  
+Will add either babel-preset-es2015 (for es5) or babel-preset-es2015-webpack (for es6).
+
+__Connects to extension:__ `roc-package-module-dev`  
+__Connects to hook:__ `babel-load-presets`  
 

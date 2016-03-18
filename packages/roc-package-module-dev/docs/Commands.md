@@ -8,7 +8,7 @@ All commands can be called with some additional options as can be seen below.
 | Name            | Description                                                                                                   | Required |
 | --------------- | ------------------------------------------------------------------------------------------------------------- | -------- |
 | -c, --config    | Path to configuration file, will default to roc.config.js in current working directory.                       | No       |
-| -D, --directory | Path to working directory, will default to the current working directory. Can be either absolute or relative. | No       |
+| -d, --directory | Path to working directory, will default to the current working directory. Can be either absolute or relative. | No       |
 | -h, --help      | Output usage information.                                                                                     | No       |
 | -V, --verbose   | Enable verbose mode.                                                                                          | No       |
 | -v, --version   | Output version number.                                                                                        | No       |
