@@ -51,9 +51,9 @@ const buildWithBabel = (target, settings) => {
 /**
  * Builds source files based on the configuration using Babel.
  *
- * @param {Object} rocCommandObject - A command object.
+ * @param {Object} settings - Roc settings object.
  *
- * @returns {Promise} - Promise that is resolved when build is completed.
+ * @returns {Function} - A correct Roc action.
  */
 export default (settings) => (targets) => {
     // If not at least on of the targets matches the valid ones it will ignore it. Makes it smarter when combining.
