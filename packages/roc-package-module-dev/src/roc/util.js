@@ -3,7 +3,7 @@ import { runHook } from 'roc';
 /**
  * The name of the package, for easy consumption.
  */
-export const name = require('../package.json').name;
+export const name = require('../../package.json').name;
 
 /**
  * Helper function for invoking/running a hook, pre-configured for the current package.

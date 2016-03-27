@@ -39,12 +39,10 @@ const meta = {
     },
     commands: {
         build: {
-            ...defaultSettings,
-            description: 'Build the current project.'
+            ...defaultSettings
         },
         dev: {
-            ...defaultSettings,
-            description: 'Start the current project in watch mode.'
+            ...defaultSettings
         }
     }
 };
