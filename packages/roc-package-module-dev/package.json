@@ -31,7 +31,7 @@
     "chalk": "~1.1.1",
     "pretty-ms": "~2.1.0",
     "roc": "^1.0.0-rc",
-    "roc-package-core-dev": "^1.0.0-alpha",
+    "roc-package-base-dev": "^1.0.0-alpha",
     "roc-package-module": "^1.0.0-alpha"
   },
   "devDependencies": {

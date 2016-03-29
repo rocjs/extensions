@@ -36,7 +36,7 @@ roc-package-module-dev build [targets]
 | targets | For what targets the project should be built for, overrides the settings if provided. | No       | `[/^es5$|^es6$/]` |         |
 
 ### Settings options
-* [build](/dev/docs/Settings.md#build)
+* [build](/packages/roc-package-module-dev/docs/Settings.md#build)
 
 ## clean
 __Cleans the current project.__
@@ -46,7 +46,7 @@ roc-package-module-dev clean
 ```
 
 ### Settings options
-* [build](/dev/docs/Settings.md#build)
+* [build](/packages/roc-package-module-dev/docs/Settings.md#build)
 
 ## dev
 __Start the current project in watch mode.__
@@ -62,7 +62,7 @@ roc-package-module-dev dev [targets]
 | targets | For what targets the project should be built for, overrides the settings if provided. | No       | `[/^es5$|^es6$/]` |         |
 
 ### Settings options
-* [build](/dev/docs/Settings.md#build)
+* [build](/packages/roc-package-module-dev/docs/Settings.md#build)
 
 ## list-settings
 __Prints all the available settings that can be changed.__
@@ -91,4 +91,3 @@ __Prints all the available settings that can be changed in a markdown format.__
 ```
 roc-package-module-dev markdown-settings
 ```
-

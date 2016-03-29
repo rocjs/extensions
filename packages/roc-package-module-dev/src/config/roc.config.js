@@ -1,5 +1,5 @@
-import build from '../commands/build';
-import dev from '../commands/dev';
+// import build from '../commands/build';
+// import dev from '../commands/dev';
 
 const config = {
     settings: {
@@ -11,11 +11,6 @@ const config = {
                 es6: 'lib/es6'
             }
         }
-    },
-
-    commands: {
-        build,
-        dev
     }
 };
 

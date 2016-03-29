@@ -46,4 +46,3 @@ __Prints all the available settings that can be changed in a markdown format.__
 ```
 roc-package-module markdown-settings
 ```
-

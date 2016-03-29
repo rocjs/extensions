@@ -1,14 +1,16 @@
 # Hooks for `roc-package-module-dev`
 
 ## Hooks
-* [roc-package-core-dev](#roc-package-core-dev)
+* [roc-package-base-dev](#roc-package-base-dev)
   * [after-clean](#after-clean)
   * [before-clean](#before-clean)
+  * [run-build-command](#run-build-command)
+  * [run-dev-command](#run-dev-command)
 * [roc-package-module-dev](#roc-package-module-dev)
   * [babel-load-plugins](#babel-load-plugins)
   * [babel-load-presets](#babel-load-presets)
 
-## roc-package-core-dev
+## roc-package-base-dev
 
 ### after-clean
 
@@ -29,6 +31,32 @@ __Expected return value:__ `[String]`
 | Name     | Description                                    | Type |
 | -------- | ---------------------------------------------- | ---- |
 | settings | The settings object that is received from Roc. | `{}` |
+
+### run-build-command
+
+Use to add things that should react to the build command being called.
+
+__Initial value:__ _Nothing_  
+__Expected return value:__ _Nothing_
+
+#### Arguments
+
+| Name    | Description                                                                            | Type       |
+| ------- | -------------------------------------------------------------------------------------- | ---------- |
+| targets | The targets to build for, will be based on settings or a possible argument if defined. | `[String]` |
+
+### run-dev-command
+
+Use to add things that should react to the dev command being called.
+
+__Initial value:__ _Nothing_  
+__Expected return value:__ _Nothing_
+
+#### Arguments
+
+| Name    | Description                                                                           | Type       |
+| ------- | ------------------------------------------------------------------------------------- | ---------- |
+| targets | The targets use for dev, will be based on settings or a possible argument if defined. | `[String]` |
 
 ## roc-package-module-dev
 
@@ -57,4 +85,3 @@ __Expected return value:__ `[String]`
 | Name   | Description                                       | Type     |
 | ------ | ------------------------------------------------- | -------- |
 | target | The target, will by default be either es5 or es6. | `String` |
-
