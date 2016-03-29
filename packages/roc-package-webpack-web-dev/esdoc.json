@@ -1,0 +1,15 @@
+{
+    "source": "./src",
+    "destination": "./esdocs",
+    "excludes": [],
+    "plugins": [{
+            "name": "esdoc-es7-plugin"
+        },{
+            "name": "esdoc-importpath-plugin",
+            "option": {
+                "replaces": [
+                    {"from": "^src/", "to": "lib/"}
+                ]
+            }
+        }]
+    }
