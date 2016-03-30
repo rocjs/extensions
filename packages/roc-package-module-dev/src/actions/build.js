@@ -58,6 +58,6 @@ const buildWithBabel = (target, settings) => {
 export default (settings) => (targets) => {
     // If not at least on of the targets matches the valid ones it will ignore it. Makes it smarter when combining.
     if (isSomeTargetValid(targets)) {
-        return () => Promise.all(targets.map((target) => buildWithBabel(target, settings)));
+        return () => () => Promise.all(targets.map((target) => buildWithBabel(target, settings)));
     }
 };
