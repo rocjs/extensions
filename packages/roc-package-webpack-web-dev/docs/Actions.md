@@ -9,6 +9,7 @@
   * [dev](#dev)
   * [webpack](#webpack)
 * [roc-package-webpack-web-dev](#roc-package-webpack-web-dev)
+  * [target](#target)
   * [watcher](#watcher)
   * [webpack](#webpack)
 
@@ -32,10 +33,14 @@ __Connects to hook:__ `before-clean`
 
 ### build
 
+Build with Webpack.
+
 __Connects to extension:__ Not specified  
 __Connects to hook:__ `run-build-command`  
 
 ### dev
+
+Run in development mode using Webpack.
 
 __Connects to extension:__ Not specified  
 __Connects to hook:__ `run-dev-command`  
@@ -48,6 +53,13 @@ __Connects to extension:__ `roc-package-webpack-dev`
 __Connects to hook:__ `build-webpack`  
 
 ## roc-package-webpack-web-dev
+
+### target
+
+Adds __web__ as a valid Webpack target.
+
+__Connects to extension:__ `roc-package-webpack-dev`  
+__Connects to hook:__ `get-webpack-targets`  
 
 ### watcher
 
