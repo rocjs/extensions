@@ -12,9 +12,8 @@
   ],
   "keywords": [
     "roc",
-    "roc-package",
-    "webpack",
-    "roc-dev"
+    "roc-plugin",
+    "browsersync"
   ],
   "repository": {
     "type": "git",
