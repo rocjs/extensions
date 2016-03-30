@@ -21,6 +21,7 @@ const meta = {
     settings: {
         descriptions: {
             build: {
+                input: 'What directory to build from.',
                 output: {
                     es5: 'The output directory for the ES5 build.',
                     es6: 'The output directory for the ES6 build.'
@@ -29,7 +30,8 @@ const meta = {
         },
         validations: {
             build: {
-                targets: isArray(/|^es5$|^es6$/i),
+                targets: isArray(/^es5$|^es6$/i),
+                input: isPath,
                 output: {
                     es5: isPath,
                     es6: isPath
