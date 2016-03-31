@@ -23,7 +23,7 @@ All commands can be called with some additional options as can be seen below.
 * [markdown-settings](#markdown-settings)
 
 ## build
-__Build the current project.__
+__Used to build the current project.__
 
 ```
 roc-package-module-dev build [targets]
@@ -49,7 +49,7 @@ roc-package-module-dev clean
 * [build](/packages/roc-package-module-dev/docs/Settings.md#build)
 
 ## dev
-__Start the current project in watch mode.__
+__Used to start the current project in development mode.__
 
 ```
 roc-package-module-dev dev [targets]

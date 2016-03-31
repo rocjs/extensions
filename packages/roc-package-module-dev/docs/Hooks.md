@@ -37,7 +37,7 @@ __Expected return value:__ `[String]`
 Use to add things that should react to the build command being called.
 
 __Initial value:__ _Nothing_  
-__Expected return value:__ _Nothing_
+__Expected return value:__ `Function`
 
 #### Arguments
 
