@@ -1,0 +1,42 @@
+{
+  "name": "roc-package-webpack-node-dev",
+  "version": "1.0.0-alpha.1",
+  "description": "Package providing Node support through Webpack for Roc (Development)",
+  "main": "lib/index.js",
+  "bin": "bin/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "npm run lint"
+  },
+  "files": [
+    "bin",
+    "lib"
+  ],
+  "keywords": [
+    "roc",
+    "roc-package",
+    "webpack",
+    "roc-dev",
+    "server",
+    "node"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rocjs/roc-package-webpack-node.git"
+  },
+  "author": "VG",
+  "license": "MIT",
+  "dependencies": {
+    "debug": "~2.2.0",
+    "node-watch": "~0.3.4",
+    "roc": "^1.0.0-rc",
+    "roc-package-webpack-dev": "^1.0.0-alpha",
+    "roc-package-webpack-node": "^1.0.0-alpha",
+    "roc-plugin-start": "^1.0.0-alpha"
+  },
+  "devDependencies": {
+    "babel-eslint": "~5.0.0",
+    "eslint": "~1.10.3",
+    "eslint-config-vgno": "~5.0.0"
+  }
+}
