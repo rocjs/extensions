@@ -21,6 +21,12 @@ export default {
             description: 'Adds configuration need for web builds for Webpack.',
             action: () => createBuilder
         },
+        target: {
+            description: 'Adds __web__ as a valid Webpack target.',
+            extension: 'roc-package-webpack-dev',
+            hook: 'get-webpack-targets',
+            action: () => ({ previousValue }) => () => () => previousValue.concat('web')
+        },
         watcher: {
             extension: 'roc-package-webpack-dev',
             hook: 'create-watchers',

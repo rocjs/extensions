@@ -2,7 +2,9 @@
 export roc from './roc';
 
 // Watcher
-export watchClient from './watcher/client';
-
-// Builder
-export createBuilder from './builder';
+export {
+    getDevPath,
+    getDevPort,
+    removeTrailingSlash,
+    addTrailingSlash
+} from './helpers';
