@@ -1,2 +1,2 @@
-// Expose the runtime for connivance
+// Expose the runtime for convenience
 require('roc-plugin-start').initRuntime();
