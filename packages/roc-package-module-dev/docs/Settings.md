@@ -4,7 +4,7 @@
 
 | Name    | Description                                                                                             | Path             | CLI option         | Default         | Type               | Required |
 | ------- | ------------------------------------------------------------------------------------------------------- | ---------------- | ------------------ | --------------- | ------------------ | -------- |
-| input   | What directory to build from.                                                                           | build.input      | --build-input      | `"src"`         | `Filepath`         | No       |
+| input   | The directory to build from.                                                                            | build.input      | --build-input      | `"src"`         | `Filepath`         | No       |
 | targets | For what targets the code should be built for.                                                          | build.targets    | --build-targets    | `["es5","es6"]` | `[/^es5$|^es6$/i]` | No       |
 
 ### Output

@@ -31,9 +31,9 @@ roc-package-module-dev build [targets]
 
 ### Arguments
 
-| Name    | Description                                                                           | Required | Type              | Default |
-| ------- | ------------------------------------------------------------------------------------- | -------- | ----------------- | ------- |
-| targets | For what targets the project should be built for, overrides the settings if provided. | No       | `[/^es5$|^es6$/]` |         |
+| Name    | Description                                                                      | Required | Type              | Default |
+| ------- | -------------------------------------------------------------------------------- | -------- | ----------------- | ------- |
+| targets | The targets the project should be built for, overrides the settings if provided. | No       | `[/^es5$|^es6$/]` |         |
 
 ### Settings options
 * [build](/packages/roc-package-module-dev/docs/Settings.md#build)
@@ -57,9 +57,9 @@ roc-package-module-dev dev [targets]
 
 ### Arguments
 
-| Name    | Description                                                                           | Required | Type              | Default |
-| ------- | ------------------------------------------------------------------------------------- | -------- | ----------------- | ------- |
-| targets | For what targets the project should be built for, overrides the settings if provided. | No       | `[/^es5$|^es6$/]` |         |
+| Name    | Description                                                                      | Required | Type              | Default |
+| ------- | -------------------------------------------------------------------------------- | -------- | ----------------- | ------- |
+| targets | The targets the project should be built for, overrides the settings if provided. | No       | `[/^es5$|^es6$/]` |         |
 
 ### Settings options
 * [build](/packages/roc-package-module-dev/docs/Settings.md#build)
