@@ -1,6 +1,6 @@
 {
   "name": "roc-plugin-start",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-alpha.1",
   "description": "Adds start command and path resolving to Roc",
   "main": "lib/index.js",
   "scripts": {
