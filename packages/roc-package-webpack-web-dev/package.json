@@ -37,7 +37,7 @@
     "roc-package-webpack-dev": "^1.0.0-alpha",
     "roc-package-webpack-web": "^1.0.0-alpha",
     "webpack": "~1.12.2",
-    "webpack-hot-middleware": "~2.6.4"
+    "webpack-hot-middleware": "~2.10.0"
   },
   "devDependencies": {
     "babel-eslint": "~5.0.0",
