@@ -1,0 +1,19 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "Roc node module example",
+  "scripts": {
+    "start": "node build/app.js"
+  },
+  "keywords": [
+    "roc"
+  ],
+  "author": "VG",
+  "license": "MIT",
+  "dependencies": {
+    "roc-package-webpack-node": "*"
+  },
+  "devDependencies": {
+    "roc-package-webpack-node-dev": "*"
+  }
+}
