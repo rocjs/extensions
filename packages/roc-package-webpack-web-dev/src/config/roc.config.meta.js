@@ -10,7 +10,7 @@ const meta = {
     settings: {
         descriptions: {
             build: {
-                assets: 'An array of files to include into the build process.'
+                resources: 'An array of files to include into the build process.'
             },
             dev: {
                 port: 'Port for the dev server.',
@@ -29,7 +29,7 @@ const meta = {
 
         validations: {
             build: {
-                assets: isArray(isPath),
+                resources: isArray(isPath),
                 targets: /web/
             },
             dev: {

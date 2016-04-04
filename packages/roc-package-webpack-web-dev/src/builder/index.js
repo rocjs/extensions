@@ -42,8 +42,8 @@ export default ({ previousValue: rocBuilder }) => (target) => {
 
             const makeAllPathsAbsolute = (input) => input.map((elem) => getAbsolutePath(elem));
 
-            const assets = makeAllPathsAbsolute(buildSettings.assets);
-            buildConfig.entry[info.outputName] = buildConfig.entry[info.outputName].concat(assets);
+            const resources = makeAllPathsAbsolute(buildSettings.resources);
+            buildConfig.entry[info.outputName] = buildConfig.entry[info.outputName].concat(resources);
 
             /**
             * Devtool

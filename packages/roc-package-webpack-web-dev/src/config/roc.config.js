@@ -15,7 +15,7 @@ const config = {
         },
 
         build: {
-            assets: [],
+            resources: [],
             targets: ['web']
         }
     }
