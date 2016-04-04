@@ -5,7 +5,7 @@ import {
 
 import config from '../config/roc.config.js';
 import meta from '../config/roc.config.meta.js';
-import { default as imageAction } from '../images';
+import imageAction from '../images';
 
 import { name } from './util';
 
