@@ -32,8 +32,9 @@ export default function client(compiler) {
             })
         );
 
+        const hotMiddleware = require('webpack-hot-middleware')(compiler);
         server.use(function* (next) {
-            yield require('webpack-hot-middleware')(compiler).bind(null, this.req, this.res);
+            yield hotMiddleware.bind(null, this.req, this.res);
             yield next;
         });
 

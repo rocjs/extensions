@@ -16,7 +16,7 @@ let onceDevPort = true;
  * @returns {string} The complete dev path on the server including the port.
  */
 export function getDevPath(relativeBuildPath = '') {
-    const devIp = devip() ? devip()[0] : 'localhost';
+    const devIp = devip().length > 0 ? devip()[0] : 'localhost';
     const buildPath = relativeBuildPath && relativeBuildPath.slice(-1) !== '/' ?
         relativeBuildPath + '/' :
         relativeBuildPath;

@@ -16,7 +16,6 @@ export default {
     ],
     actions: {
         webpack: {
-            extension: 'roc-package-webpack-dev',
             hook: 'build-webpack',
             description: 'Adds configuration need for web builds for Webpack.',
             action: () => createBuilder
