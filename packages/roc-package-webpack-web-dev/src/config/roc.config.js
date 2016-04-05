@@ -7,7 +7,7 @@ const config = {
                 quiet: false
             },
             hotMiddleware: {
-                overlay: false,
+                overlay: true,
                 reload: true,
                 noInfo: false,
                 quiet: false
