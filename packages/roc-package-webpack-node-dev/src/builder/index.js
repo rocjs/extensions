@@ -58,7 +58,8 @@ export default () => ({ previousValue: rocBuilder }) => (target) => {
             */
             buildConfig.plugins.push(
                 new builder.DefinePlugin({
-                    __SERVER__: true
+                    __WEB__: false,
+                    __NODE__: true
                 })
             );
 
