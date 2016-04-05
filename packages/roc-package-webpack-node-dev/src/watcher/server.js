@@ -121,7 +121,7 @@ export default function server(compiler) {
                 statsJson.warnings.map(wrn => console.log(wrn));
             }
 
-            let bundleName = 'app.server.bundle.js';
+            let bundleName = `${getSettings('build').name}.js`;
 
             if (statsJson.assets && statsJson.assets.length > 0) {
                 const stats = parseStats(statsJson);
