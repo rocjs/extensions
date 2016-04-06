@@ -3,7 +3,7 @@ import koa from 'koa';
 import koaWebpackDevMiddleware from 'koa-webpack-dev-middleware';
 import { getSettings } from 'roc';
 
-import { getDevPort } from '../helpers';
+import { getDevPort } from 'roc-package-webpack-dev';
 
 /**
  * Client watcher.

@@ -13,7 +13,6 @@ const meta = {
                 resources: 'An array of files to include into the build process.'
             },
             dev: {
-                port: 'Port for the dev server.',
                 devMiddleware: {
                     noInfo: 'If no info should be sent to the console.',
                     quiet: 'If nothing should be sent to the console.'
@@ -34,7 +33,6 @@ const meta = {
             },
             dev: {
                 debug: isString,
-                port: isInteger,
                 devMiddleware: {
                     noInfo: isBoolean,
                     quiet: isBoolean

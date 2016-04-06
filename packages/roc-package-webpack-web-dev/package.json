@@ -27,9 +27,7 @@
   "author": "VG",
   "license": "MIT",
   "dependencies": {
-    "chalk": "~1.1.1",
     "debug": "~2.2.0",
-    "dev-ip": "~1.0.1",
     "koa": "~1.1.1",
     "koa-webpack-dev-middleware": "~1.1.0",
     "qs": "~6.1.0",

@@ -1,7 +1,6 @@
 const config = {
     settings: {
         dev: {
-            port: 3001,
             devMiddleware: {
                 noInfo: true,
                 quiet: false
