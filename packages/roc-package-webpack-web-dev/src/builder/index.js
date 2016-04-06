@@ -2,7 +2,7 @@ import path from 'path';
 import qs from 'qs';
 
 import { getSettings, getAbsolutePath } from 'roc';
-import { getDevPath, addTrailingSlash } from '../helpers';
+import { getDevPath } from 'roc-package-webpack-dev';
 
 export default ({ previousValue: rocBuilder }) => (target) => {
     if (target === 'web') {
@@ -16,14 +16,6 @@ export default ({ previousValue: rocBuilder }) => (target) => {
             const buildSettings = getSettings('build');
             const DEV = (buildSettings.mode === 'dev');
             const DIST = (buildSettings.mode === 'dist');
-
-            /**
-            * Output
-            */
-            buildConfig.output = {
-                ...buildConfig.output,
-                publicPath: DIST ? addTrailingSlash(buildSettings.path) : getDevPath()
-            };
 
             /**
             * Entry
