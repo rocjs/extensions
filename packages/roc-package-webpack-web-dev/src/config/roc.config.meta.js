@@ -1,5 +1,4 @@
 import {
-    isInteger,
     isString,
     isBoolean,
     isPath,
