@@ -1,5 +1,5 @@
 {
-  "name": "roc-plugin-style-sass",
+  "name": "roc-plugin-style-less",
   "private": true,
   "license": "MIT",
   "scripts": {
