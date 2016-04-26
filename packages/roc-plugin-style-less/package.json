@@ -24,9 +24,7 @@
   "license": "MIT",
   "dependencies": {
     "less": "^2.5.1",
-    "less-loader": "^2.2.1",
-    "roc": "^1.0.0-rc",
-    "webpack": "~1.12.14"
+    "less-loader": "^2.2.1"
   },
   "devDependencies": {
     "babel-eslint": "~5.0.0",
