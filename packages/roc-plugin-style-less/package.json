@@ -1,6 +1,6 @@
 {
   "name": "roc-plugin-style-less",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "description": "Plugin providing Less support for Webpack in Roc",
   "main": "lib/index.js",
   "scripts": {
