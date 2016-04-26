@@ -12,15 +12,15 @@
   ],
   "keywords": [
     "roc",
-    "roc-package",
+    "roc-plugin",
     "webpack",
-    "roc-dev"
+    "less"
   ],
   "repository": {
     "type": "git",
     "url": "https://github.com/rocjs/roc-plugin-style-less.git"
   },
-  "author": "VG",
+  "author": "Aftonbladet",
   "license": "MIT",
   "dependencies": {
     "less": "^2.5.1",
