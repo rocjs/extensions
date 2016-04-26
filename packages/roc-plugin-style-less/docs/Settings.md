@@ -1,1 +1,1 @@
-No settings available
+No settings available.
