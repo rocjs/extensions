@@ -38,8 +38,10 @@ export default () => ({ previousValue: rocBuilder }) => (target) => {
                         return callback();
                     }
 
-                    // If a normal node_module mark it as external
-                    if (/^[a-zA-Z\-0-9]{1}.*$/.test(request)) {
+                    // If a normal node_module mark it as external and manage
+                    // Webpack loaders that might be a part of the path
+                    const resourcePath = request.split('!').pop();
+                    if (/^[a-zA-Z\-0-9]{1}.*$/.test(resourcePath)) {
                         return callback(null, true);
                     }
 
