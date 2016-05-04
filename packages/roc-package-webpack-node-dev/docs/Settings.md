@@ -17,6 +17,8 @@
 | Name               | Description                                                                                              | Path                     | CLI option                 | Default             | Type                    | Required |
 | ------------------ | -------------------------------------------------------------------------------------------------------- | ------------------------ | -------------------------- | ------------------- | ----------------------- | -------- |
 | debug              | Filter for debug messages that should be shown during development, see https://npmjs.com/package/debug.  | dev.debug                | --dev-debug                | `"roc:*"`           | `String`                | No       |
+| host               | The host to use during development, will be automatically defined if left empty.                         | dev.host                 | --dev-host                 | `null`              | `String`                | No       |
+| port               | Port for the dev server.                                                                                 | dev.port                 | --dev-port                 | `3001`              | `Integer`               | No       |
 | watch              | Files/folders that should trigger a restart of the server.                                               | dev.watch                | --dev-watch                | `["roc.config.js"]` | `Filepath / [Filepath]` | No       |
 
 ## Runtime
