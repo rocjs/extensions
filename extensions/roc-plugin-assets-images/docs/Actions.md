@@ -2,13 +2,13 @@
 
 ## Actions
 * [roc-plugin-assets-images](#roc-plugin-assets-images)
-  * [images](#images)
+  * [build-webpack](#build-webpack)
 
 ## roc-plugin-assets-images
 
-### images
+### build-webpack
 
-Adds images support.
+Adds image support. Also makes `url-loader` and `file-loader` available in the module scope.
 
 __Connects to extension:__ Not specified  
 __Connects to hook:__ `build-webpack`  

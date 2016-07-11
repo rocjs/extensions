@@ -1,0 +1,49 @@
+{
+  "name": "roc-plugin-assets-images",
+  "description": "Adds image loading support to Roc",
+  "version": "1.0.0-beta.0",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "npm run lint"
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "roc",
+    "roc-plugin",
+    "webpack",
+    "images",
+    "assets"
+  ],
+  "repository": "https://github.com/rocjs/roc-plugin-assets-images/tree/master/extensions/roc-plugin-assets-images",
+  "author": "Verdens Gang AS",
+  "contributors": [
+    {
+      "name": "Gustaf Dalemar"
+    },
+    {
+      "name": "Andreas Søvik"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "file-loader": "~0.8.5",
+    "qs": "~6.2.0",
+    "roc": "^1.0.0-rc",
+    "url-loader": "~0.5.7"
+  },
+  "devDependencies": {
+    "babel-eslint": "~6.1.2",
+    "eslint": "~3.0.1",
+    "eslint-config-airbnb-base": "~4.0.0",
+    "eslint-plugin-babel": "~3.3.0",
+    "eslint-plugin-import": "~1.10.2"
+  },
+  "roc": {
+    "packages": [
+      "./lib/index.js"
+    ]
+  }
+}
