@@ -1,0 +1,8 @@
+{
+    "presets": ["stage-1", "react"],
+    "env": {
+        "production": {
+            "presets": ["stage-1", "react", "react-optimize"]
+        }
+    }
+}

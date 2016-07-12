@@ -1,16 +1,19 @@
 {
-  "name": "roc-package-module-test-simple",
+  "name": "roc-package-module-test-babelrc",
   "version": "1.0.0",
   "description": "Test of roc-package-module",
   "main": "lib/es5/index.js",
   "jsnext:main": "lib/es6/index.js",
   "scripts": {
-    "build": "roc build",
+    "build": "NODE_ENV=production roc build",
     "dev": "roc dev"
   },
   "author": "Verdens Gang AS",
   "license": "MIT",
   "devDependencies": {
+    "babel-preset-react": "~6.11.1",
+    "babel-preset-react-optimize": "1.0.1",
+    "babel-preset-stage-1": "~6.5.0",
     "roc-package-module-dev": "*"
   }
 }
