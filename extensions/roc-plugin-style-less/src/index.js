@@ -6,7 +6,7 @@ export const roc = {
         description: 'Adds Less support to Webpack.',
         action: () => () => () => () => ({
             extensions: ['less'],
-            loaders: `${require.resolve('less-loader')}?sourceMap`,
+            loaders: require.resolve('less-loader'),
         }),
     }],
 };
