@@ -9,6 +9,6 @@
   },
   "devDependencies": {
     "roc-package-web-app-dev": "*",
-    "roc-plugin-test-mocha-webpack": "^1.0.0-alpha"
+    "roc-plugin-test-mocha-webpack": "*"
   }
 }

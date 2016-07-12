@@ -6,11 +6,13 @@ import nycRunner from '../nyc';
 export default () => (targets, { options: { grep, watch, coverage } }) => {
     if (targets.find((target) => target === 'node')) {
         return () => {
-            appendSettings({ build: { mode: 'test'}});
+            appendSettings({ build: { mode: 'test' } });
             // Create Webpack configuration that is to be used in a node.
-            const rocBuilder = invokeHook('build-webpack', 'node', coverage);
+            const webpackConfig = invokeHook('build-webpack', 'node', coverage);
 
-            nycRunner({ grep, watch, coverage, rocBuilder });
+            nycRunner({ grep, watch, coverage, webpackConfig });
         };
     }
+
+    return undefined;
 };

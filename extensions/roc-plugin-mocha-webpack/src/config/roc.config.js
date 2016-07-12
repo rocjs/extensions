@@ -2,16 +2,16 @@ export default {
     settings: {
         test: {
             node: {
-                entry: '',
+                entry: undefined,
                 tests: {
                     pattern: '**/*.test.js',
-                    path: 'tests'
+                    path: 'tests',
                 },
                 src: {
                     path: 'src',
-                    pattern: '**/*.js'
-                }
-            }
-        }
-    }
+                    pattern: '**/*.js',
+                },
+            },
+        },
+    },
 };
