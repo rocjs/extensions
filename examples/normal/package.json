@@ -1,14 +1,11 @@
 {
-  "name": "node",
+  "name": "roc-package-webpack-node-example-simple",
   "version": "1.0.0",
-  "description": "Roc node module example",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "Roc Webpack Node example",
   "keywords": [
     "roc"
   ],
-  "author": "VG",
+  "author": "Verdens Gang AS",
   "license": "MIT",
   "dependencies": {
     "roc": "*",

@@ -1,17 +1,18 @@
 {
-  "name": "node",
+  "name": "roc-package-webpack-node-example-runtime",
   "version": "1.0.0",
-  "description": "Roc node module example",
+  "description": "Roc Webpack Node example",
   "scripts": {
-    "start": "node build/app.js"
+    "start": "node start.js"
   },
   "keywords": [
     "roc"
   ],
-  "author": "VG",
+  "author": "Verdens Gang AS",
   "license": "MIT",
   "dependencies": {
-    "roc-package-webpack-node": "*"
+    "roc-package-webpack-node": "*",
+    "roc": "*"
   },
   "devDependencies": {
     "roc-package-webpack-node-dev": "*"

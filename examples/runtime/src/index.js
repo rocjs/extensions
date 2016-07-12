@@ -1,3 +1,9 @@
-require('roc-package-webpack-node/runtime');
+import { getSettings } from 'roc';
 
-require('./entry.js');
+const calculate = (input) => {
+    return input * 5;
+};
+
+console.log(calculate(Math.random()));
+
+console.log('Settings:', getSettings());
