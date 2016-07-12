@@ -2,11 +2,11 @@
 
 ## Actions
 * [roc-plugin-style-sass](#roc-plugin-style-sass)
-  * [sass](#sass)
+  * [add-style](#add-style)
 
 ## roc-plugin-style-sass
 
-### sass
+### add-style
 
 Adds Sass support to Webpack.
 
