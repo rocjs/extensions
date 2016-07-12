@@ -3,12 +3,11 @@ import browserSync from 'browser-sync';
 // To make sure we only init Browsersync once
 let once = false;
 
-export default ({ settings }) => {
+export default ({ config: { settings } }) => {
     if (settings.dev.browsersync.enabled && !once) {
         once = true;
         return (port, path) => () => {
             browserSync({
-                port: settings.dev.browsersync.port,
                 // This proxy will remove extra slashes from the path, important to note
                 proxy: `0.0.0.0:${port}${path}`,
                 snippetOptions: {
@@ -28,14 +27,16 @@ export default ({ settings }) => {
                                 </script>`
                             );
                             return debugOptions + snippet + match;
-                        }
-                    }
+                        },
+                    },
                 },
-                open: settings.dev.browsersync.open,
                 ui: {
-                    port: settings.dev.browsersync.port + 1
-                }
+                    port: settings.dev.browsersync.options.port + 1,
+                },
+                ...settings.dev.browsersync.options,
             });
         };
     }
+
+    return undefined;
 };

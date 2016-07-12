@@ -2,11 +2,11 @@
 
 ## Actions
 * [roc-plugin-browsersync](#roc-plugin-browsersync)
-  * [browsersync](#browsersync)
+  * [server-started](#server-started)
 
 ## roc-plugin-browsersync
 
-### browsersync
+### server-started
 
 Adds a Browsersync instance.
 
