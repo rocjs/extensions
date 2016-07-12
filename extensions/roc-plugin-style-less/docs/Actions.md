@@ -2,11 +2,11 @@
 
 ## Actions
 * [roc-plugin-style-less](#roc-plugin-style-less)
-  * [less](#less)
+  * [add-style](#add-style)
 
 ## roc-plugin-style-less
 
-### less
+### add-style
 
 Adds Less support to Webpack.
 
