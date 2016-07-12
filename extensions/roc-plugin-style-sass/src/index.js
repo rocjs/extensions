@@ -34,8 +34,8 @@ export const roc = {
         description: 'Adds Sass support to Webpack.',
         action: ({ config: { settings } }) => () => () => ({
             extensions: ['sass', 'scss'],
-            loaders: `${require.resolve('sass-loader')}?sourceMap${settings.build.sass.useBourbon ?
-                `&includePaths[]=${BOURBON_PATH}` : ''
+            loaders: `${require.resolve('sass-loader')}?${settings.build.sass.useBourbon ?
+                `includePaths[]=${BOURBON_PATH}` : ''
             }`,
         }),
     }],
