@@ -51,16 +51,17 @@ roc development test [targets]
 ```
 
 #### Arguments
-| Name        | Description                                                                              | Default | Type      | Required | Can be empty |
-| ----------- | ---------------------------------------------------------------------------------------- | ------- | --------- | -------- | ------------ |
-| targets     | The targets the project should be tested for, overrides the settings if provided         |         |           | No       | Yes          |
+| Name          | Description                                                                      | Default | Type      | Required | Can be empty |
+| ------------- | -------------------------------------------------------------------------------- | ------- | --------- | -------- | ------------ |
+| targets       | The targets the project should be tested for, overrides the settings if provided |         |           | No       | Yes          |
 
 #### Command options
-| Name        | Description                                                                              | Default | Type      | Required | Can be empty |
-| ----------- | ---------------------------------------------------------------------------------------- | ------- | --------- | -------- | ------------ |
-| --coverage  | If coverage reports should be generated for the code.                                    | `true`  | `Boolean` | No       | Yes          |
-| -g, --grep  | Will only run tests that match the given pattern. Will be compiled to a RegExp by Mocha. |         | `String`  | No       | Yes          |
-| -w, --watch | If the tests should run in watch mode.                                                   | `false` | `Boolean` | No       | Yes          |
+| Name          | Description                                                                      | Default | Type      | Required | Can be empty |
+| ------------- | -------------------------------------------------------------------------------- | ------- | --------- | -------- | ------------ |
+| --coverage    | If coverage reports should be generated for the code.                            |         | `Boolean` | No       | Yes          |
+| -g, --grep    | Will only run tests that match the given pattern. Will be compiled to a RegExp.  |         | `String`  | No       | Yes          |
+| -r, --runtime | If the runtime from roc-plugin-start should be added.                            | `false` | `Boolean` | No       | Yes          |
+| -w, --watch   | If the tests should run in watch mode.                                           | `false` | `Boolean` | No       | Yes          |
 
 ####  Settings options
 _All groups are available._

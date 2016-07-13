@@ -5,6 +5,8 @@ import { parseStats } from 'roc-package-webpack-dev';
 import rimraf from 'rimraf';
 import webpack from 'webpack';
 
+import runMocha from './mocha';
+
 const log = initLog();
 
 const nyc = require.resolve('nyc/bin/nyc');
@@ -13,7 +15,7 @@ const mocha = require.resolve('mocha/bin/mocha');
 const getGrep = (grep) => (grep ? ` --grep ${grep}` : '');
 const coverageCommand = `${nyc} --reporter=text-summary --include /`;
 
-const mochaCommand = (artifact, grep) => `${mocha} --require ${require.resolve('source-map-support/register')} ` +
+const mochaCommand = (artifact, grep) => `${mocha} ` +
     `${getGrep(grep)} ${artifact}`;
 
 const getCommand = (artifact, grep, coverage) => (coverage ?
@@ -25,12 +27,16 @@ const cleanupCoverage = () => rimraf.sync(path.join(process.cwd(), '.nyc_output'
 function getArtifact(compiler, err, stats) {
     const statsJson = stats.toJson();
 
-    if (statsJson.errors.length > 0) {
-        statsJson.errors.map((error) => log.small.warn(error));
-    }
+    if (statsJson.errors.length > 0 || statsJson.warnings.length > 0) {
+        if (statsJson.errors.length > 0) {
+            statsJson.errors.map((error) => log.small.warn(error));
+        }
 
-    if (statsJson.warnings.length > 0) {
-        statsJson.warnings.map((warning) => log.small.warn(warning));
+        if (statsJson.warnings.length > 0) {
+            statsJson.warnings.map((warning) => log.small.warn(warning));
+        }
+
+        return undefined;
     }
 
     let bundleName = `${getSettings('build').name}.js`;
@@ -42,19 +48,67 @@ function getArtifact(compiler, err, stats) {
     return path.join(compiler.outputPath, '/', bundleName);
 }
 
-function runtTest(command) {
+let runningTest = false;
+let nextCommand;
+
+function runTest(command) {
+    function cleanupCoverageWrapper() {
+        cleanupCoverage();
+        if (nextCommand) {
+            runTest(nextCommand);
+        } else {
+            runningTest = false;
+        }
+    }
+
+    nextCommand = null;
+    runningTest = true;
     execute(command)
-        .then(cleanupCoverage, cleanupCoverage);
+       .then(cleanupCoverageWrapper, cleanupCoverageWrapper);
 }
 
-export default function nycRunner({ grep, watch, coverage, webpackConfig }) {
+function watchTest(command) {
+    if (runningTest) {
+        nextCommand = command;
+    } else {
+        runTest(command);
+    }
+}
+
+export default function nycRunner({ grep, watch, coverage, runtime, webpackConfig }) {
     const compiler = webpack(webpackConfig);
+
     if (watch) {
+        let mochaRunner;
+
+        if (coverage) {
+            log.small.note('You have enabled coverage for the watch mode for roc-plugin-test-mocha-webpack. ' +
+                'This will make the tests run slower, the recommendation is to not use coverage in watch mode.');
+
+            process.env.ROC_TEST_RUNTIME = runtime;
+        } else {
+            if (runtime) {
+                // eslint-disable-next-line
+                require('roc-plugin-start').initRuntime(false, true);
+            }
+
+            mochaRunner = runMocha(grep);
+        }
+
         compiler.watch({
             poll: true,
         }, (err, stats) => {
-            process.env.ROC_TEST_ENTRY = getArtifact(compiler, err, stats);
-            runtTest(getCommand(require.resolve('./utils/runtime'), grep, coverage));
+            const artifact = getArtifact(compiler, err, stats);
+            if (artifact) {
+                if (coverage) {
+                    process.env.ROC_TEST_ENTRY = artifact;
+                    watchTest(getCommand(require.resolve('./utils/runtime'), grep, coverage));
+                } else {
+                    mochaRunner.run(artifact);
+                }
+            } else if (mochaRunner) {
+                mochaRunner.abort();
+            }
         });
     } else {
         compiler.run((err, stats) => {

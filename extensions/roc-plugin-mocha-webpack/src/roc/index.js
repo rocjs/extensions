@@ -1,5 +1,4 @@
 import { isString, isObject, isBoolean } from 'roc/validators';
-import { toBoolean } from 'roc/converters';
 import { generateDependencies, lazyFunctionRequire } from 'roc';
 
 import config from '../config/roc.config.js';
@@ -55,7 +54,7 @@ export default {
                     name: 'grep',
                     shortname: 'g',
                     description: 'Will only run tests that match the given pattern. ' +
-                        'Will be compiled to a RegExp by Mocha.',
+                        'Will be compiled to a RegExp.',
                     validator: isString,
                 }, {
                     name: 'watch',
@@ -66,9 +65,14 @@ export default {
                 }, {
                     name: 'coverage',
                     description: 'If coverage reports should be generated for the code.',
-                    default: true,
+                    default: undefined,
                     validator: isBoolean,
-                    converter: toBoolean,
+                }, {
+                    name: 'runtime',
+                    shortname: 'r',
+                    description: 'If the runtime from roc-plugin-start should be added.',
+                    default: false,
+                    validator: isBoolean,
                 }],
             },
         },
