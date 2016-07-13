@@ -1,6 +1,8 @@
 import { runHook } from 'roc';
 
-export const name = require('../../package.json').name;
+const packageJSON = require('../../package.json');
+
+export const name = packageJSON.name;
 
 export function invokeHook(...args) {
     return runHook(name)(...args);
