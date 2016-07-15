@@ -24,7 +24,6 @@
   }],
   "license": "MIT",
   "dependencies": {
-    "roc": "^1.0.0-rc",
     "roc-abstract-package-base": "^1.0.0-beta"
   },
   "devDependencies": {
