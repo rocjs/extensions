@@ -17,6 +17,7 @@ Runs after clean command is executed. Logs that the action has been completed su
 
 __Connects to extension:__ `roc-abstract-package-base-dev`  
 __Connects to hook:__ `after-clean`  
+__Have post:__ No  
 
 ### before-clean
 
@@ -24,6 +25,7 @@ Runs before clean command is executed. Returns an array of paths that should be 
 
 __Connects to extension:__ `roc-abstract-package-base-dev`  
 __Connects to hook:__ `before-clean`  
+__Have post:__ No  
 
 ## roc-package-module-dev
 
@@ -33,13 +35,16 @@ Will add either babel-preset-es2015 (for es5) or babel-preset-es2015-webpack (fo
 
 __Connects to extension:__ `roc-package-module-dev`  
 __Connects to hook:__ `babel-load-presets`  
+__Have post:__ No  
 
 ### run-build-command
 
 __Connects to extension:__ Not specified  
 __Connects to hook:__ `run-build-command`  
+__Have post:__ No  
 
 ### run-dev-command
 
 __Connects to extension:__ Not specified  
 __Connects to hook:__ `run-dev-command`  
+__Have post:__ No  
