@@ -12,13 +12,13 @@ import initRuntime from '../helpers/init-runtime';
  *
  * @param {object} rocCommandObject - A command object
  */
-export default function start({ verbose, context: { config: { settings } }, parsedOptions }) {
+export default function start({ context: { verbose, config: { settings } }, options: { managed } }) {
     // Init the Roc runtime that will resolve dependencies and add source maps support
     initRuntime(verbose);
 
     const potentialTarget = invokeHook('get-potential-target');
 
-    const artifact = parsedOptions.options.artifact ||
+    const artifact = managed.artifact ||
         (settings.runtime.startBundle && path.join(process.cwd(), settings.runtime.startBundle)) ||
         path.join(process.cwd(), getValueFromPotentialObject(settings.build.output, potentialTarget),
             `${settings.build.name}.js`);

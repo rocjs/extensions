@@ -25,10 +25,11 @@ export default {
         },
         'register-runtime': {
             description: 'Can be used to modify the runtime before an application starts.',
-            arguments: [{
-                name: 'verbose',
-                validator: isBoolean,
-            }],
+            arguments: {
+                verbose: {
+                    validator: isBoolean,
+                },
+            },
         },
     },
     commands: {
@@ -36,11 +37,12 @@ export default {
             command: lazyRequire('../commands/start'),
             settings: ['runtime'],
             description: 'Starts the current project.',
-            arguments: [{
-                name: 'artifact',
-                validator: isPath,
-                description: 'Path to an artifact to start.',
-            }],
+            arguments: {
+                artifact: {
+                    validator: isPath,
+                    description: 'Path to an artifact to start.',
+                },
+            },
         },
     },
 };
