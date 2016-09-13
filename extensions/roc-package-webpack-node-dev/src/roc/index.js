@@ -10,7 +10,6 @@ export default {
     meta,
     packages: [
         require.resolve('roc-package-webpack-dev'),
-        require.resolve('roc-package-webpack-node'),
     ],
     actions: [{
         description: 'Adds configuration needed for building for Node.',
@@ -33,10 +32,11 @@ export default {
     hooks: {
         'dev-process-created': {
             description: 'Used to react to when the development server has started.',
-            arguments: [{
-                name: 'serverProcess',
-                description: 'The created server process.',
-            }],
+            arguments: {
+                serverProcess: {
+                    description: 'The created server process.',
+                },
+            },
         },
     },
 };

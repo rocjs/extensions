@@ -75,7 +75,7 @@ export default function server(compiler) {
             const env = {
                 ...process.env,
                 ROC_INITAL_ARGV: JSON.stringify(process.argv),
-                ROC_INITAL_SETTINGS: JSON.stringify(getSettings()),
+                ROC_INITAL_BUILD_MODE: JSON.stringify(getSettings().build.mode),
                 ROC_NODE_DEV_ENTRY: bundlePath,
             };
             // env - use it for the entry file
