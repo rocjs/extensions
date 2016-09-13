@@ -88,6 +88,13 @@ export default ({ previousValue: webpackConfig }) => (target) => {
                             warnings: false,
                             screw_ie8: true,
                             drop_debugger: true
+                        },
+                        managle: {
+                            screw_ie8: true,
+                        },
+                        output: {
+                            comments: false,
+                            screw_ie8: true,
                         }
                         /* eslint-enable */
                     })
