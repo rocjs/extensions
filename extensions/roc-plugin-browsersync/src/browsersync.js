@@ -3,7 +3,7 @@ import browserSync from 'browser-sync';
 // To make sure we only init Browsersync once
 let once = false;
 
-export default ({ config: { settings } }) => {
+export default ({ context: { config: { settings } } }) => {
     if (settings.dev.browsersync.enabled && !once) {
         once = true;
         return (port, path) => () => {
