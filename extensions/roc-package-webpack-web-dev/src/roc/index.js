@@ -10,7 +10,6 @@ export default {
     meta,
     packages: [
         require.resolve('roc-package-webpack-dev'),
-        require.resolve('roc-package-webpack-web'),
     ],
     actions: [{
         hook: 'build-webpack',
