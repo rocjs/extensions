@@ -12,3 +12,4 @@ Adds a Browsersync instance.
 
 __Connects to extension:__ Not specified  
 __Connects to hook:__ `server-started`  
+__Have post:__ No  
