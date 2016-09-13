@@ -2,7 +2,7 @@ import { join } from 'path';
 
 import qs from 'qs';
 
-export default ({ config: { settings }, previousValue: webpackConfig }) => () => () => {
+export default ({ context: { config: { settings } }, previousValue: webpackConfig }) => () => () => {
     webpackConfig.module.loaders.push({
         test: new RegExp(`\.(${settings.build.assets.images.urlLoader.filetypes.join('|')})$`),
         loader: `${require.resolve('url-loader')}?${qs.stringify({
