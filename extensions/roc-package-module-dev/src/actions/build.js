@@ -37,7 +37,7 @@ const buildWithBabel = (target, settings) => {
 
         const totalTime = process.hrtime(startTime);
 
-        log.small.done(`Completed ${target.toUpperCase()} in ` +
+        log.small.success(`Completed ${target.toUpperCase()} in ` +
             `${prettyMs((totalTime[0] * 1000) + (totalTime[1] / 1000000))}`);
         resolve();
     });
@@ -56,5 +56,5 @@ export default ({ context: { config: { settings } } }) => (targets) => {
         return () => () => Promise.all(targets.map((target) => buildWithBabel(target, settings)));
     }
 
-    return Promise.resolve();
+    return undefined;
 };
