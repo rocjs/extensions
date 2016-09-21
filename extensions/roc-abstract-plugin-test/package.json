@@ -23,7 +23,7 @@
   }],
   "license": "MIT",
   "dependencies": {
-    "roc": "^1.0.0-rc"
+    "roc": "1.0.0-rc.11"
   },
   "devDependencies": {
     "babel-eslint": "~6.1.2",
