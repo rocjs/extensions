@@ -29,10 +29,10 @@
   "dependencies": {
     "debug": "~2.2.0",
     "node-watch": "~0.3.4",
-    "roc": "^1.0.0-rc",
-    "roc-package-webpack-dev": "^1.0.0-alpha",
-    "roc-package-webpack-node": "^1.0.0-alpha",
-    "roc-plugin-start": "^1.0.0-alpha"
+    "roc": "1.0.0-rc.10",
+    "roc-package-webpack-dev": "1.0.0-alpha.11",
+    "roc-package-webpack-node": "1.0.0-alpha.5",
+    "roc-plugin-start": "1.0.0-alpha.2"
   },
   "devDependencies": {
     "babel-eslint": "~5.0.0",
