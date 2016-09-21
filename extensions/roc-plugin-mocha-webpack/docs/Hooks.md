@@ -17,13 +17,16 @@
 
 Expected to return new settings that should be merged with the existing ones.
 
+Makes it possible to modify the settings object before a command is started and after potential arguments from the command line and configuration file have been parsed. This is a good point to default to some value if no was given or modify something in the settings.
+
 __Initial value:__ _Nothing_  
 __Expected return value:__ `{}`
 
 #### Arguments
+
 | Name        | Description                                                                  | Type       | Required | Can be empty |
 | ----------- | ---------------------------------------------------------------------------- | ---------- | -------- | ------------ |
-| getSettings | A function that returns the settings after the context has been initialized. | `Function` | No       | Yes          |
+| getSettings | A function that returns the settings after the context has been initialized. | `Function` | No       |              |
 
 ## roc-abstract-plugin-test
 
@@ -35,10 +38,11 @@ __Initial value:__ _Nothing_
 __Expected return value:__ _Nothing_
 
 #### Arguments
-| Name          | Description | Type       | Required | Can be empty |
-| ------------- | ----------- | ---------- | -------- | ------------ |
-| targets       |             | `[String]` | Yes      | No           |
-| parsedOptions |             | `{}`       | Yes      | Yes          |
+
+| Name           | Description | Type       | Required | Can be empty |
+| -------------- | ----------- | ---------- | -------- | ------------ |
+| targets        |             | `[String]` | Yes      | No           |
+| managedOptions |             | `{}`       | Yes      | Yes          |
 
 ## roc-plugin-start
 
@@ -57,9 +61,10 @@ __Initial value:__ _Nothing_
 __Expected return value:__ _Nothing_
 
 #### Arguments
+
 | Name    | Description | Type      | Required | Can be empty |
 | ------- | ----------- | --------- | -------- | ------------ |
-| verbose |             | `Boolean` | No       | Yes          |
+| verbose |             | `Boolean` | No       |              |
 
 ## roc-plugin-test-mocha-webpack
 
@@ -71,7 +76,8 @@ __Initial value:__ `{}`
 __Expected return value:__ `{}`
 
 #### Arguments
+
 | Name     | Description                                                         | Type      | Required | Can be empty |
 | -------- | ------------------------------------------------------------------- | --------- | -------- | ------------ |
 | target   | The target for which the Webpack configuration should be build for. | `String`  | No       | Yes          |
-| coverage | If the code should be prepared for coverage generation.             | `Boolean` | No       | Yes          |
+| coverage | If the code should be prepared for coverage generation.             | `Boolean` | No       |              |

@@ -8,8 +8,8 @@ __Version__: ~1.20.0
 __Extension__: roc-plugin-test-mocha-webpack  
 __Custom resolve function__:  No  
 
-## Uses
-Nothing is listed as used.
-
 ## Requires
 Nothing is required.
+
+## Uses
+Nothing is listed as used.
