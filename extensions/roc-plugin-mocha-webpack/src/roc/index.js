@@ -35,45 +35,47 @@ export default {
             description: 'Used to create the final Webpack configuration object for tests.',
             initialValue: {},
             returns: isObject(),
-            arguments: [{
-                name: 'target',
-                validator: isString,
-                description: 'The target for which the Webpack configuration should be build for.',
-            }, {
-                name: 'coverage',
-                validator: isBoolean,
-                description: 'If the code should be prepared for coverage generation.',
-            }],
+            arguments: {
+                target: {
+                    validator: isString,
+                    description: 'The target for which the Webpack configuration should be build for.',
+                },
+                coverage: {
+                    validator: isBoolean,
+                    description: 'If the code should be prepared for coverage generation.',
+                },
+            },
         },
     },
     commands: {
         development: {
             test: {
                 override: 'roc-abstract-plugin-test',
-                options: [{
-                    name: 'grep',
-                    shortname: 'g',
-                    description: 'Will only run tests that match the given pattern. ' +
-                        'Will be compiled to a RegExp.',
-                    validator: isString,
-                }, {
-                    name: 'watch',
-                    shortname: 'w',
-                    description: 'If the tests should run in watch mode.',
-                    default: false,
-                    validator: isBoolean,
-                }, {
-                    name: 'coverage',
-                    description: 'If coverage reports should be generated for the code.',
-                    default: undefined,
-                    validator: isBoolean,
-                }, {
-                    name: 'runtime',
-                    shortname: 'r',
-                    description: 'If the runtime from roc-plugin-start should be added.',
-                    default: false,
-                    validator: isBoolean,
-                }],
+                options: {
+                    grep: {
+                        alias: 'g',
+                        description: 'Will only run tests that match the given pattern. ' +
+                            'Will be compiled to a RegExp.',
+                        validator: isString,
+                    },
+                    watch: {
+                        alias: 'w',
+                        description: 'If the tests should run in watch mode.',
+                        default: false,
+                        validator: isBoolean,
+                    },
+                    coverage: {
+                        description: 'If coverage reports should be generated for the code.',
+                        default: undefined,
+                        validator: isBoolean,
+                    },
+                    runtime: {
+                        alias: 'r',
+                        description: 'If the runtime from roc-plugin-start should be added.',
+                        default: false,
+                        validator: isBoolean,
+                    },
+                },
             },
         },
     },
