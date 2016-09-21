@@ -22,7 +22,7 @@
     "url": "https://github.com/rocjs/roc-abstract-plugin-test"
   },
   "dependencies": {
-    "roc": "^1.0.0-rc"
+    "roc": "1.0.0-rc.10"
   },
   "devDependencies": {
     "babel-eslint": "~5.0.0",
