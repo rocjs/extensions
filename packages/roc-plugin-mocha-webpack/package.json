@@ -31,10 +31,10 @@
     "mocha": "~2.4.5",
     "nyc": "~6.4.4",
     "rimraf": "~2.5.2",
-    "roc": "^1.0.0-rc",
-    "roc-abstract-plugin-test": "^1.0.0-alpha",
-    "roc-package-webpack-dev": "^1.0.0-alpha",
-    "roc-plugin-start": "^1.0.0-alpha",
+    "roc": "1.0.0-rc.10",
+    "roc-abstract-plugin-test": "1.0.0-alpha.2",
+    "roc-package-webpack-dev": "1.0.0-alpha.7",
+    "roc-plugin-start": "1.0.0-alpha.2",
     "source-map-support": "0.4.0"
   },
   "devDependencies": {
