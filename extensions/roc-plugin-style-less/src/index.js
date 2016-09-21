@@ -4,7 +4,7 @@ export const roc = {
         extension: 'roc-plugin-style-css',
         hook: 'add-style',
         description: 'Adds Less support to Webpack.',
-        action: () => () => () => () => ({
+        action: () => () => () => ({
             extensions: ['less'],
             loaders: require.resolve('less-loader'),
         }),
