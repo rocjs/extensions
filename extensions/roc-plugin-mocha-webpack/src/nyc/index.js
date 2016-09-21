@@ -82,7 +82,7 @@ export default function nycRunner({ grep, watch, coverage, runtime, webpackConfi
         let mochaRunner;
 
         if (coverage) {
-            log.small.note('You have enabled coverage for the watch mode for roc-plugin-test-mocha-webpack. ' +
+            log.small.info('You have enabled coverage for the watch mode for roc-plugin-test-mocha-webpack. ' +
                 'This will make the tests run slower, the recommendation is to not use coverage in watch mode.');
 
             process.env.ROC_TEST_RUNTIME = runtime;
