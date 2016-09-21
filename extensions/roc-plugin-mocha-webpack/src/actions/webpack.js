@@ -12,7 +12,7 @@ function getRegexp(regexp) {
     return micromatch.makeRe(`./${regexp}`);
 }
 
-export default ({ config: { settings }, previousValue: webpackConfig }) => (target, coverage) => () => {
+export default ({ context: { config: { settings } }, previousValue: webpackConfig }) => (target, coverage) => () => {
     const newWebpackConfig = { ...webpackConfig };
 
     newWebpackConfig.devtool = 'inline-source-map';

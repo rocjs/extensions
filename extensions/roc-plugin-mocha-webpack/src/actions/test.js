@@ -3,7 +3,7 @@ import { appendSettings } from 'roc';
 import { invokeHook } from '../roc/util';
 import nycRunner from '../nyc';
 
-export default () => (targets, { options: { grep, watch, coverage, runtime } }) => {
+export default () => (targets, { grep, watch, coverage, runtime }) => {
     if (targets.find((target) => target === 'node')) {
         return () => {
             // By default set coverage to true in non-watch
