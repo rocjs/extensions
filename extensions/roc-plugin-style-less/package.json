@@ -17,11 +17,6 @@
     "style",
     "less"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/rocjs/roc-plugin-style-less.git"
-  },
-  "author": "Aftonbladet AB",
   "license": "MIT",
   "repository": "https://github.com/rocjs/roc-plugin-style-less/tree/master/extensions/roc-plugin-style-less",
   "author": "Aftonbladet AB",
