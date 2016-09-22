@@ -1,4 +1,4 @@
-import styles from 'style.scss';
+import styles from './style.scss';
 
 export default function() {
     const hest = 5;
