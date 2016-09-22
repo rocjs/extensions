@@ -6,8 +6,8 @@ The extensions that are used in the project, indirect and direct, in the order t
 _No packages._
 
 ## Plugins
-### roc-abstract-plugin-test — [v1.0.0-beta.0](https://www.npmjs.com/package/roc-abstract-plugin-test)
+### roc-abstract-plugin-test — [v1.0.0-beta.1](https://www.npmjs.com/package/roc-abstract-plugin-test)
 Adds test command
 
-### roc-plugin-start — [v1.0.0-beta.0](https://www.npmjs.com/package/roc-plugin-start)
+### roc-plugin-start — [v1.0.0-beta.1](https://www.npmjs.com/package/roc-plugin-start)
 Adds start command with a way to modify the runtime

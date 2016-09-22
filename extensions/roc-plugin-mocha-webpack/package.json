@@ -1,6 +1,6 @@
 {
   "name": "roc-plugin-test-mocha-webpack",
-  "version": "1.0.0-beta.0",
+  "version": "1.0.0-beta.1",
   "description": "Adds a way to easily test Webpack projects for Node in Roc",
   "main": "lib/index.js",
   "scripts": {
@@ -20,9 +20,11 @@
   ],
   "repository": "https://github.com/rocjs/roc-plugin-test-mocha-webpack/tree/master/extensions/roc-plugin-test-mocha-webpack",
   "author": "Verdens Gang AS",
-  "contributors": [{
-    "name": "Gustaf Dalemar"
-  }],
+  "contributors": [
+    {
+      "name": "Gustaf Dalemar"
+    }
+  ],
   "license": "MIT",
   "dependencies": {
     "babel-plugin-__coverage__": "~1.11.111",
