@@ -1,6 +1,6 @@
 {
   "name": "roc-plugin-start",
-  "version": "1.0.0-beta.0",
+  "version": "1.0.0-beta.1",
   "description": "Adds start command with a way to modify the runtime",
   "main": "lib/index.js",
   "scripts": {
@@ -17,9 +17,11 @@
   ],
   "repository": "https://github.com/rocjs/roc-plugin-start/tree/master/extensions/roc-plugin-start",
   "author": "Verdens Gang AS",
-  "contributors": [{
-    "name": "Gustaf Dalemar"
-  }],
+  "contributors": [
+    {
+      "name": "Gustaf Dalemar"
+    }
+  ],
   "license": "MIT",
   "dependencies": {
     "roc": "1.0.0-rc.11",
