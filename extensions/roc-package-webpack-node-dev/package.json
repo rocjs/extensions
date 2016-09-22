@@ -1,6 +1,6 @@
 {
   "name": "roc-package-webpack-node-dev",
-  "version": "1.0.0-beta.0",
+  "version": "1.0.0-beta.1",
   "description": "Package providing Node support through Webpack for Roc (Development)",
   "main": "lib/index.js",
   "scripts": {
@@ -20,9 +20,11 @@
   ],
   "repository": "https://github.com/rocjs/roc-package-webpack-node/tree/master/extensions/roc-package-webpack-node-dev",
   "author": "Verdens Gang AS",
-  "contributors": [{
-    "name": "Gustaf Dalemar"
-  }],
+  "contributors": [
+    {
+      "name": "Gustaf Dalemar"
+    }
+  ],
   "license": "MIT",
   "dependencies": {
     "debug": "~2.2.0",
