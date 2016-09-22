@@ -1,6 +1,6 @@
 {
   "name": "roc-plugin-browsersync",
-  "version": "1.0.0-beta.0",
+  "version": "1.0.0-beta.1",
   "description": "Plugin providing Browsersync for Roc",
   "main": "lib/index.js",
   "scripts": {
@@ -17,9 +17,11 @@
   ],
   "repository": "https://github.com/rocjs/roc-plugin-browsersync/tree/master/extensions/roc-plugin-browsersync",
   "author": "Verdens Gang AS",
-  "contributors": [{
-    "name": "Gustaf Dalemar"
-  }],
+  "contributors": [
+    {
+      "name": "Gustaf Dalemar"
+    }
+  ],
   "license": "MIT",
   "dependencies": {
     "browser-sync": "~2.9.11",
