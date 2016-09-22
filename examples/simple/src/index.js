@@ -1,3 +1,3 @@
 const alerter = window.alert;
 
-alerter('Hello Roc');
+alerter(HELLO + ' World');

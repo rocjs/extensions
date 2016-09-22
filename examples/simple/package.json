@@ -1,10 +1,10 @@
 {
-  "name": "browser",
+  "name": "roc-package-webpack-web-test-simple",
   "version": "1.0.0",
-  "description": "Roc browser example",
+  "description": "Roc Webpack Web example",
   "scripts": {
-    "build": "roc-package-webpack-web-dev build",
-    "dev": "roc-package-webpack-web-dev dev"
+    "build": "roc build",
+    "dev": "roc dev"
   },
   "keywords": [
     "roc"
