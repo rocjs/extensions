@@ -1,6 +1,6 @@
 {
   "name": "roc-package-module",
-  "version": "1.0.0-beta.0",
+  "version": "1.0.0-beta.1",
   "description": "Package providing module support for Roc",
   "main": "lib/index.js",
   "scripts": {
@@ -17,11 +17,14 @@
   ],
   "repository": "https://github.com/rocjs/roc-package-module/tree/master/extensions/roc-package-module",
   "author": "Verdens Gang AS",
-  "contributors": [{
+  "contributors": [
+    {
       "name": "Gustaf Dalemar"
-    }, {
+    },
+    {
       "name": "Andreas Søvik"
-  }],
+    }
+  ],
   "license": "MIT",
   "dependencies": {
     "roc-abstract-package-base": "^1.0.0-beta"
