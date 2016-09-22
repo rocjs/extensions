@@ -2,11 +2,11 @@
 
 ## Actions
 * [roc-plugin-start](#roc-plugin-start)
-  * [runtime](#runtime)
+  * [register-runtime](#register-runtime)
 
 ## roc-plugin-start
 
-### runtime
+### register-runtime
 
 Adds the base runtime. Will resolve node paths and enable source map support.
 
