@@ -1,3 +1,5 @@
+import path from 'path';
+
 import { getSettings } from 'roc';
 import webpack from 'webpack';
 
@@ -24,26 +26,33 @@ export default ({ previousValue: webpackConfig }) => (target) => {
 
             newWebpackConfig.externals = [
                 function externals(context, request, callback) {
-                    const regexp = /roc-[^\/]+\/([^\/]+)/;
-                    const match = regexp.exec(request);
+                    // Webpack loaders that might be a part of the path, manage this
+                    const resourcePath = request.split('!').pop();
 
                     // If a roc module include it if app is the next on the path
                     // Will include for example "roc-package-web-app/app" & "roc-package-web-app-react/app/server"
                     // but not "roc-package-web-app/lib" & "roc-package-web-app"
-                    if (match && match[1] === 'app') {
+                    const regexp = /roc-[^\/]+\/(?:app$|app\/)|roc-[^\\]+\\(?:app$|app\\)/;
+                    if (regexp.test(resourcePath)) {
+                        // Include it
                         return callback();
                     }
 
-                    // If a normal node_module mark it as external and manage
-                    // Webpack loaders that might be a part of the path
-                    const resourcePath = request.split('!').pop();
                     // Important that we have _ in the RegExp to not include dependencies that
                     // should be managed outside Roc, the bailout character
-                    if (/^[_@a-zA-Z\-0-9]{1}.*$/.test(resourcePath)) {
+                    if (!path.isAbsolute(resourcePath) && /^[_@a-zA-Z\-0-9]{1}.*$/.test(resourcePath)) {
+                        // External
                         return callback(null, true);
                     }
 
-                    // Everything else should be included, that will be relative and absolute paths
+                    // We either have a relative or absolute path here
+                    // Make external if the path contains node_modules
+                    if (/node_modules/.test(resourcePath)) {
+                        // External
+                        return callback(null, true);
+                    }
+
+                    // Everything else should be included
                     return callback();
                 },
             ];
