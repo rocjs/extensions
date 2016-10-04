@@ -28,13 +28,20 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "babel-cli": "~6.5.1",
-    "babel-preset-es2015": "~6.5.0",
-    "babel-preset-es2015-webpack": "~6.3.14",
+    "babel-core": "~6.17.0",
+    "babel-preset-latest": "~6.16.0",
     "chalk": "~1.1.1",
+    "chokidar": "~1.6.0",
+    "fs-readdir-recursive": "1.0.0",
+    "glob": "~7.1.0",
+    "lodash": "~4.16.2",
+    "output-file-sync": "~1.1.2",
+    "path-exists": "~3.0.0",
     "pretty-ms": "~2.1.0",
-    "roc": "1.0.0-rc.11",
-    "roc-abstract-package-base-dev": "1.0.0-beta.1"
+    "roc": "^1.0.0-rc.11",
+    "roc-abstract-package-base-dev": "^1.0.0-beta.1",
+    "roc-plugin-babel": "^1.0.0-beta.1",
+    "slash": "~1.0.0"
   },
   "devDependencies": {
     "babel-eslint": "~6.1.2",

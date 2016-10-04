@@ -1,5 +1,5 @@
-import { isString, isArray } from 'roc/validators';
-import { lazyFunctionRequire } from 'roc';
+import { isString, isArray, isObject } from 'roc/validators';
+import { lazyFunctionRequire, generateDependencies } from 'roc';
 
 import config from '../config/roc.config.js';
 import meta from '../config/roc.config.meta.js';
@@ -10,7 +10,7 @@ const defaultSettings = {
     settings: ['build'],
     arguments: {
         targets: {
-            validator: isArray(/^es5$|^es6$/),
+            validator: isArray(/^cjs$|^esm$/),
         },
     },
     override: 'roc-abstract-package-base-dev',
@@ -20,9 +20,12 @@ export default {
     description: `
         Package providing module support.
 
-        Will build code using Babel for either ES5 or ES6.`,
+        Will build code using Babel for either CommonJS or ES Modules.`,
     config,
     meta,
+    plugins: [
+        require.resolve('roc-plugin-babel'),
+    ],
     packages: [
         require.resolve('roc-abstract-package-base-dev'),
     ],
@@ -36,15 +39,22 @@ export default {
             },
         },
     },
+    dependencies: {
+        uses: generateDependencies(require('../../package.json'), [ // eslint-disable-line
+            'babel-core',
+            'babel-preset-latest',
+        ]),
+    },
     actions: [{
+        hook: 'babel-config',
         extension: 'roc-package-module-dev',
-        hook: 'babel-load-presets',
-        description: 'Will add either babel-preset-es2015 (for es5) or babel-preset-es2015-webpack (for es6).',
-        action: ({ previousValue }) => (target) => () => (
-            target === 'es5' ?
-                previousValue.concat(require.resolve('babel-preset-es2015')) :
-                previousValue.concat(require.resolve('babel-preset-es2015-webpack'))
-        ),
+        description: 'Adds babel-preset-latest with either modules enabled or not depending on the target',
+        action: () => (target) => (babelConfig) => ({
+            ...babelConfig,
+            presets: target === 'cjs' ?
+                [...babelConfig.presets, require.resolve('babel-preset-latest')] :
+                [[require.resolve('babel-preset-latest'), { es2015: { modules: false } }], ...babelConfig.presets],
+        }),
     }, {
         hook: 'run-build-command',
         action: lazyRequire('../actions/build'),
@@ -60,30 +70,18 @@ export default {
             arguments: {
                 target: {
                     validator: isString,
-                    description: 'The target, will by default be either es5 or es6.',
+                    description: 'The target, will by default be either "cjs" or "esm".',
                 },
             },
         },
-        'babel-load-presets': {
-            description: 'Expected to return a presets to add to the array of presets to use.',
-            initialValue: [],
-            returns: isArray(isString),
+        'babel-config': {
+            description: 'Used to create a Babel configuration to be used.',
+            initialValue: {},
+            returns: isObject(),
             arguments: {
                 target: {
                     validator: isString,
-                    description: 'The target, will by default be either es5 or es6.',
-                },
-            },
-        },
-
-        'babel-load-plugins': {
-            description: 'Expected to return a concatenated array with the final presets to use.',
-            initialValue: [],
-            returns: isArray(isString),
-            arguments: {
-                target: {
-                    validator: isString,
-                    description: 'The target, will by default be either es5 or es6.',
+                    description: 'The target, will by default be either "cjs" or "esm".',
                 },
             },
         },
