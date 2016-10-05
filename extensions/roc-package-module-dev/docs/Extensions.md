@@ -10,4 +10,5 @@ The package serves as a base from which other `dev` packages within the ecosyste
 It is therefore _never to be included_ as a direct dependency in app or component projects.
 
 ## Plugins
-_No plugins._
+### roc-plugin-babel — [v1.0.0-beta.1](https://www.npmjs.com/package/roc-plugin-babel)
+Roc plugin that adds basic Babel management

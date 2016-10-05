@@ -43,7 +43,7 @@ roc development build [targets]
 
 | Name    | Description                                                                      | Default | Type              | Required | Can be empty |
 | ------- | -------------------------------------------------------------------------------- | ------- | ----------------- | -------- | ------------ |
-| targets | The targets the project should be built for, overrides the settings if provided. |         | `[/^es5$|^es6$/]` | No       | Yes          |
+| targets | The targets the project should be built for, overrides the settings if provided. |         | `[/^cjs$|^esm$/]` | No       | Yes          |
 
 ####  Settings options
 * [build](/Users/gustaf/VG/public/roc-package/roc-package-module/extensions/roc-package-module-dev/docs/Settings.md#build)
@@ -75,7 +75,7 @@ roc development dev [targets]
 
 | Name    | Description                                                                      | Default | Type              | Required | Can be empty |
 | ------- | -------------------------------------------------------------------------------- | ------- | ----------------- | -------- | ------------ |
-| targets | The targets the project should be built for, overrides the settings if provided. |         | `[/^es5$|^es6$/]` | No       | Yes          |
+| targets | The targets the project should be built for, overrides the settings if provided. |         | `[/^cjs$|^esm$/]` | No       | Yes          |
 
 ####  Settings options
 * [build](/Users/gustaf/VG/public/roc-package/roc-package-module/extensions/roc-package-module-dev/docs/Settings.md#build)

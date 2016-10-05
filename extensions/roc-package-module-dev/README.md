@@ -2,7 +2,7 @@
 
 Package providing module support.
 
-Will build code using Babel for either ES5 or ES6.
+Will build code using Babel for either CommonJS or ES Modules.
 
 ## Documentation
 - [Actions](docs/Actions.md)

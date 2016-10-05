@@ -4,8 +4,10 @@
 * [roc-abstract-package-base-dev](#roc-abstract-package-base-dev)
   * [after-clean](#after-clean)
   * [before-clean](#before-clean)
+* [roc-plugin-babel](#roc-plugin-babel)
+  * [babel-config](#babel-config)
 * [roc-package-module-dev](#roc-package-module-dev)
-  * [babel-load-presets](#babel-load-presets)
+  * [babel-config](#babel-config-1)
   * [run-build-command](#run-build-command)
   * [run-dev-command](#run-dev-command)
 
@@ -27,14 +29,24 @@ __Connects to extension:__ `roc-abstract-package-base-dev`
 __Connects to hook:__ `before-clean`  
 __Have post:__ No  
 
+## roc-plugin-babel
+
+### babel-config
+
+Base Babel configuration
+
+__Connects to extension:__ Not specified  
+__Connects to hook:__ `babel-config`  
+__Have post:__ Yes  
+
 ## roc-package-module-dev
 
-### babel-load-presets
+### babel-config
 
-Will add either babel-preset-es2015 (for es5) or babel-preset-es2015-webpack (for es6).
+Adds babel-preset-latest with either modules enabled or not depending on the target
 
 __Connects to extension:__ `roc-package-module-dev`  
-__Connects to hook:__ `babel-load-presets`  
+__Connects to hook:__ `babel-config`  
 __Have post:__ No  
 
 ### run-build-command

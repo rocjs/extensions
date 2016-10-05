@@ -9,4 +9,9 @@ Nothing is exported.
 Nothing is required.
 
 ## Uses
-Nothing is listed as used.
+### roc-package-module-dev
+#### [babel-core](https://www.npmjs.com/package/babel-core)
+__Version__: ~6.17.0  
+
+#### [babel-preset-latest](https://www.npmjs.com/package/babel-preset-latest)
+__Version__: ~6.16.0  
