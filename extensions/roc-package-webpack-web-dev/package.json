@@ -31,8 +31,8 @@
     "koa": "~1.1.1",
     "koa-webpack-dev-middleware": "~1.1.0",
     "qs": "~6.1.0",
-    "roc": "1.0.0-rc.11",
-    "roc-package-webpack-dev": "1.0.0-beta.1",
+    "roc": "^1.0.0-rc.12",
+    "roc-package-webpack-dev": "^1.0.0-beta.2",
     "webpack": "~1.12.2",
     "webpack-hot-middleware": "~2.10.0"
   },
