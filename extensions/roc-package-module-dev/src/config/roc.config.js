@@ -1,12 +1,14 @@
 export default {
     settings: {
         build: {
-            targets: ['es5', 'es6'],
+            targets: ['cjs', 'esm'],
             input: 'src',
             output: {
-                es5: 'lib/es5',
-                es6: 'lib/es6',
+                cjs: 'lib/cjs',
+                esm: 'lib/esm',
             },
         },
     },
+
+    babel: undefined,
 };

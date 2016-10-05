@@ -12,7 +12,7 @@ export default {
                 override: 'roc-abstract-package-base-dev',
             },
             targets: {
-                validator: required(notEmpty(isArray(/^es5$|^es6$/i))),
+                validator: required(notEmpty(isArray(/^cjs$|^esm$/i))),
                 override: 'roc-abstract-package-base-dev',
             },
             input: {
@@ -24,15 +24,19 @@ export default {
                 __meta: {
                     override: 'roc-abstract-package-base-dev',
                 },
-                es5: {
-                    description: 'The output directory for the ES5 build.',
+                cjs: {
+                    description: 'The output directory for the CommonJS build.',
                     validator: required(notEmpty(isPath)),
                 },
-                es6: {
-                    description: 'The output directory for the ES6 build.',
+                esm: {
+                    description: 'The output directory for the ES Modules build.',
                     validator: required(notEmpty(isPath)),
                 },
             },
         },
+    },
+
+    babel: {
+        description: 'Babel configuration that can be either a plain object or a function that gets target as argument',
     },
 };

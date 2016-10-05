@@ -8,8 +8,11 @@ const Decorate = (target) => {
 
 @Decorate
 export default class Hello extends Component {
+    static propTypes = {
+        name: React.PropTypes.string
+    };
 
     render() {
-        return <div className={styles.hest}>Hello World</div>;
+        return <div className={styles.hest}>Hello { this.props.name }</div>;
     }
 }
