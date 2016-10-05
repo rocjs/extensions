@@ -1,5 +1,6 @@
 {
     "presets": ["stage-1", "react"],
+    "plugins": ["transform-decorators-legacy"],
     "env": {
         "production": {
             "presets": ["stage-1", "react", "react-optimize"]
