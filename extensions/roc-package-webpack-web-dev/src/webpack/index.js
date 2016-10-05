@@ -22,7 +22,7 @@ export default ({ previousValue: webpackConfig }) => (target) => {
 
                 newWebpackConfig.entry = {
                     [newWebpackConfig.rocMetaInfo.outputName]: [
-                        `webpack-hot-middleware/client?path=${getDevPath()}` +
+                        `${require.resolve('webpack-hot-middleware/client')}?path=${getDevPath()}` +
                             `__webpack_hmr&${qs.stringify(hotMiddleware)}`,
                         newWebpackConfig.rocMetaInfo.entry,
                     ],
