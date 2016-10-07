@@ -47,10 +47,10 @@ export default {
             if (userBabelConfig) {
                 return (babelConfig) => {
                     const newBabelConfig = merge(babelConfig, userBabelConfig);
-                    newBabelConfig.plugins = [...(userBabelConfig.plugins || []), ...babelConfig.plugins];
+                    newBabelConfig.plugins = [...(userBabelConfig.plugins || []), ...(babelConfig.plugins || [])];
 
                     // We need to flip the order here because of the way that Babel processes presets
-                    newBabelConfig.presets = [...(babelConfig.presets || []), ...userBabelConfig.presets];
+                    newBabelConfig.presets = [...(babelConfig.presets || []), ...(userBabelConfig.presets || [])];
 
                     // Merge env configuration with special consideration for plugins & presets
                     Object.keys(newBabelConfig.env).forEach((env) => {
