@@ -55,7 +55,7 @@ export default {
                     // Merge env configuration with special consideration for plugins & presets
                     Object.keys(newBabelConfig.env).forEach((env) => {
                         const babelConfigEnv = babelConfig.env[env] || {};
-                        const userBabelConfigEnv = userBabelConfig.env[env] || {};
+                        const userBabelConfigEnv = (userBabelConfig.env || {})[env] || {};
 
                         const envPresets = [
                             ...(babelConfigEnv.presets || []),
