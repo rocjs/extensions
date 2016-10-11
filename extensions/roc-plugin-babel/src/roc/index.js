@@ -5,6 +5,21 @@ import isFunction from 'lodash.isfunction';
 import { merge, fileExists } from 'roc';
 import log from 'roc/log/default/small';
 
+import babelResolve from './babelResolve';
+
+function resolve(type, directory) {
+    return (val) => {
+        const babel = babelResolve(`babel-${type}-${val}`, directory) || babelResolve(val, directory);
+        if (!babel) {
+            throw new Error(
+                `Babel: Couldn't find ${type} ${JSON.stringify(val)} relative to directory ${JSON.stringify(directory)}`
+            );
+        }
+
+        return babel;
+    };
+}
+
 export default {
     actions: [{
         hook: 'babel-config',
@@ -47,10 +62,16 @@ export default {
             if (userBabelConfig) {
                 return (babelConfig) => {
                     const newBabelConfig = merge(babelConfig, userBabelConfig);
-                    newBabelConfig.plugins = [...(userBabelConfig.plugins || []), ...(babelConfig.plugins || [])];
+                    newBabelConfig.plugins = [
+                        ...(userBabelConfig.plugins || []).map(resolve('plugin', directory)),
+                        ...(babelConfig.plugins || []),
+                    ];
 
                     // We need to flip the order here because of the way that Babel processes presets
-                    newBabelConfig.presets = [...(babelConfig.presets || []), ...(userBabelConfig.presets || [])];
+                    newBabelConfig.presets = [
+                        ...(babelConfig.presets || []),
+                        ...(userBabelConfig.presets || []).map(resolve('preset', directory)),
+                    ];
 
                     // Merge env configuration with special consideration for plugins & presets
                     Object.keys(newBabelConfig.env).forEach((env) => {
@@ -59,13 +80,13 @@ export default {
 
                         const envPresets = [
                             ...(babelConfigEnv.presets || []),
-                            ...(userBabelConfigEnv.presets || []),
+                            ...(userBabelConfigEnv.presets || []).map(resolve('preset', directory)),
                         ];
 
                         newBabelConfig.env[env].presets = envPresets;
 
                         const envPlugins = [
-                            ...(userBabelConfigEnv.plugins || []),
+                            ...(userBabelConfigEnv.plugins || []).map(resolve('plugin', directory)),
                             ...(babelConfigEnv.plugins || []),
                         ];
 
