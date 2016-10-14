@@ -3,6 +3,21 @@ import { toArray } from 'roc/converters';
 
 import test from '../commands/test';
 
+// Take a validator that enforces that something is required and reverses it
+const doNotRequire = (validator) => (input, info) => {
+    if (info) {
+        return {
+            ...validator(null, true),
+            required: false,
+        };
+    }
+    if (input === undefined || input === null) {
+        return true;
+    }
+
+    return validator(input);
+};
+
 export default {
     hooks: {
         'run-test-command': {
@@ -27,7 +42,7 @@ export default {
                     targets: {
                         description: 'The targets the project should be tested for, ' +
                             'overrides the settings if provided',
-                        converter: toArray,
+                        converter: toArray(),
                     },
                 },
             },
@@ -38,7 +53,7 @@ export default {
         // This is to get good documentation generation
         const targets =
             settings && settings.build && settings.build && settings.build.targets ?
-                settings.build.targets.validator :
+                doNotRequire(settings.build.targets.validator) :
                 () => createInfoObject('Context based');
         return {
             roc: {
