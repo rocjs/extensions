@@ -4,13 +4,13 @@ import { generateDependencies, lazyFunctionRequire } from 'roc';
 import config from '../config/roc.config.js';
 import meta from '../config/roc.config.meta.js';
 
-import { packageJSON } from './util';
+import { packageJSON, name } from './util';
 
 const lazyRequire = lazyFunctionRequire(require);
 
 export default {
     required: {
-        'roc-package-webpack-node': '^1.0.0-beta',
+        'roc-package-webpack-node-dev': '^1.0.0-beta',
     },
     plugins: [
         require.resolve('roc-abstract-plugin-test'),
@@ -25,10 +25,13 @@ export default {
         description: 'Adds support for running tests with nyc using Webpack.',
         action: lazyRequire('../actions/test'),
     }, {
-        extension: 'roc-plugin-test-mocha-webpack',
+        extension: name,
         hook: 'build-webpack',
         description: 'Adds Webpack configuration specific for tests.',
         action: lazyRequire('../actions/webpack'),
+    }, {
+        hook: 'babel-config',
+        action: lazyRequire('../actions/babel'),
     }],
     hooks: {
         'build-webpack': {
@@ -39,6 +42,21 @@ export default {
                 target: {
                     validator: isString,
                     description: 'The target for which the Webpack configuration should be build for.',
+                },
+                babelConfig: {
+                    validator: isObject(),
+                    description: 'The Babel configuration that should be used for the Webpack build.',
+                },
+            },
+        },
+        'babel-config': {
+            description: 'Used to create a Babel configuration to be used in the Webpack build for test.',
+            initialValue: {},
+            returns: isObject(),
+            arguments: {
+                target: {
+                    validator: isString,
+                    description: 'The target that is used.',
                 },
                 coverage: {
                     validator: isBoolean,

@@ -12,7 +12,8 @@ export default () => (targets, { grep, watch, coverage, runtime }) => {
             appendSettings({ build: { mode: 'test' } });
 
             // Create Webpack configuration that is to be used in a node.
-            const webpackConfig = invokeHook('build-webpack', 'node', cover);
+            const babelConfig = invokeHook('babel-config', 'node', cover);
+            const webpackConfig = invokeHook('build-webpack', 'node', babelConfig);
 
             nycRunner({ grep, watch, coverage: cover, runtime, webpackConfig });
         };
