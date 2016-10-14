@@ -36,7 +36,7 @@ roc start [artifact]
 | artifact | Path to an artifact to start. |         | `Filepath` | No       | Yes          |
 
 ###  Settings options
-* [runtime](/Users/gustaf/VG/public/roc-package/roc-plugin-test-mocha-webpack/extensions/roc-plugin-mocha-webpack/docs/Settings.md#runtime)
+* [runtime](docs/Settings.md#runtime)
 
 ###  Defined by extensions
 roc-plugin-start
@@ -70,8 +70,8 @@ roc development test [targets]
 
 ####  Settings options
 _All groups are available._
-* [runtime](/Users/gustaf/VG/public/roc-package/roc-plugin-test-mocha-webpack/extensions/roc-plugin-mocha-webpack/docs/Settings.md#runtime)
-* [test](/Users/gustaf/VG/public/roc-package/roc-plugin-test-mocha-webpack/extensions/roc-plugin-mocha-webpack/docs/Settings.md#test)
+* [runtime](docs/Settings.md#runtime)
+* [test](docs/Settings.md#test)
 
 ####  Defined by extensions
 roc-abstract-plugin-test, roc-plugin-test-mocha-webpack

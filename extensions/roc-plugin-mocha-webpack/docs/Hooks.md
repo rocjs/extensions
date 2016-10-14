@@ -9,6 +9,7 @@
   * [get-potential-target](#get-potential-target)
   * [register-runtime](#register-runtime)
 * [roc-plugin-test-mocha-webpack](#roc-plugin-test-mocha-webpack)
+  * [babel-config](#babel-config)
   * [build-webpack](#build-webpack)
 
 ## roc
@@ -68,6 +69,20 @@ __Expected return value:__ _Nothing_
 
 ## roc-plugin-test-mocha-webpack
 
+### babel-config
+
+Used to create a Babel configuration to be used in the Webpack build for test.
+
+__Initial value:__ `{}`  
+__Expected return value:__ `{}`
+
+#### Arguments
+
+| Name     | Description                                             | Type      | Required | Can be empty |
+| -------- | ------------------------------------------------------- | --------- | -------- | ------------ |
+| target   | The target that is used.                                | `String`  | No       | Yes          |
+| coverage | If the code should be prepared for coverage generation. | `Boolean` | No       |              |
+
 ### build-webpack
 
 Used to create the final Webpack configuration object for tests.
@@ -77,7 +92,7 @@ __Expected return value:__ `{}`
 
 #### Arguments
 
-| Name     | Description                                                         | Type      | Required | Can be empty |
-| -------- | ------------------------------------------------------------------- | --------- | -------- | ------------ |
-| target   | The target for which the Webpack configuration should be build for. | `String`  | No       | Yes          |
-| coverage | If the code should be prepared for coverage generation.             | `Boolean` | No       |              |
+| Name        | Description                                                         | Type     | Required | Can be empty |
+| ----------- | ------------------------------------------------------------------- | -------- | -------- | ------------ |
+| target      | The target for which the Webpack configuration should be build for. | `String` | No       | Yes          |
+| babelConfig | The Babel configuration that should be used for the Webpack build.  | `{}`     | No       | Yes          |

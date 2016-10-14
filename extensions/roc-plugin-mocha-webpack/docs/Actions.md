@@ -2,6 +2,7 @@
 
 ## Actions
 * [roc-plugin-test-mocha-webpack](#roc-plugin-test-mocha-webpack)
+  * [babel-config](#babel-config)
   * [build-webpack](#build-webpack)
   * [run-test-command](#run-test-command)
 * [roc-plugin-start](#roc-plugin-start)
@@ -9,11 +10,17 @@
 
 ## roc-plugin-test-mocha-webpack
 
+### babel-config
+
+__Connects to extension:__ Not specified  
+__Connects to hook:__ `babel-config`  
+__Have post:__ No  
+
 ### build-webpack
 
 Adds Webpack configuration specific for tests.
 
-__Connects to extension:__ `roc-plugin-test-mocha-webpack`  
+__Connects to extension:__ Not specified  
 __Connects to hook:__ `build-webpack`  
 __Have post:__ No  
 
