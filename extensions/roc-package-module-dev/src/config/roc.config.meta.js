@@ -35,8 +35,4 @@ export default {
             },
         },
     },
-
-    babel: {
-        description: 'Babel configuration that can be either a plain object or a function that gets target as argument',
-    },
 };
