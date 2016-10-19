@@ -21,6 +21,14 @@ function resolve(type, directory) {
 }
 
 export default {
+    config: {
+        babel: undefined,
+    },
+    meta: {
+        babel: {
+            description: 'Babel configuration that can be either a plain object or a function that gets target as argument', // eslint-disable-line
+        },
+    },
     actions: [{
         hook: 'babel-config',
         description: 'Base Babel configuration',
