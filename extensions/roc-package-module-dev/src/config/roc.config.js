@@ -9,6 +9,4 @@ export default {
             },
         },
     },
-
-    babel: undefined,
 };
