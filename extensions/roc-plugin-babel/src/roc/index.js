@@ -9,14 +9,18 @@ import babelResolve from './babelResolve';
 
 function resolve(type, directory) {
     return (val) => {
-        const babel = babelResolve(`babel-${type}-${val}`, directory) || babelResolve(val, directory);
+        // A Babel plugin/preset can be an array where the first value is the plugin/preset
+        const pluginOrPreset = Array.isArray(val) ? val[0] : val;
+        const babel = babelResolve(`babel-${type}-${pluginOrPreset}`, directory) ||
+            babelResolve(pluginOrPreset, directory);
         if (!babel) {
             throw new Error(
-                `Babel: Couldn't find ${type} ${JSON.stringify(val)} relative to directory ${JSON.stringify(directory)}`
+                `Babel: Couldn't find ${type} ${JSON.stringify(pluginOrPreset)} relative` +
+                ` to directory ${JSON.stringify(directory)}`
             );
         }
 
-        return babel;
+        return Array.isArray(val) ? [babel, val[1]] : babel;
     };
 }
 
