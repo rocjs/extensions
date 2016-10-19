@@ -41,12 +41,12 @@ roc development build [targets]
 
 #### Arguments
 
-| Name    | Description                                                                      | Default | Type              | Required | Can be empty |
-| ------- | -------------------------------------------------------------------------------- | ------- | ----------------- | -------- | ------------ |
-| targets | The targets the project should be built for, overrides the settings if provided. |         | `[/^cjs$|^esm$/]` | No       | Yes          |
+| Name    | Description                                                                      | Default | Type                   | Required | Can be empty |
+| ------- | -------------------------------------------------------------------------------- | ------- | ---------------------- | -------- | ------------ |
+| targets | The targets the project should be built for, overrides the settings if provided. |         | `Array(/^cjs$|^esm$/)` | No       | Yes          |
 
 ####  Settings options
-* [build](/Users/gustaf/VG/public/roc-package/roc-package-module/extensions/roc-package-module-dev/docs/Settings.md#build)
+* [build](docs/Settings.md#build)
 
 ####  Defined by extensions
 roc-abstract-package-base-dev, roc-package-module-dev
@@ -59,7 +59,7 @@ roc development clean
 ```
 
 ####  Settings options
-* [build](/Users/gustaf/VG/public/roc-package/roc-package-module/extensions/roc-package-module-dev/docs/Settings.md#build)
+* [build](docs/Settings.md#build)
 
 ####  Defined by extensions
 roc-abstract-package-base-dev
@@ -73,12 +73,12 @@ roc development dev [targets]
 
 #### Arguments
 
-| Name    | Description                                                                      | Default | Type              | Required | Can be empty |
-| ------- | -------------------------------------------------------------------------------- | ------- | ----------------- | -------- | ------------ |
-| targets | The targets the project should be built for, overrides the settings if provided. |         | `[/^cjs$|^esm$/]` | No       | Yes          |
+| Name    | Description                                                                      | Default | Type                   | Required | Can be empty |
+| ------- | -------------------------------------------------------------------------------- | ------- | ---------------------- | -------- | ------------ |
+| targets | The targets the project should be built for, overrides the settings if provided. |         | `Array(/^cjs$|^esm$/)` | No       | Yes          |
 
 ####  Settings options
-* [build](/Users/gustaf/VG/public/roc-package/roc-package-module/extensions/roc-package-module-dev/docs/Settings.md#build)
+* [build](docs/Settings.md#build)
 
 ####  Defined by extensions
 roc-abstract-package-base-dev, roc-package-module-dev
