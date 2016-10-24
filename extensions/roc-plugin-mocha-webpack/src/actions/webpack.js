@@ -23,6 +23,11 @@ export default ({ context: { config: { settings }, directory } }) => () => (webp
 
     newWebpackConfig.entry[newWebpackConfig.rocMetaInfo.outputName] = require.resolve(entry);
 
+    // Always include the entry point
+    newWebpackConfig.externals.unshift({
+        [require.resolve(entry)]: false,
+    });
+
     newWebpackConfig.resolve.alias = {
         ...newWebpackConfig.resolve.alias,
         src: join(directory, settings.test.node.src.path),
