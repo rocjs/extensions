@@ -21,7 +21,7 @@ Expected to return new settings that should be merged with the existing ones.
 Makes it possible to modify the settings object before a command is started and after potential arguments from the command line and configuration file have been parsed. This is a good point to default to some value if no was given or modify something in the settings.
 
 __Initial value:__ _Nothing_  
-__Expected return value:__ `{}`
+__Expected return value:__ `Object()`
 
 #### Arguments
 
@@ -40,10 +40,10 @@ __Expected return value:__ _Nothing_
 
 #### Arguments
 
-| Name           | Description | Type       | Required | Can be empty |
-| -------------- | ----------- | ---------- | -------- | ------------ |
-| targets        |             | `[String]` | Yes      | No           |
-| managedOptions |             | `{}`       | Yes      | Yes          |
+| Name           | Description | Type            | Required | Can be empty |
+| -------------- | ----------- | --------------- | -------- | ------------ |
+| targets        |             | `Array(String)` | Yes      | No           |
+| managedOptions |             | `Object()`      | Yes      | Yes          |
 
 ## roc-plugin-start
 
@@ -74,7 +74,7 @@ __Expected return value:__ _Nothing_
 Used to create a Babel configuration to be used in the Webpack build for test.
 
 __Initial value:__ `{}`  
-__Expected return value:__ `{}`
+__Expected return value:__ `Object()`
 
 #### Arguments
 
@@ -88,11 +88,11 @@ __Expected return value:__ `{}`
 Used to create the final Webpack configuration object for tests.
 
 __Initial value:__ `{}`  
-__Expected return value:__ `{}`
+__Expected return value:__ `Object()`
 
 #### Arguments
 
-| Name        | Description                                                         | Type     | Required | Can be empty |
-| ----------- | ------------------------------------------------------------------- | -------- | -------- | ------------ |
-| target      | The target for which the Webpack configuration should be build for. | `String` | No       | Yes          |
-| babelConfig | The Babel configuration that should be used for the Webpack build.  | `{}`     | No       | Yes          |
+| Name        | Description                                                         | Type       | Required | Can be empty |
+| ----------- | ------------------------------------------------------------------- | ---------- | -------- | ------------ |
+| target      | The target for which the Webpack configuration should be build for. | `String`   | No       | Yes          |
+| babelConfig | The Babel configuration that should be used for the Webpack build.  | `Object()` | No       | Yes          |
