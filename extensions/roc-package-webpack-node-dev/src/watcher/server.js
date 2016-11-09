@@ -41,8 +41,13 @@ export default function server(compiler) {
         let startServer;
         let once = false;
 
-        const restartServer = () => {
+        const stopServer = () => {
+            invokeHook('dev-process-stopping', serverProcess);
             serverProcess.kill('SIGTERM');
+        };
+
+        const restartServer = () => {
+            stopServer();
             return startServer();
         };
 
@@ -82,7 +87,7 @@ export default function server(compiler) {
             serverProcess = childProcess.fork(require.resolve('./wrapper'), { env });
 
             // Make sure or node process is terminated when the main process is
-            process.on('exit', () => serverProcess.kill('SIGTERM'));
+            process.on('exit', () => stopServer());
 
             if (!once) {
                 once = true;
