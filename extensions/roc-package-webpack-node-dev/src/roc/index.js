@@ -38,5 +38,13 @@ export default {
                 },
             },
         },
+        'dev-process-stopping': {
+            description: 'Used to react before the development server is stopped.',
+            arguments: {
+                serverProcess: {
+                    description: 'The server process that is being stopped.',
+                },
+            },
+        },
     },
 };
