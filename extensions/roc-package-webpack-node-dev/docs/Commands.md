@@ -38,7 +38,7 @@ roc start [artifact]
 | artifact | Path to an artifact to start. |         | `Filepath` | No       | Yes          |
 
 ###  Settings options
-* [runtime](/Users/gustaf/VG/public/roc-package/roc-package-webpack-node/extensions/roc-package-webpack-node-dev/docs/Settings.md#runtime)
+* [runtime](docs/Settings.md#runtime)
 
 ###  Defined by extensions
 roc-plugin-start
@@ -61,12 +61,12 @@ roc development build [targets]
 
 #### Arguments
 
-| Name    | Description                                                                      | Default | Type       | Required | Can be empty |
-| ------- | -------------------------------------------------------------------------------- | ------- | ---------- | -------- | ------------ |
-| targets | The targets the project should be built for, overrides the settings if provided. |         | `[String]` | No       | Yes          |
+| Name    | Description                                                                      | Default | Type            | Required | Can be empty |
+| ------- | -------------------------------------------------------------------------------- | ------- | --------------- | -------- | ------------ |
+| targets | The targets the project should be built for, overrides the settings if provided. |         | `Array(String)` | No       | Yes          |
 
 ####  Settings options
-* [build](/Users/gustaf/VG/public/roc-package/roc-package-webpack-node/extensions/roc-package-webpack-node-dev/docs/Settings.md#build)
+* [build](docs/Settings.md#build)
 
 ####  Defined by extensions
 roc-abstract-package-base-dev, roc-package-webpack-dev
@@ -79,7 +79,7 @@ roc development clean
 ```
 
 ####  Settings options
-* [build](/Users/gustaf/VG/public/roc-package/roc-package-webpack-node/extensions/roc-package-webpack-node-dev/docs/Settings.md#build)
+* [build](docs/Settings.md#build)
 
 ####  Defined by extensions
 roc-abstract-package-base-dev
@@ -93,15 +93,15 @@ roc development dev [targets]
 
 #### Arguments
 
-| Name    | Description                                                                      | Default | Type       | Required | Can be empty |
-| ------- | -------------------------------------------------------------------------------- | ------- | ---------- | -------- | ------------ |
-| targets | The targets the project should be built for, overrides the settings if provided. |         | `[String]` | No       | Yes          |
+| Name    | Description                                                                      | Default | Type            | Required | Can be empty |
+| ------- | -------------------------------------------------------------------------------- | ------- | --------------- | -------- | ------------ |
+| targets | The targets the project should be built for, overrides the settings if provided. |         | `Array(String)` | No       | Yes          |
 
 ####  Settings options
 _All groups are available._
-* [build](/Users/gustaf/VG/public/roc-package/roc-package-webpack-node/extensions/roc-package-webpack-node-dev/docs/Settings.md#build)
-* [dev](/Users/gustaf/VG/public/roc-package/roc-package-webpack-node/extensions/roc-package-webpack-node-dev/docs/Settings.md#dev)
-* [runtime](/Users/gustaf/VG/public/roc-package/roc-package-webpack-node/extensions/roc-package-webpack-node-dev/docs/Settings.md#runtime)
+* [build](docs/Settings.md#build)
+* [dev](docs/Settings.md#dev)
+* [runtime](docs/Settings.md#runtime)
 
 ####  Defined by extensions
 roc-abstract-package-base-dev, roc-package-webpack-dev
