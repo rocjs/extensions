@@ -13,6 +13,11 @@ import initRuntime from '../helpers/init-runtime';
  * @param {object} rocCommandObject - A command object
  */
 export default function start({ context: { verbose, config: { settings } }, options: { managed } }) {
+    // Default NODE_ENV to production if not already defined
+    if (!process.env.NODE_ENV) {
+        process.env.NODE_ENV = 'production';
+    }
+
     // Init the Roc runtime that will resolve dependencies and add source maps support
     initRuntime(verbose);
 
