@@ -10,7 +10,7 @@ export const roc = {
         action: ({ context: { config: { settings } } }) => () => () => ({
             extensions: ['less'],
             loaders: require.resolve('less-loader') +
-                settings.build.style.sourceMap ? '?sourceMap' : '',
+                (settings.build.style.sourceMap ? '?sourceMap' : ''),
         }),
     }],
 };
