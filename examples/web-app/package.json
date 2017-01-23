@@ -5,10 +5,10 @@
   "author": "VG",
   "license": "MIT",
   "dependencies": {
-    "roc-package-web-app": "*"
+    "roc-package-web-app": "next"
   },
   "devDependencies": {
-    "roc-package-web-app-dev": "*",
-    "roc-plugin-test-mocha-webpack": "*"
+    "roc-package-web-app-dev": "next",
+    "roc-plugin-test-mocha-webpack": "next"
   }
 }
