@@ -25,6 +25,10 @@ const getCommand = (artifact, grep, coverage) => (coverage ?
 const cleanupCoverage = () => rimraf.sync(path.join(process.cwd(), '.nyc_output'));
 
 function getArtifact(compiler, err, stats) {
+    if (err) {
+        throw err;
+    }
+
     const statsJson = stats.toJson();
 
     if (statsJson.errors.length > 0 || statsJson.warnings.length > 0) {
