@@ -38,9 +38,9 @@ export default ({ previousValue: webpackConfig }) => (target) => {
                         return callback();
                     }
 
-                    // Important that we have _ in the RegExp to not include dependencies that
+                    // Important that we have # in the RegExp to not include dependencies that
                     // should be managed outside Roc, the bailout character
-                    if (!path.isAbsolute(resourcePath) && /^[_@a-zA-Z\-0-9]{1}.*$/.test(resourcePath)) {
+                    if (!path.isAbsolute(resourcePath) && /^[#@a-zA-Z\-0-9]{1}.*$/.test(resourcePath)) {
                         // External
                         return callback(null, true);
                     }
