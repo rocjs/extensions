@@ -46,8 +46,8 @@ export default ({ previousValue: webpackConfig }) => (target) => {
             * Output
             */
             if (DIST) {
-                newWebpackConfig.output.filename = '[name].[hash].roc.js';
-                newWebpackConfig.output.chunkFilename = '[name].[hash].roc.js';
+                newWebpackConfig.output.filename = '[name].[hash].js';
+                newWebpackConfig.output.chunkFilename = '[name].[hash].js';
             }
 
             /**
