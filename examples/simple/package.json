@@ -1,0 +1,13 @@
+{
+  "name": "roc-plugin-test-jest-example",
+  "version": "1.0.0",
+  "description": "Simple Jest example",
+  "license": "MIT",
+  "dependencies": {
+    "roc-package-web-app-react": "^1.0.0-beta.1"
+  },
+  "devDependencies": {
+    "roc-package-web-app-react-dev": "^1.0.0-beta.1",
+    "roc-plugin-test-jest": "*"
+  }
+}
