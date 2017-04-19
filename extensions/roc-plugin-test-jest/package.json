@@ -1,0 +1,45 @@
+{
+  "name": "roc-plugin-test-jest",
+  "description": "A Roc plugin for testing with Jest",
+  "author": "Gustaf Dalemar",
+  "license": "MIT",
+  "version": "1.0.0-beta.1",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "npm run lint"
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "roc",
+    "roc-plugin",
+    "jest",
+    "test"
+  ],
+  "repository": "https://github.com/rocjs/roc-plugin-test-jest",
+  "dependencies": {
+    "babel-jest": "^16.0.0",
+    "browser-resolve": "^1.11.2",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^19.1.0-alpha.eed82034",
+    "jest-cli": "^19.1.0-alpha.eed82034",
+    "react-test-renderer": "^15.3.2",
+    "resolve": "^1.3.1",
+    "roc": "^1.0.0-rc.18",
+    "roc-abstract-plugin-test": "^1.0.0-beta.3"
+  },
+  "devDependencies": {
+    "babel-eslint": "~6.1.2",
+    "eslint": "~3.0.1",
+    "eslint-config-airbnb-base": "~4.0.0",
+    "eslint-plugin-babel": "~3.3.0",
+    "eslint-plugin-import": "~1.10.2"
+  },
+  "roc": {
+    "packages": [
+      "./lib/index.js"
+    ]
+  }
+}
