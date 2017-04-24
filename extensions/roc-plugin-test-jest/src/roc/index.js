@@ -17,7 +17,7 @@ Object.keys(jestOptions)
             jestOptions[key].validator = isArray(isPath);
         }
         // Remove aliases that are used by Roc to avoid collisions
-        if (['b', 'c', 'd', 'h', 'V', 'v'].includes(jestOptions[key].alias)) {
+        if (['b', 'c', 'd', 'h', 'V', 'v'].indexOf(jestOptions[key].alias) > -1) {
             jestOptions[key].alias = undefined;
         }
     });
