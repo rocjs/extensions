@@ -2,7 +2,7 @@ import prettyMs from 'pretty-ms';
 import { getAbsolutePath, initLog } from 'roc';
 import { getValueFromPotentialObject } from 'roc-abstract-package-base-dev';
 
-import meta from '../config/roc.config.meta.js';
+import meta from '../config/roc.config.meta';
 import { invokeHook } from '../roc/util';
 
 import isSomeTargetValid from './helpers/isSomeTargetValid';
@@ -54,7 +54,7 @@ export default ({ context: { config: { settings } } }) => (targets) => {
     if (isSomeTargetValid(targets)) {
         return () => () => new Promise((resolve) => {
             const startTime = process.hrtime();
-            targets.forEach((target) => buildWithBabel(target, settings));
+            targets.forEach(target => buildWithBabel(target, settings));
             const totalTime = process.hrtime(startTime);
 
             log.small.success('All module builds completed in ' +

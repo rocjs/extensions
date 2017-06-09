@@ -1,8 +1,8 @@
 import { isString, isArray, isObject } from 'roc/validators';
 import { lazyFunctionRequire, generateDependencies } from 'roc';
 
-import config from '../config/roc.config.js';
-import meta from '../config/roc.config.meta.js';
+import config from '../config/roc.config';
+import meta from '../config/roc.config.meta';
 
 const lazyRequire = lazyFunctionRequire(require);
 
@@ -49,7 +49,7 @@ export default {
         hook: 'babel-config',
         extension: 'roc-package-module-dev',
         description: 'Adds babel-preset-latest with either modules enabled or not depending on the target',
-        action: () => (target) => (babelConfig) => ({
+        action: () => target => babelConfig => ({
             ...babelConfig,
             presets: target === 'cjs' ?
                 [...babelConfig.presets, require.resolve('babel-preset-latest')] :
