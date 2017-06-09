@@ -4,9 +4,13 @@ cache:
     - node_modules
 node_js:
   - 4.2
+
 before_install:
   - npm install -g npm
-before_script:
+script:
   - npm run link
-after_success:
-  - npm start build && npm start docs
+  - npm run build
+  - cd examples/simple
+  - npm link roc-plugin-test-jest
+  - npm install
+  - npm run test

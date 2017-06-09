@@ -1,6 +1,9 @@
 import { isString, isObject, isBoolean, isArray, isPath } from 'roc/validators';
 import { generateDependencies, lazyFunctionRequire } from 'roc';
 
+import config from '../config/roc.config';
+import meta from '../config/roc.config.meta';
+
 import { packageJSON } from './util';
 
 const lazyRequire = lazyFunctionRequire(require);
@@ -27,14 +30,8 @@ export default {
         roc: '^1.0.0-rc.18',
         'roc-package-webpack-dev': '^1.0.0-beta.7',
     },
-    config: {
-        jest: undefined,
-    },
-    meta: {
-        jest: {
-            description: 'Jest configuration.',
-        },
-    },
+    config,
+    meta,
     commands: {
         development: {
             test: {

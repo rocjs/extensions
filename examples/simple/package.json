@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Simple Jest example",
   "license": "MIT",
+  "scripts": {
+    "test": "roc test"
+  },
   "dependencies": {
     "roc-package-web-app-react": "^1.0.0-beta.1"
   },

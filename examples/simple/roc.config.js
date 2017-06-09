@@ -5,6 +5,6 @@ module.exports = {
         },
         build: {
             routes: 'src/routes.js',
-        }
+        },
     },
 };
