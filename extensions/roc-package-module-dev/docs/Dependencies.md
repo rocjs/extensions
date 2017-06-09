@@ -11,7 +11,7 @@ Nothing is required.
 ## Uses
 ### roc-package-module-dev
 #### [babel-core](https://www.npmjs.com/package/babel-core)
-__Version__: ~6.17.0  
+__Version__: ^6.24.1  
 
 #### [babel-preset-latest](https://www.npmjs.com/package/babel-preset-latest)
-__Version__: ~6.16.0  
+__Version__: ^6.24.1  
