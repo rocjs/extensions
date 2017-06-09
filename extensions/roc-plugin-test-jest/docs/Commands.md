@@ -83,6 +83,7 @@ roc development test [targets]
 
 ####  Settings options
 _All groups are available._
+* [test](docs/Settings.md#test)
 
 ####  Defined by extensions
 roc-abstract-plugin-test, roc-plugin-test-jest

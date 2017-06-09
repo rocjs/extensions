@@ -3,7 +3,7 @@
   "description": "A Roc plugin for testing with Jest",
   "author": "Gustaf Dalemar",
   "license": "MIT",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0-beta.3",
   "main": "lib/index.js",
   "scripts": {
     "lint": "eslint .",

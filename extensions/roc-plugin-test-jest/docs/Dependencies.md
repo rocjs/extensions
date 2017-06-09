@@ -14,4 +14,4 @@ Nothing is required.
 ## Uses
 ### roc-plugin-test-jest
 #### [jest](https://www.npmjs.com/package/jest)
-__Version__: ^19.1.0-alpha.eed82034  
+__Version__: ^20.0.3  
