@@ -9,7 +9,7 @@ export default ({ context: { config: { settings } } }) => {
         return (port, path) => () => {
             browserSync({
                 // This proxy will remove extra slashes from the path, important to note
-                proxy: `0.0.0.0:${port}${path}`,
+                proxy: `localhost:${port}${path}`,
                 snippetOptions: {
                     rule: {
                         match: /<\/body>/i,
