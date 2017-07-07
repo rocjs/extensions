@@ -73,6 +73,11 @@ export default {
 
             if (userBabelConfig) {
                 return (babelConfig) => {
+                    if (userBabelConfig.roc && userBabelConfig.roc.merge === false) {
+                        log.info('Using only project Babel configuration.');
+                        return userBabelConfig;
+                    }
+
                     const newBabelConfig = merge(babelConfig, userBabelConfig);
                     newBabelConfig.plugins = [
                         ...(userBabelConfig.plugins || []).map(resolve('plugin', directory)),
