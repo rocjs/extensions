@@ -73,7 +73,7 @@ export default {
 
             if (userBabelConfig) {
                 return (babelConfig) => {
-                    if (userBabelConfig.roc && userBabelConfig.roc.merge === false) {
+                    if (userBabelConfig.extends === false) {
                         log.info('Using only project Babel configuration.');
                         return userBabelConfig;
                     }
