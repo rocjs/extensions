@@ -27,7 +27,7 @@
   "license": "MIT",
   "dependencies": {
     "bourbon": "~4.2.6",
-    "node-sass": "~3.10.0",
+    "node-sass": "^4.5.0",
     "roc": "^1.0.0-rc.12",
     "sass-loader": "~3.2.3"
   },
