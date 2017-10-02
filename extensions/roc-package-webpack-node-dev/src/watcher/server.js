@@ -1,4 +1,4 @@
-import childProcess from 'child_process';
+import { setupMaster, fork } from 'cluster';
 import path from 'path';
 
 import { getSettings, initLog } from 'roc';
@@ -83,8 +83,11 @@ export default function server(compiler) {
                 ROC_INITAL_BUILD_MODE: JSON.stringify(getSettings().build.mode),
                 ROC_NODE_DEV_ENTRY: bundlePath,
             };
+            // Set target executable.
+            setupMaster({ exec: require.resolve('./wrapper') });
+
             // env - use it for the entry file
-            serverProcess = childProcess.fork(require.resolve('./wrapper'), { env });
+            serverProcess = fork(env).process;
 
             // Make sure or node process is terminated when the main process is
             process.on('exit', () => stopServer());
