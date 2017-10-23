@@ -1,0 +1,60 @@
+{
+  "name": "roc-plugin-test-mocha-karma-webpack",
+  "version": "1.0.0-beta.4",
+  "description": "Adds a way to easily test Webpack projects for the web in Roc",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "npm run lint"
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "roc",
+    "roc-plugin",
+    "webpack",
+    "karma",
+    "mocha",
+    "test"
+  ],
+  "repository": "https://github.com/rocjs/roc-plugin-test-mocha-karma-webpack/tree/master/extensions/roc-plugin-test-mocha-karma-webpack",
+  "author": "Verdens Gang AS",
+  "contributors": [
+    {
+      "name": "Gustaf Dalemar"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^6.10.4",
+    "babel-plugin-istanbul": "~2.0.1",
+    "expect": "~1.20.1",
+    "karma": "~0.13.22",
+    "karma-coverage": "~0.5.5",
+    "karma-failed-reporter": "~0.0.3",
+    "karma-mocha": "~1.0.1",
+    "karma-phantomjs-launcher": "~1.0.0",
+    "karma-sourcemap-loader": "~0.3.7",
+    "karma-spec-json-reporter": "~0.0.8",
+    "karma-spec-reporter": "~0.0.26",
+    "karma-webpack": "~1.7.0",
+    "micromatch": "~2.3.8",
+    "mocha": "~2.4.5",
+    "phantomjs-prebuilt": "~2.1.7",
+    "roc": "^1.0.0-rc.12",
+    "roc-abstract-plugin-test": "^1.0.0-beta.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "~6.1.2",
+    "eslint": "~3.0.1",
+    "eslint-config-airbnb-base": "~4.0.0",
+    "eslint-plugin-babel": "~3.3.0",
+    "eslint-plugin-import": "~1.10.2"
+  },
+  "roc": {
+    "packages": [
+      "./lib/index.js"
+    ]
+  }
+}
