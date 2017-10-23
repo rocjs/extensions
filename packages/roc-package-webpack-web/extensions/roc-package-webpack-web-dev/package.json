@@ -1,0 +1,51 @@
+{
+  "name": "roc-package-webpack-web-dev",
+  "version": "1.0.0-beta.3",
+  "description": "Package providing browser support through Webpack for Roc (Development)",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "npm run lint"
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "roc",
+    "roc-package",
+    "webpack",
+    "roc-dev",
+    "client",
+    "browser"
+  ],
+  "repository": "https://github.com/rocjs/roc-package-webpack-web/tree/master/extensions/roc-package-webpack-web-dev",
+  "author": "Verdens Gang AS",
+  "contributors": [
+    {
+      "name": "Gustaf Dalemar"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "debug": "~2.2.0",
+    "koa": "~1.1.1",
+    "koa-webpack-dev-middleware": "~1.1.0",
+    "qs": "~6.1.0",
+    "roc": "^1.0.0-rc.12",
+    "roc-package-webpack-dev": "^1.0.0-beta.2",
+    "webpack": "~1.12.2",
+    "webpack-hot-middleware": "~2.10.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "~6.1.2",
+    "eslint": "~3.0.1",
+    "eslint-config-airbnb-base": "~4.0.0",
+    "eslint-plugin-babel": "~3.3.0",
+    "eslint-plugin-import": "~1.10.2"
+  },
+  "roc": {
+    "packages": [
+      "./lib/index.js"
+    ]
+  }
+}
