@@ -1,0 +1,18 @@
+{
+  "name": "roc-abstract-package-base",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "start": "rid",
+    "rid": "rid",
+    "build": "rid build",
+    "lint": "rid lint:alias",
+    "link": "rid link",
+    "link:all": "rid link roc",
+    "test": "npm run lint"
+  },
+  "devDependencies": {
+    "@rocjs/roc-internal-dev": "^2.0.0",
+    "babel-plugin-transform-async-to-generator": "~6.8.0"
+  }
+}
