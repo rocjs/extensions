@@ -1,0 +1,17 @@
+{
+  "name": "roc-package-webpack-node-example-simple",
+  "version": "1.0.0",
+  "description": "Roc Webpack Node example",
+  "keywords": [
+    "roc"
+  ],
+  "author": "Verdens Gang AS",
+  "license": "MIT",
+  "dependencies": {
+    "roc": "*",
+    "roc-package-webpack-node": "*"
+  },
+  "devDependencies": {
+    "roc-package-webpack-node-dev": "*"
+  }
+}
