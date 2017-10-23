@@ -1,4 +1,4 @@
-import { isBoolean, isInteger, required } from 'roc/validators';
+import { isBoolean, isInteger, isString, oneOf, required, notEmpty } from 'roc/validators';
 
 export const config = {
     settings: {
@@ -7,6 +7,7 @@ export const config = {
                 options: {
                     __raw: {},
                     open: true,
+                    host: null,
                     port: 3030,
                 },
                 enabled: true,
@@ -29,8 +30,14 @@ export const meta = {
                 },
                 options: {
                     open: {
-                        description: 'If Browsersync should open when the server is ready.',
-                        validator: required(isBoolean),
+                        description: 'Decide which URL to open automatically when Browsersync starts. ' +
+                            'Defaults to "local" if none set. Can be true, local, external, ' +
+                            'ui, ui-external, tunnel or false.',
+                        validator: required(oneOf(/^(external|ui|ui-external|tunnel)$/, isBoolean)),
+                    },
+                    host: {
+                        description: 'The host that Browsersync should use, will be automatic by default.',
+                        validator: notEmpty(isString),
                     },
                     port: {
                         description: 'The port that Browsersync should start on, should be a range of at least 2.',
