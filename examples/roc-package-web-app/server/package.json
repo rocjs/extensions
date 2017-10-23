@@ -1,0 +1,19 @@
+{
+  "name": "roc-web-app-server-example",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Roc Web server example",
+  "author": "Schibsted",
+  "license": "MIT",
+  "scripts": {
+    "dev": "roc dev --build-targets node --build-input-node index.js --build-koaMiddlewares koa-middlewares.js",
+    "build": "roc build --build-targets node --build-input-node index.js --build-koaMiddlewares koa-middlewares.js",
+    "start": "roc start"
+  },
+  "dependencies": {
+    "roc-package-web-app": "latest"
+  },
+  "devDependencies": {
+    "roc-package-web-app-dev": "latest"
+  }
+}

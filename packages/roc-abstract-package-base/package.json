@@ -1,18 +1,33 @@
 {
   "name": "roc-abstract-package-base",
-  "private": true,
+  "version": "1.0.0-beta.2",
+  "description": "Abstract base for Roc packages",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "roc",
+    "roc-abstract",
+    "roc-package"
+  ],
+  "repository": "https://github.com/rocjs/roc-extensions/tree/master/packages/roc-abstract-package-base",
+  "author": "Schibsted",
+  "contributors": [
+    {
+      "name": "Gustaf Dalemar"
+    },
+    {
+      "name": "Andreas Søvik"
+    }
+  ],
   "license": "MIT",
-  "scripts": {
-    "start": "rid",
-    "rid": "rid",
-    "build": "rid build",
-    "lint": "rid lint:alias",
-    "link": "rid link",
-    "link:all": "rid link roc",
-    "test": "npm run lint"
+  "dependencies": {
+    "roc": "^1.0.0-rc.23"
   },
-  "devDependencies": {
-    "@rocjs/roc-internal-dev": "^2.0.0",
-    "babel-plugin-transform-async-to-generator": "~6.8.0"
+  "roc": {
+    "packages": [
+      "./lib/index.js"
+    ]
   }
 }

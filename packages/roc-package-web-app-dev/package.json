@@ -1,0 +1,39 @@
+{
+  "name": "roc-package-web-app-dev",
+  "version": "1.0.0-beta.7",
+  "description": "Package for building web applications using Roc (Development)",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "roc",
+    "roc-package",
+    "webpack",
+    "roc-dev",
+    "server",
+    "client"
+  ],
+  "repository": "https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app-dev",
+  "author": "Schibsted",
+  "contributors": [
+    {
+      "name": "Gustaf Dalemar"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "roc": "^1.0.0-rc.23",
+    "roc-package-webpack-dev": "^1.0.0-beta.2",
+    "roc-package-webpack-node-dev": "^1.0.0-beta.2",
+    "roc-package-webpack-web-dev": "^1.0.0-beta.3",
+    "roc-plugin-browsersync": "^1.0.0-beta.2",
+    "roc-plugin-style-css": "^1.0.0-beta.3",
+    "roc-plugin-assets-images": "^1.0.0-beta.2"
+  },
+  "roc": {
+    "packages": [
+      "./lib/index.js"
+    ]
+  }
+}

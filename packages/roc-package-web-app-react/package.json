@@ -1,17 +1,56 @@
 {
   "name": "roc-package-web-app-react",
-  "private": true,
+  "description": "Package for building React applications with Roc",
+  "version": "1.0.0-beta.18",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "styles",
+    "views",
+    "app"
+  ],
+  "keywords": [
+    "roc",
+    "roc-package",
+    "react-router",
+    "react",
+    "redux"
+  ],
+  "repository": "https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app-react",
+  "author": "Schibsted",
+  "contributors": [
+    {
+      "name": "Gustaf Dalemar"
+    }
+  ],
   "license": "MIT",
-  "scripts": {
-    "start": "rid",
-    "rid": "rid",
-    "build": "rid build",
-    "lint": "rid lint:alias",
-    "link": "rid link",
-    "link:all": "rid link roc,roc-package-web-app,roc-package-web-app-dev,roc-plugin-react-dev,roc-plugin-react",
-    "test": "npm run lint"
+  "dependencies": {
+    "debug": "~2.2.0",
+    "error": "~7.0.2",
+    "history": "^3.0.0",
+    "intl": "^1.2.5",
+    "intl-locales-supported": "^1.0.0",
+    "nunjucks": "~2.4.2",
+    "pretty-error": "^2.1.0",
+    "react-helmet": "~5.0.3",
+    "react-redux": "^5.0.4",
+    "react-router": "^3.0.5",
+    "react-router-redial": "~0.3.5",
+    "react-router-redux": "^4.0.8",
+    "react-router-scroll-async": "~0.5.1",
+    "react-server-status": "~1.1.0",
+    "redial": "~0.5.0",
+    "redux": "^3.6.0",
+    "redux-saga": "^0.15.6",
+    "redux-thunk": "^2.2.0",
+    "roc": "^1.0.0-rc.23",
+    "roc-package-web-app": "^1.0.0-beta.7",
+    "roc-plugin-react": "^1.0.0-beta.4",
+    "serialize-javascript": "~1.2.0"
   },
-  "devDependencies": {
-    "@rocjs/roc-internal-dev": "^2.0.0"
+  "roc": {
+    "packages": [
+      "./lib/index.js"
+    ]
   }
 }

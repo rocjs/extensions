@@ -1,8 +1,0 @@
-node_modules
-*.log
-*.swp
-.DS_Store
-lib
-esdocs
-coverage
-build

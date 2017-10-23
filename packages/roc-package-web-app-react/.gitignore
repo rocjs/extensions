@@ -1,8 +1,0 @@
-node_modules
-*.log
-.DS_Store
-lib
-esdocs
-coverage
-build
-package-lock.json

@@ -1,0 +1,21 @@
+{
+  "name": "roc-package-webpack-node-example-runtime",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Roc Webpack Node example",
+  "scripts": {
+    "start": "node start.js"
+  },
+  "keywords": [
+    "roc"
+  ],
+  "author": "Verdens Gang AS",
+  "license": "MIT",
+  "dependencies": {
+    "roc-package-webpack-node": "latest",
+    "roc": "1.0.0-rc.23"
+  },
+  "devDependencies": {
+    "roc-package-webpack-node-dev": "latest"
+  }
+}

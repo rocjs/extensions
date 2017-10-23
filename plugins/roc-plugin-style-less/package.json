@@ -1,17 +1,36 @@
 {
   "name": "roc-plugin-style-less",
-  "private": true,
+  "version": "1.0.0-beta.3",
+  "description": "Plugin providing Less support for Webpack in Roc",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "roc",
+    "roc-plugin",
+    "webpack",
+    "style",
+    "less"
+  ],
   "license": "MIT",
-  "scripts": {
-    "start": "rid",
-    "rid": "rid",
-    "build": "rid build",
-    "lint": "rid lint:alias",
-    "link": "rid link",
-    "link:all": "rid link",
-    "test": "npm run lint"
+  "repository": "https://github.com/rocjs/roc-extensions/tree/master/plugins/roc-plugin-style-less",
+  "author": "Schibsted",
+  "contributors": [
+    {
+      "name": "Christian Lizell"
+    },
+    {
+      "name": "Gustaf Dalemar"
+    }
+  ],
+  "dependencies": {
+    "less": "^2.5.1",
+    "less-loader": "^2.2.1"
   },
-  "devDependencies": {
-    "@rocjs/roc-internal-dev": "^2.0.0"
+  "roc": {
+    "packages": [
+      "./lib/index.js"
+    ]
   }
 }

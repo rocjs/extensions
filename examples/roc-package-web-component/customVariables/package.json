@@ -1,0 +1,16 @@
+{
+  "name": "roc-package-module-test",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Test of roc-package-module",
+  "main": "build/es5/index.js",
+  "jsnext:main": "build/es6/index.js",
+  "author": "Schibsted",
+  "license": "MIT",
+  "scripts": {
+      "dev": "roc dev --build-name hest --dev-template-path templates"
+  },
+  "devDependencies": {
+    "roc-package-web-component-dev": "latest"
+  }
+}

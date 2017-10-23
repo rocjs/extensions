@@ -1,0 +1,17 @@
+{
+  "name": "roc-web-react-simple-example",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Roc Web React simple example",
+  "author": "Schibsted",
+  "license": "MIT",
+  "scripts": {
+    "dev": "roc dev --runtime-applicationName 'Simple Example'"
+  },
+  "dependencies": {
+    "roc-package-web-app-react": "latest"
+  },
+  "devDependencies": {
+      "roc-package-web-app-react-dev": "latest"
+  }
+}

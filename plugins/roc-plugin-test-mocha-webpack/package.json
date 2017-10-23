@@ -1,17 +1,43 @@
 {
   "name": "roc-plugin-test-mocha-webpack",
-  "private": true,
+  "version": "1.0.0-beta.7",
+  "description": "Adds a way to easily test Webpack projects for Node in Roc",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "roc",
+    "roc-plugin",
+    "webpack",
+    "nyc",
+    "mocha",
+    "test"
+  ],
+  "repository": "https://github.com/rocjs/roc-extensions/tree/master/plugins/roc-plugin-test-mocha-webpack",
+  "author": "Schibsted",
+  "contributors": [
+    {
+      "name": "Gustaf Dalemar"
+    }
+  ],
   "license": "MIT",
-  "scripts": {
-    "start": "rid",
-    "rid": "rid",
-    "build": "rid build",
-    "lint": "rid lint:alias",
-    "link": "rid link",
-    "link:all": "rid link roc,roc-package-webpack-dev,roc-abstract-plugin-test,roc-plugin-start",
-    "test": "npm run lint"
+  "dependencies": {
+    "babel-plugin-istanbul": "~2.0.1",
+    "expect": "~1.20.0",
+    "micromatch": "~2.3.8",
+    "mocha": "~2.4.5",
+    "nyc": "~10.1.2",
+    "rimraf": "~2.5.2",
+    "roc": "^1.0.0-rc.23",
+    "roc-abstract-plugin-test": "^1.0.0-beta.2",
+    "roc-package-webpack-dev": "^1.0.0-beta.2",
+    "roc-plugin-start": "^1.0.0-beta.2",
+    "source-map-support": "0.4.0"
   },
-  "devDependencies": {
-    "@rocjs/roc-internal-dev": "^2.0.0"
+  "roc": {
+    "packages": [
+      "./lib/index.js"
+    ]
   }
 }
