@@ -1,0 +1,58 @@
+{
+  "name": "roc-package-module-dev",
+  "version": "1.0.0-beta.4",
+  "description": "Package providing module support for Roc (Development)",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "npm run lint"
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "roc",
+    "roc-package",
+    "babel",
+    "roc-dev"
+  ],
+  "repository": "https://github.com/rocjs/roc-package-module/tree/master/extensions/roc-package-module-dev",
+  "author": "Verdens Gang AS",
+  "contributors": [
+    {
+      "name": "Gustaf Dalemar"
+    },
+    {
+      "name": "Andreas Søvik"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^6.24.1",
+    "babel-preset-latest": "^6.24.1",
+    "chalk": "^1.1.3",
+    "chokidar": "^1.7.0",
+    "fs-readdir-recursive": "^1.0.0",
+    "glob": "^7.1.2",
+    "lodash": "^4.17.4",
+    "output-file-sync": "^2.0.0",
+    "path-exists": "^3.0.0",
+    "pretty-ms": "^2.1.0",
+    "roc": "^1.0.0-rc.12",
+    "roc-abstract-package-base-dev": "^1.0.0-beta.2",
+    "roc-plugin-babel": "^1.0.0-beta.1",
+    "slash": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-babel": "^4.1.1",
+    "eslint-plugin-import": "^2.3.0"
+  },
+  "roc": {
+    "packages": [
+      "./lib/index.js"
+    ]
+  }
+}
