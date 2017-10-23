@@ -1,0 +1,42 @@
+{
+  "name": "roc-plugin-browsersync",
+  "version": "1.0.0-beta.2",
+  "description": "Plugin providing Browsersync for Roc",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "npm run lint"
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "roc",
+    "roc-plugin",
+    "browsersync"
+  ],
+  "repository": "https://github.com/rocjs/roc-plugin-browsersync/tree/master/extensions/roc-plugin-browsersync",
+  "author": "Verdens Gang AS",
+  "contributors": [
+    {
+      "name": "Gustaf Dalemar"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "~2.9.11",
+    "roc": "^1.0.0-rc.12"
+  },
+  "devDependencies": {
+    "babel-eslint": "~6.1.2",
+    "eslint": "~3.0.1",
+    "eslint-config-airbnb-base": "~4.0.0",
+    "eslint-plugin-babel": "~3.3.0",
+    "eslint-plugin-import": "~1.10.2"
+  },
+  "roc": {
+    "packages": [
+      "./lib/index.js"
+    ]
+  }
+}
