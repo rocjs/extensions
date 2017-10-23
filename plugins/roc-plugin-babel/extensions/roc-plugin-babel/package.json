@@ -1,0 +1,45 @@
+{
+  "name": "roc-plugin-babel",
+  "description": "Roc plugin that adds basic Babel management",
+  "author": "Verdens Gang AS",
+  "license": "MIT",
+  "version": "1.0.0-beta.4",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "npm run lint"
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "roc",
+    "roc-plugin",
+    "babel"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rocjs/roc-plugin-babel"
+  },
+  "contributors": [
+    {
+      "name": "Gustaf Dalemar"
+    }
+  ],
+  "dependencies": {
+    "roc": "^1.0.0-rc.11",
+    "lodash.isfunction": "~3.0.8"
+  },
+  "devDependencies": {
+    "babel-eslint": "~6.1.2",
+    "eslint": "~3.0.1",
+    "eslint-config-airbnb-base": "~4.0.0",
+    "eslint-plugin-babel": "~3.3.0",
+    "eslint-plugin-import": "~1.10.2"
+  },
+  "roc": {
+    "packages": [
+      "./lib/index.js"
+    ]
+  }
+}

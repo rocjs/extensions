@@ -1,0 +1,16 @@
+{
+  "name": "roc-plugin-babel",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "start": "rid",
+    "rid": "rid",
+    "build": "rid build",
+    "lint": "rid lint",
+    "link": "rid link",
+    "test": "npm run lint"
+  },
+  "devDependencies": {
+    "@rocjs/roc-internal-dev": "^2.0.2"
+  }
+}
