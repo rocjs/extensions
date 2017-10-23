@@ -1,0 +1,54 @@
+{
+  "name": "roc-plugin-test-mocha-webpack",
+  "version": "1.0.0-beta.7",
+  "description": "Adds a way to easily test Webpack projects for Node in Roc",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "npm run lint"
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "roc",
+    "roc-plugin",
+    "webpack",
+    "nyc",
+    "mocha",
+    "test"
+  ],
+  "repository": "https://github.com/rocjs/roc-plugin-test-mocha-webpack/tree/master/extensions/roc-plugin-test-mocha-webpack",
+  "author": "Verdens Gang AS",
+  "contributors": [
+    {
+      "name": "Gustaf Dalemar"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "babel-plugin-istanbul": "~2.0.1",
+    "expect": "~1.20.0",
+    "micromatch": "~2.3.8",
+    "mocha": "~2.4.5",
+    "nyc": "~10.1.2",
+    "rimraf": "~2.5.2",
+    "roc": "^1.0.0-rc.12",
+    "roc-abstract-plugin-test": "^1.0.0-beta.2",
+    "roc-package-webpack-dev": "^1.0.0-beta.2",
+    "roc-plugin-start": "^1.0.0-beta.2",
+    "source-map-support": "0.4.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "~6.1.2",
+    "eslint": "~3.0.1",
+    "eslint-config-airbnb-base": "~4.0.0",
+    "eslint-plugin-babel": "~3.3.0",
+    "eslint-plugin-import": "~1.10.2"
+  },
+  "roc": {
+    "packages": [
+      "./lib/index.js"
+    ]
+  }
+}
