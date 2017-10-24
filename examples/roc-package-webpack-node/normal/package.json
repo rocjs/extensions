@@ -10,9 +10,9 @@
   "license": "MIT",
   "dependencies": {
     "roc": "^1.0.0-rc.23",
-    "roc-package-webpack-node": "latest"
+    "roc-package-webpack-node": "^1.0.0"
   },
   "devDependencies": {
-    "roc-package-webpack-node-dev": "latest"
+    "roc-package-webpack-node-dev": "^1.0.0"
   }
 }

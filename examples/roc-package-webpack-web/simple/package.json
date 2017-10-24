@@ -13,6 +13,6 @@
   "author": "Schibsted",
   "license": "MIT",
   "devDependencies": {
-    "roc-package-webpack-web-dev": "latest"
+    "roc-package-webpack-web-dev": "^1.0.0"
   }
 }

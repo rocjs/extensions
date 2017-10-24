@@ -6,13 +6,13 @@
   "author": "Schibsted",
   "license": "MIT",
   "dependencies": {
-    "roc-package-web-app-react": "latest",
+    "roc-package-web-app-react": "^1.0.0",
     "chart.js": "^1.0.2",
     "isomorphic-fetch": "^2.2.0",
     "react-chartjs": "^0.6.0"
   },
   "devDependencies": {
-      "roc-package-web-app-react-dev": "latest",
-      "roc-plugin-style-sass": "^1.0.0-beta.2"
+      "roc-package-web-app-react-dev": "^1.0.0",
+      "roc-plugin-style-sass": "^1.0.0"
   }
 }

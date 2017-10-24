@@ -6,10 +6,10 @@
   "author": "Schibsted",
   "license": "MIT",
   "dependencies": {
-    "roc-package-web-app": "latest"
+    "roc-package-web-app": "^1.0.0"
   },
   "devDependencies": {
-    "roc-package-web-app-dev": "latest"
+    "roc-package-web-app-dev": "^1.0.0"
   },
   "roc": {
       "packages": [

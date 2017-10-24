@@ -10,10 +10,10 @@
     "react-toggle": "~2.1.1",
     "redux-api-middleware": "~1.0.2",
     "redux-fetcher": "~2.0.0",
-    "roc-package-web-app-react": "^1.0.0-beta.18"
+    "roc-package-web-app-react": "^1.0.0"
   },
   "devDependencies": {
-    "roc-package-web-app-react-dev": "^1.0.0-beta.18",
-    "roc-plugin-style-sass": "^1.0.0-beta.2"
+    "roc-package-web-app-react-dev": "^1.0.0",
+    "roc-plugin-style-sass": "^1.0.0"
   }
 }

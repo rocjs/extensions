@@ -11,7 +11,7 @@
   "author": "Schibsted",
   "license": "MIT",
   "devDependencies": {
-    "roc-package-web-component-dev": "latest",
+    "roc-package-web-component-dev": "^1.0.0",
     "roc-plugin-style-sass": "^1.0.0-alpha"
   }
 }
