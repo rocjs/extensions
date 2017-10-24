@@ -1,6 +1,6 @@
 {
   "name": "roc-plugin-start",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0",
   "description": "Adds start command with a way to modify the runtime",
   "main": "lib/index.js",
   "files": [
