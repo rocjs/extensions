@@ -4,7 +4,7 @@ module.exports = {
             targets: ['cjs'],
             babelPresetEnv: {
                 targets: {
-                    node: '4.8',
+                    node: '6',
                 },
             },
             mono: [
