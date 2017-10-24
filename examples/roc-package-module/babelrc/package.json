@@ -1,0 +1,22 @@
+{
+  "name": "roc-package-module-test-babelrc",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Test of roc-package-module",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "jsnext:main": "lib/esm/index.js",
+  "scripts": {
+    "build": "NODE_ENV=production roc build",
+    "dev": "roc dev"
+  },
+  "author": "Schibsted",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-plugin-transform-decorators-legacy": "1.3.4",
+    "babel-preset-react": "~6.16.0",
+    "babel-preset-react-optimize": "1.0.1",
+    "babel-preset-stage-1": "~6.16.0",
+    "roc-package-module-dev": "latest"
+  }
+}

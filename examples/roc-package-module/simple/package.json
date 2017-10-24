@@ -1,0 +1,18 @@
+{
+  "name": "roc-package-module-test-simple",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Test of roc-package-module",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "jsnext:main": "lib/esm/index.js",
+  "scripts": {
+    "build": "roc build",
+    "dev": "roc dev"
+  },
+  "author": "Schibsted",
+  "license": "MIT",
+  "devDependencies": {
+    "roc-package-module-dev": "latest"
+  }
+}

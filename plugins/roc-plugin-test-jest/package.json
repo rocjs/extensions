@@ -1,16 +1,40 @@
 {
   "name": "roc-plugin-test-jest",
-  "private": true,
+  "description": "A Roc plugin for testing with Jest",
   "license": "MIT",
-  "scripts": {
-    "start": "rid",
-    "rid": "rid",
-    "build": "rid build",
-    "lint": "rid lint",
-    "link": "rid link",
-    "test": "npm run lint"
+  "version": "1.0.0-beta.3",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "roc",
+    "roc-plugin",
+    "jest",
+    "test"
+  ],
+  "repository": "https://github.com/rocjs/roc-extensions/tree/master/plugins/roc-plugin-test-jest",
+  "author": "Schibsted",
+  "contributors": [
+    {
+      "name": "Gustaf Dalemar"
+    }
+  ],
+  "dependencies": {
+    "babel-jest": "^16.0.0",
+    "browser-resolve": "^1.11.2",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^20.0.3",
+    "jest-cli": "^20.0.3",
+    "jest-junit": "^1.5.1",
+    "react-test-renderer": "^15.3.2",
+    "resolve": "^1.3.1",
+    "roc": "^1.0.0-rc.23",
+    "roc-abstract-plugin-test": "^1.0.0-beta.3"
   },
-  "devDependencies": {
-    "@rocjs/roc-internal-dev": "^2.0.2"
+  "roc": {
+    "packages": [
+      "./lib/index.js"
+    ]
   }
 }

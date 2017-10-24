@@ -1,0 +1,15 @@
+{
+  "name": "roc-web-react-simple-redux-example",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Roc Web React simple redux example",
+  "author": "Schibsted",
+  "license": "MIT",
+  "dependencies": {
+    "roc-package-web-app-react": "latest"
+  },
+  "devDependencies": {
+      "roc-package-web-app-react-dev": "latest",
+      "roc-plugin-style-sass": "^1.0.0-beta.2"
+  }
+}

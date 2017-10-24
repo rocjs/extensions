@@ -1,17 +1,31 @@
 {
   "name": "roc-plugin-browsersync",
-  "private": true,
+  "version": "1.0.0-beta.2",
+  "description": "Plugin providing Browsersync for Roc",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "roc",
+    "roc-plugin",
+    "browsersync"
+  ],
+  "repository": "https://github.com/rocjs/roc-extensions/tree/master/plugins/roc-plugin-browsersync",
+  "author": "Schibsted",
+  "contributors": [
+    {
+      "name": "Gustaf Dalemar"
+    }
+  ],
   "license": "MIT",
-  "scripts": {
-    "start": "rid",
-    "rid": "rid",
-    "build": "rid build",
-    "lint": "rid lint:alias",
-    "link": "rid link",
-    "link:all": "rid link roc",
-    "test": "npm run lint"
+  "dependencies": {
+    "browser-sync": "~2.9.11",
+    "roc": "^1.0.0-rc.23"
   },
-  "devDependencies": {
-    "@rocjs/roc-internal-dev": "^2.0.0"
+  "roc": {
+    "packages": [
+      "./lib/index.js"
+    ]
   }
 }

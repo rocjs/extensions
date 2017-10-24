@@ -1,0 +1,18 @@
+{
+  "name": "roc-package-webpack-node-example-simple",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Roc Webpack Node example",
+  "keywords": [
+    "roc"
+  ],
+  "author": "Schibsted",
+  "license": "MIT",
+  "dependencies": {
+    "roc": "^1.0.0-rc.23",
+    "roc-package-webpack-node": "latest"
+  },
+  "devDependencies": {
+    "roc-package-webpack-node-dev": "latest"
+  }
+}

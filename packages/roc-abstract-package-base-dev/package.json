@@ -1,0 +1,36 @@
+{
+  "name": "roc-abstract-package-base-dev",
+  "version": "1.0.0-beta.2",
+  "description": "Abstract base for Roc packages (Development)",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "roc",
+    "roc-abstract",
+    "roc-package",
+    "roc-dev"
+  ],
+  "repository": "https://github.com/rocjs/roc-extensions/tree/master/packages/roc-abstract-package-base-dev",
+  "author": "Schibsted",
+  "contributors": [
+    {
+      "name": "Gustaf Dalemar"
+    },
+    {
+      "name": "Andreas Søvik"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "~4.5.1",
+    "rimraf": "~2.5.1",
+    "roc": "^1.0.0-rc.23"
+  },
+  "roc": {
+    "packages": [
+      "./lib/index.js"
+    ]
+  }
+}

@@ -1,16 +1,31 @@
 {
   "name": "roc-plugin-babel",
-  "private": true,
+  "description": "Roc plugin that adds basic Babel management",
   "license": "MIT",
-  "scripts": {
-    "start": "rid",
-    "rid": "rid",
-    "build": "rid build",
-    "lint": "rid lint",
-    "link": "rid link",
-    "test": "npm run lint"
+  "version": "1.0.0-beta.4",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "roc",
+    "roc-plugin",
+    "babel"
+  ],
+  "repository": "https://github.com/rocjs/roc-extensions/tree/master/plugins/roc-plugin-babel",
+  "author": "Schibsted",
+  "contributors": [
+    {
+      "name": "Gustaf Dalemar"
+    }
+  ],
+  "dependencies": {
+    "roc": "^1.0.0-rc.23",
+    "lodash.isfunction": "~3.0.8"
   },
-  "devDependencies": {
-    "@rocjs/roc-internal-dev": "^2.0.2"
+  "roc": {
+    "packages": [
+      "./lib/index.js"
+    ]
   }
 }

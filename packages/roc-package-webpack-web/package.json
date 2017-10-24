@@ -1,17 +1,34 @@
 {
   "name": "roc-package-webpack-web",
-  "private": true,
+  "version": "1.0.0-beta.3",
+  "description": "Package providing browser support through Webpack for Roc",
+  "main": "lib/index.js",
+  "files": [
+    "bin",
+    "lib"
+  ],
+  "keywords": [
+    "roc",
+    "roc-package",
+    "webpack",
+    "client",
+    "browser"
+  ],
+  "repository": "https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-webpack-web",
+  "author": "Schibsted",
+  "contributors": [
+    {
+      "name": "Gustaf Dalemar"
+    }
+  ],
   "license": "MIT",
-  "scripts": {
-    "start": "rid",
-    "rid": "rid",
-    "build": "rid build",
-    "lint": "rid lint:alias",
-    "link": "rid link",
-    "link:all": "rid link roc,roc-package-webpack-dev,roc-package-webpack",
-    "test": "npm run lint"
+  "dependencies": {
+    "roc": "^1.0.0-rc.23",
+    "roc-package-webpack": "^1.0.0-beta.2"
   },
-  "devDependencies": {
-    "@rocjs/roc-internal-dev": "^2.0.0"
+  "roc": {
+    "packages": [
+      "./lib/index.js"
+    ]
   }
 }

@@ -1,17 +1,38 @@
 {
   "name": "roc-plugin-style-css",
-  "private": true,
+  "version": "1.0.0-beta.9",
+  "description": "Plugin providing CSS support for Webpack in Roc",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "roc",
+    "roc-plugin",
+    "webpack",
+    "style",
+    "css"
+  ],
+  "repository": "https://github.com/rocjs/roc-extensions/tree/master/plugins/roc-plugin-style-css",
+  "author": "Schibsted",
+  "contributors": [
+    {
+      "name": "Gustaf Dalemar"
+    }
+  ],
   "license": "MIT",
-  "scripts": {
-    "start": "rid",
-    "rid": "rid",
-    "build": "rid build",
-    "lint": "rid lint",
-    "link": "rid link",
-    "link:all": "rid link roc",
-    "test": "npm run lint"
+  "dependencies": {
+    "autoprefixer": "~6.6.1",
+    "css-loader": "~0.23.0",
+    "extract-text-webpack-plugin": "~0.8.2",
+    "node-noop": "1.0.0",
+    "postcss-loader": "~0.8.0",
+    "roc": "^1.0.0-rc.23",
+    "style-loader": "~0.13.0"
   },
-  "devDependencies": {
-    "@rocjs/roc-internal-dev": "^2.0.0"
+  "roc": {
+    "packages": [
+      "./lib/index.js"
+    ]
   }
 }

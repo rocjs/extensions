@@ -1,0 +1,33 @@
+{
+  "name": "roc-plugin-react-dev",
+  "description": "Adds React support to Webpack and Roc (Development)",
+  "version": "1.0.0-beta.4",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "roc",
+    "roc-plugin"
+  ],
+  "repository": "https://github.com/rocjs/roc-extensions/tree/master/plugins/roc-plugin-react-dev",
+  "author": "Schibsted",
+  "contributors": [
+    {
+      "name": "Gustaf Dalemar"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "babel-plugin-react-transform": "~2.0.0",
+    "babel-preset-react": "~6.3.13",
+    "react-transform-catch-errors": "~1.0.2",
+    "react-transform-hmr": "~1.0.2",
+    "redbox-react": "~1.3.6"
+  },
+  "roc": {
+    "packages": [
+      "./lib/index.js"
+    ]
+  }
+}

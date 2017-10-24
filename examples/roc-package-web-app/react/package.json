@@ -1,0 +1,16 @@
+{
+  "name": "roc-web-app-react-example",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Roc Web client & server example",
+  "author": "Schibsted",
+  "license": "MIT",
+  "dependencies": {
+    "roc-package-web-app": "latest",
+    "roc-plugin-react": "latest"
+  },
+  "devDependencies": {
+    "roc-package-web-app-dev": "latest",
+    "roc-plugin-react-dev": "latest"
+  }
+}
