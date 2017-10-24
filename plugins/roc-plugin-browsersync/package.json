@@ -1,6 +1,6 @@
 {
   "name": "roc-plugin-browsersync",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0",
   "description": "Plugin providing Browsersync for Roc",
   "main": "lib/index.js",
   "files": [
