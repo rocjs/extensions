@@ -1,6 +1,6 @@
 {
   "name": "roc-abstract-package-base-dev",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0",
   "description": "Abstract base for Roc packages (Development)",
   "main": "lib/index.js",
   "files": [
