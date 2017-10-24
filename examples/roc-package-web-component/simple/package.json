@@ -11,6 +11,6 @@
       "dev": "roc dev --build-name hest --dev-template-path templates"
   },
   "devDependencies": {
-    "roc-package-web-component-dev": "latest"
+    "roc-package-web-component-dev": "^1.0.0"
   }
 }

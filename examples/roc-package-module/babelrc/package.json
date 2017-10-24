@@ -17,6 +17,6 @@
     "babel-preset-react": "~6.16.0",
     "babel-preset-react-optimize": "1.0.1",
     "babel-preset-stage-1": "~6.16.0",
-    "roc-package-module-dev": "latest"
+    "roc-package-module-dev": "^1.0.0"
   }
 }

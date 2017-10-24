@@ -9,9 +9,9 @@
     "dev": "roc dev"
   },
   "dependencies": {
-    "roc-package-web-app-react": "latest"
+    "roc-package-web-app-react": "^1.0.0"
   },
   "devDependencies": {
-      "roc-package-web-app-react-dev": "latest"
+      "roc-package-web-app-react-dev": "^1.0.0"
   }
 }
