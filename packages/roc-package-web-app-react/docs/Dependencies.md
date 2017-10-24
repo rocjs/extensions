@@ -99,7 +99,7 @@ __Extension__: roc-package-web-app-react
 __Custom resolve function__:  No  
 
 ### [roc-package-web-app](https://www.npmjs.com/package/roc-package-web-app)
-__Version__: ^1.0.0-beta.7  
+__Version__: ^1.0.0  
 __Extension__: roc-package-web-app-react  
 __Custom resolve function__:  No  
 
