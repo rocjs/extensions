@@ -1,7 +1,7 @@
 {
   "name": "roc-plugin-react-dev",
   "description": "Adds React support to Webpack and Roc (Development)",
-  "version": "1.0.0-beta.4",
+  "version": "1.0.0",
   "main": "lib/index.js",
   "files": [
     "lib"
