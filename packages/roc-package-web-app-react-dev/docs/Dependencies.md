@@ -3,6 +3,11 @@
 The dependencies that are available in the project.
 
 ## Exported
+### [extract-text-webpack-plugin](https://www.npmjs.com/package/extract-text-webpack-plugin)
+__Version__: ~0.8.2  
+__Extension__: roc-plugin-style-css  
+__Custom resolve function__:  No  
+
 ### [react-a11y](https://www.npmjs.com/package/react-a11y)
 __Version__: ~0.3.3  
 __Extension__: roc-package-web-app-react-dev  
