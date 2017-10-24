@@ -3,6 +3,7 @@
     "start": "roc",
     "test": "npm start lint"
   },
+  "repository": "https://github.com/rocjs/extensions",
   "devDependencies": {
     "babel-eslint": "~6.1.2",
     "babel-plugin-transform-export-extensions": "^6.22.0",
