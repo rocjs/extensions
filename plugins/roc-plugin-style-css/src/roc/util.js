@@ -1,5 +1,6 @@
 import { runHook } from 'roc';
 
+// eslint-disable-next-line global-require
 export const packageJSON = require('../../package.json');
 
 /**
