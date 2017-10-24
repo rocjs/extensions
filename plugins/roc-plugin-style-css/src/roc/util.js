@@ -1,6 +1,6 @@
 import { runHook } from 'roc';
 
-const packageJSON = require('../../package.json');
+export const packageJSON = require('../../package.json');
 
 /**
  * Helper function for invoking/running a hook, pre-configured for the current package.

@@ -1,14 +1,19 @@
 import { isArray, isObject, isString, oneOf } from 'roc/validators';
-import { lazyFunctionRequire } from 'roc';
+import { lazyFunctionRequire, generateDependencies } from 'roc';
 
 import config from '../config/roc.config.js';
 import meta from '../config/roc.config.meta.js';
+
+import { packageJSON } from './util';
 
 const lazyRequire = lazyFunctionRequire(require);
 
 export default {
     config,
     meta,
+    dependencies: {
+        exports: generateDependencies(packageJSON, ['extract-text-webpack-plugin']),
+    },
     actions: [{
         hook: 'build-webpack',
         description: 'Adds CSS support.',
