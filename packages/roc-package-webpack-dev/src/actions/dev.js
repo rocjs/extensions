@@ -2,7 +2,7 @@ import { stat, writeFileSync } from 'fs';
 import { join } from 'path';
 
 import { sync } from 'mkdirp';
-import { appendSettings, initLog } from 'roc';
+import { appendSettings, getSettings, initLog } from 'roc';
 import { cleanPromise } from 'roc-abstract-package-base-dev';
 import webpack from 'webpack';
 
@@ -17,10 +17,14 @@ const writeStatsFile = (buildPath, scriptPath) =>
             if (err) {
                 sync(buildPath);
             }
-
+            const bundleName = getSettings('build').name;
             writeFileSync(join(buildPath, 'webpack-stats.json'), JSON.stringify({
-                script: [`${scriptPath}`],
-                css: '',
+                script: {
+                    [bundleName]: [`${scriptPath}`],
+                },
+                css: {
+                    [bundleName]: undefined,
+                },
             }));
 
             return resolve();

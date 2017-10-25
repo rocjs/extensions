@@ -11,23 +11,24 @@ import { getSettings } from 'roc';
  * @returns {object} A object with keys for 'script' and 'css'
  * @private
  */
-export function parseStats(stats, publicPath = '', name = 'app') {
+export function parseStats(stats, publicPath = '') {
     // get chunks by name and extensions
-    const getChunks = (n, ext = 'js') => {
-        let chunk = stats.assetsByChunkName[n];
+    const getChunks = (ext = 'js') => {
+        const chunk = stats.assetsByChunkName;
+        return Object.keys(chunk).reduce((chunksForExtension, chunkName) => {
+            // a chunk could be a string or an array, so make sure it is an array
+            chunksForExtension[chunkName] = [].concat(chunk[chunkName]);
 
-        // a chunk could be a string or an array, so make sure it is an array
-        if (!(Array.isArray(chunk))) {
-            chunk = [chunk];
-        }
+            chunksForExtension[chunkName] = chunksForExtension[chunkName]
+                .filter((c) => extname(c) === `.${ext}`)
+                .map((c) => publicPath + c);
 
-        return chunk
-            .filter((chunkName) => extname(chunkName) === `.${ext}`)
-            .map((chunkName) => publicPath + chunkName);
+            return chunksForExtension;
+        }, {});
     };
 
-    const script = getChunks(name, 'js');
-    const css = getChunks(name, 'css');
+    const script = getChunks('js');
+    const css = getChunks('css');
 
     return {
         script,
