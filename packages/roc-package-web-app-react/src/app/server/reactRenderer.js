@@ -92,9 +92,8 @@ export function initRenderPage(distMode, devMode, Header) {
         stats,
     } = {}) => {
         const { dev, build, ...rest } = rocConfig; // eslint-disable-line
-        const buildName = rocConfig.build.name;
-        const bundleName = stats.script[buildName][0];
-        const styleName = (stats.css[buildName] || [])[0];
+        const bundleName = stats.script[build.name][0];
+        const styleName = (stats.css[build.name] || [])[0];
 
         const rocConfigClient = distMode ? rest : { ...rest, dev };
 

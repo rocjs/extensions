@@ -1,8 +1,6 @@
 import { writeFileSync } from 'fs';
 import { extname, join } from 'path';
 
-import { getSettings } from 'roc';
-
 /**
  * A parser for stats that find all JS and CSS files
  *
@@ -51,9 +49,7 @@ export function writeStats(stats) {
     const analysisFilepath = join(this.options.output.path, 'webpack-analysis.json');
 
     const json = stats.toJson();
-    const name = getSettings('build').name;
-
-    const content = parseStats(json, publicPath, name);
+    const content = parseStats(json, publicPath);
 
     writeFileSync(statsFilepath, JSON.stringify(content));
     writeFileSync(analysisFilepath, JSON.stringify(json));
