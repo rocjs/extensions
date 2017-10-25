@@ -43,10 +43,11 @@ function getArtifact(compiler, err, stats) {
         return undefined;
     }
 
-    let bundleName = `${getSettings('build').name}.js`;
+    const buildName = getSettings('build').name;
+    let bundleName = `${buildName}.js`;
 
     if (statsJson.assets && statsJson.assets.length > 0) {
-        bundleName = parseStats(statsJson).script[0];
+        bundleName = parseStats(statsJson).script[buildName][0];
     }
 
     return path.join(compiler.outputPath, '/', bundleName);
