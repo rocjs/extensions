@@ -11,6 +11,7 @@ import Helmet from 'react-helmet';
 import { triggerHooks, useRedial } from 'react-router-redial';
 import { getAbsolutePath, getSettings } from 'roc';
 import ServerStatus from 'react-server-status';
+import { ApolloProvider, getDataFromTree } from 'react-apollo';
 
 import { invokeHook } from '../../roc/util';
 
@@ -81,6 +82,7 @@ export function initRenderPage(distMode, devMode, Header) {
     } = setupTemplate(devMode);
 
     return ({
+        apolloState = {},
         content = '',
         customTemplateValues = {},
         error,
@@ -106,6 +108,7 @@ export function initRenderPage(distMode, devMode, Header) {
 
         return nunjucksEnv.render(mainTemplate, {
             ...nunjucksContext,
+            apolloState: serialize(apolloState),
             bundleName,
             content,
             custom: customTemplateValues,
@@ -137,6 +140,7 @@ export function reactRender({
     templateValues,
     reduxSagas,
     stats,
+    apollo,
 }) {
     return new Promise((resolve) => {
         let currentLocation;
@@ -211,62 +215,88 @@ export function reactRender({
 
                     let component = applyRouterMiddleware(useRedial({ redialMap }))(renderProps);
 
-                    if (store) {
-                        component = (
-                            <Provider store={store}>
-                                {component}
-                            </Provider>
-                        );
+                    if (apollo) {
+                        const providerProps = { client: apollo, store };
+                        component = <ApolloProvider {...providerProps}>{component}</ApolloProvider>;
+                    } else if (store) {
+                        component = <Provider store={store}>{component}</Provider>;
                     }
 
-                    const content = staticRender ? renderToStaticMarkup(component) : renderToString(component);
-                    const head = Helmet.rewind();
-                    const reduxState = store ? store.getState() : {};
-                    const status = ServerStatus.rewind() || 200;
+                    const apolloPromise = apollo
+                        ? getDataFromTree(component)
+                        : Promise.resolve();
 
-                    const customTemplateValues = invokeHook('get-template-values', {
-                        koaState,
-                        settings: rocConfig,
-                        reduxState,
-                        stats,
-                    });
+                    return apolloPromise.then(() => {
+                        const content = staticRender ? renderToStaticMarkup(component) : renderToString(component);
+                        const head = Helmet.rewind();
+                        const reduxState = store ? store.getState() : {};
+                        const status = ServerStatus.rewind() || 200;
 
-                    if (hasTemplateValues) {
-                        // Provides settings, Redux state and Koa state
-                        Object.assign(
-                            customTemplateValues,
-                            templateValues.default({
-                                koaState,
-                                settings: rocConfig,
+                        const customTemplateValues = invokeHook('get-template-values', {
+                            koaState,
+                            settings: rocConfig,
+                            reduxState,
+                            stats,
+                        });
+
+                        if (hasTemplateValues) {
+                            // Provides settings, Redux state and Koa state
+                            Object.assign(
+                                customTemplateValues,
+                                templateValues.default({
+                                    koaState,
+                                    settings: rocConfig,
+                                    reduxState,
+                                    stats,
+                                }),
+                            );
+                        }
+
+                        return resolve({
+                            body: renderPage({
+                                apolloState: apollo && !store ? apollo.store.getState() : {},
+                                customTemplateValues,
+                                content,
+                                head,
+                                redialProps,
                                 reduxState,
                                 stats,
+                                request,
+                                status,
                             }),
-                        );
-                    }
-
-                    return resolve({
-                        body: renderPage({
-                            customTemplateValues,
-                            content,
-                            head,
-                            redialProps,
-                            reduxState,
-                            request,
                             status,
-                            stats,
-                        }),
-                        status,
-                    });
-                })
-                    .catch((err) => {
+                        });
+                    }).catch((err) => {
                         if (err) {
-                            log('General error', pretty.render(err));
+                            log('Render error', pretty.render(err));
                         }
                         return resolve({
                             status: 500,
-                            body: renderPage({ error: err, request, status: 500, stats }),
+                            body: renderPage({
+                                error: err,
+                                request,
+                                status: 500,
+                                stats,
+                                redialProps,
+                                reduxState: store ? store.getState() : {},
+                            }),
                         });
                     });
+                }).catch((err) => {
+                    if (err) {
+                        log('General error', pretty.render(err));
+                    }
+                    return resolve({
+                        status: 500,
+                        body: renderPage({
+                            error: err,
+                            request,
+                            status: 500,
+                            stats,
+                            reduxState: store ? store.getState() : {},
+                        }),
+                    });
+                });
             });
     });
 }

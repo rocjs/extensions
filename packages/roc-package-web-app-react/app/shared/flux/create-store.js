@@ -18,7 +18,7 @@ import { rocConfig } from '../universal-config';
  */
 export default function createReduxStore(reducers, middlewares = [], enhancers = []) {
     return (callback) =>
-        (history, initialState) => {
+        (history, initialState, extraReducers, extraMiddlewares) => {
             let finalCreateStore;
             const normalMiddlewares = [].concat(middlewares);
             let sagaMiddleware;
@@ -32,6 +32,9 @@ export default function createReduxStore(reducers, middlewares = [], enhancers =
 
             // Add the react-router-redux middleware
             normalMiddlewares.push(routerMiddleware(history));
+
+            // Add extra middleware, like Apollo
+            normalMiddlewares.push(...extraMiddlewares);
 
             if (__DEV__ && __WEB__) {
                 const { persistState } = require('redux-devtools'); // eslint-disable-line
@@ -63,6 +66,7 @@ export default function createReduxStore(reducers, middlewares = [], enhancers =
 
             const reducer = combineReducers({
                 routing: routerReducer,
+                ...extraReducers,
                 ...reducers,
             });
 
@@ -73,6 +77,7 @@ export default function createReduxStore(reducers, middlewares = [], enhancers =
                 callback((newReducers) => {
                     const nextRootReducer = combineReducers({
                         routing: routerReducer,
+                        ...extraReducers,
                         ...newReducers,
                     });
                     store.replaceReducer(nextRootReducer);

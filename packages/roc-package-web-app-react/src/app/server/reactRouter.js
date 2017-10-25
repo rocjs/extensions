@@ -19,6 +19,7 @@ export default function reactRouter({
     rocPath,
     Header,
     reduxSagas,
+    apolloServerOptions,
 }) {
     const rocConfig = getSettings();
 
@@ -46,7 +47,13 @@ export default function reactRouter({
                 this.status = 200;
                 this.body = renderPage();
             } else {
-                const { store, history, url } = setupForRender(createStore, this.url, rocPath);
+                const { store, history, url, apollo } = setupForRender(
+                    createStore,
+                    this.url,
+                    rocPath,
+                    this.request,
+                    apolloServerOptions
+                );
 
                 // Give Koa middlewares a chance to interact with the reduxStore
                 // This can be used to dynamically pass some data to the client.
@@ -74,6 +81,7 @@ export default function reactRouter({
                     templateValues,
                     reduxSagas,
                     stats,
+                    apollo,
                 });
 
                 if (redirect) {
