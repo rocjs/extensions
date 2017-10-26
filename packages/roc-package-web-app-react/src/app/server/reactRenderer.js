@@ -73,14 +73,12 @@ function setupTemplate(devMode) {
     };
 }
 
-export function initRenderPage({ script, css }, distMode, devMode, Header) {
+export function initRenderPage(distMode, devMode, Header) {
     const {
         nunjucksEnv,
         nunjucksContext,
         mainTemplate,
     } = setupTemplate(devMode);
-    const bundleName = script[0];
-    const styleName = css[0];
 
     return ({
         content = '',
@@ -91,8 +89,11 @@ export function initRenderPage({ script, css }, distMode, devMode, Header) {
         reduxState = {},
         request,
         status,
+        stats,
     } = {}) => {
         const { dev, build, ...rest } = rocConfig; // eslint-disable-line
+        const bundleName = stats.script[build.name][0];
+        const styleName = (stats.css[build.name] || [])[0];
 
         const rocConfigClient = distMode ? rest : { ...rest, dev };
 
@@ -116,6 +117,7 @@ export function initRenderPage({ script, css }, distMode, devMode, Header) {
             request,
             serializedAppConfig: serialize(appConfig),
             serializedRocConfig: serialize(rocConfigClient),
+            stats,
             status,
             styleName,
         });
@@ -134,6 +136,7 @@ export function reactRender({
     hasTemplateValues,
     templateValues,
     reduxSagas,
+    stats,
 }) {
     return new Promise((resolve) => {
         let currentLocation;
@@ -225,6 +228,7 @@ export function reactRender({
                         koaState,
                         settings: rocConfig,
                         reduxState,
+                        stats,
                     });
 
                     if (hasTemplateValues) {
@@ -235,6 +239,7 @@ export function reactRender({
                                 koaState,
                                 settings: rocConfig,
                                 reduxState,
+                                stats,
                             }),
                         );
                     }
@@ -248,19 +253,20 @@ export function reactRender({
                             reduxState,
                             request,
                             status,
+                            stats,
                         }),
                         status,
                     });
                 })
-                .catch((err) => {
-                    if (err) {
-                        log('General error', pretty.render(err));
-                    }
-                    return resolve({
-                        status: 500,
-                        body: renderPage({ error: err, request, status: 500 }),
+                    .catch((err) => {
+                        if (err) {
+                            log('General error', pretty.render(err));
+                        }
+                        return resolve({
+                            status: 500,
+                            body: renderPage({ error: err, request, status: 500, stats }),
+                        });
                     });
-                });
             });
     });
 }

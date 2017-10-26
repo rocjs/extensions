@@ -31,7 +31,7 @@
     "rimraf": "~2.5.2",
     "roc": "^1.0.0-rc.23",
     "roc-abstract-plugin-test": "^1.0.0",
-    "roc-package-webpack-dev": "^1.0.0",
+    "roc-package-webpack-dev": "^1.1.0",
     "roc-plugin-start": "^1.0.0",
     "source-map-support": "0.4.0"
   },

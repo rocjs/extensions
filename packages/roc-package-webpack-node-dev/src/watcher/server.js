@@ -128,11 +128,12 @@ export default function server(compiler) {
                 statsJson.warnings.map(wrn => log.small.warn(wrn));
             }
 
-            let bundleName = `${getSettings('build').name}.js`;
+            const buildName = getSettings('build').name;
+            let bundleName = `${buildName}.js`;
 
             if (statsJson.assets && statsJson.assets.length > 0) {
                 const stats = parseStats(statsJson);
-                bundleName = stats.script[0];
+                bundleName = stats.script[buildName][0];
             }
 
             const artifact = path.join(compiler.outputPath, '/', bundleName);

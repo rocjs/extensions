@@ -73,6 +73,7 @@ export default function reactRouter({
                     hasTemplateValues,
                     templateValues,
                     reduxSagas,
+                    stats,
                 });
 
                 if (redirect) {

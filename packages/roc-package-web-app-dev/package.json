@@ -24,8 +24,8 @@
   "license": "MIT",
   "dependencies": {
     "roc": "^1.0.0-rc.23",
-    "roc-package-webpack-dev": "^1.0.0",
-    "roc-package-webpack-node-dev": "^1.0.0",
+    "roc-package-webpack-dev": "^1.1.0",
+    "roc-package-webpack-node-dev": "^1.0.1",
     "roc-package-webpack-web-dev": "^1.0.0",
     "roc-plugin-browsersync": "^1.0.0",
     "roc-plugin-style-css": "^1.0.0",
