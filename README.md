@@ -1,4 +1,4 @@
-# Roc Extensions [![Build Status](https://travis-ci.org/rocjs/roc-extensions.svg?branch=master)](https://travis-ci.org/rocjs/roc-extensions)
+# Roc Extensions [![Build Status](https://travis-ci.org/rocjs/extensions.svg?branch=master)](https://travis-ci.org/rocjs/extensions)
 
 The core extensions in [Roc](https://github.com/rocjs/roc) are managed as a monorepo, this to make it easier to work with them and contribute.
 
