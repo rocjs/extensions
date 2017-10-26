@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class Repo extends Component {
     static propTypes = {
-        endpoint: React.PropTypes.string
+        endpoint: PropTypes.string
     };
 
     render() {

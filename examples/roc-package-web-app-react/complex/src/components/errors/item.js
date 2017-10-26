@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './style.css';
 
@@ -9,8 +10,8 @@ export default class ErrorItem extends Component {
     };
 
     static propTypes = {
-        key: React.PropTypes.number.isRequired,
-        error: React.PropTypes.string.isRequired
+        key: PropTypes.number.isRequired,
+        error: PropTypes.string.isRequired
     };
 
     render() {

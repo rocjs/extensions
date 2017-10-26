@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { provideHooks } from 'redial';
@@ -48,16 +49,16 @@ function mapDispatchToProps(dispatch) {
 export default class Main extends React.Component {
     static propTypes = {
         // bound actions
-        click: React.PropTypes.func.isRequired,
-        resetErrors: React.PropTypes.func.isRequired,
-        createFetchAction: React.PropTypes.func.isRequired,
-        reposForceFetch: React.PropTypes.func.isRequired,
-        updateUser: React.PropTypes.func.isRequired,
-        repoUser: React.PropTypes.string,
+        click: PropTypes.func.isRequired,
+        resetErrors: PropTypes.func.isRequired,
+        createFetchAction: PropTypes.func.isRequired,
+        reposForceFetch: PropTypes.func.isRequired,
+        updateUser: PropTypes.func.isRequired,
+        repoUser: PropTypes.string,
         // connected values from store
-        clicker: React.PropTypes.number,
-        repositories: React.PropTypes.object,
-        errors: React.PropTypes.array
+        clicker: PropTypes.number,
+        repositories: PropTypes.object,
+        errors: PropTypes.array
     };
 
     render() {

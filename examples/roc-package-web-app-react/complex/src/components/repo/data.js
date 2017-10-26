@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './style.css';
 
 export default class RepoData extends Component {
     static propTypes = {
-        city: React.PropTypes.object,
-        list: React.PropTypes.array
+        city: PropTypes.object,
+        list: PropTypes.array
     };
 
     render() {

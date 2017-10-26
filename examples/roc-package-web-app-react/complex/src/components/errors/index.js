@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import ErrorItem from './item';
 
@@ -8,8 +9,8 @@ export default class Errors extends Component {
     };
 
     static propTypes = {
-        errors: React.PropTypes.array,
-        resetErrors: React.PropTypes.func
+        errors: PropTypes.array,
+        resetErrors: PropTypes.func
     };
 
     render() {
