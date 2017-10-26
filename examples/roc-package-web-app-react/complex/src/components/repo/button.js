@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import sharedStyles from '../shared.css';
 
 export default class RepoUpdateButton extends Component {
     static propTypes = {
-        text: React.PropTypes.string,
-        onClick: React.PropTypes.func
+        text: PropTypes.string,
+        onClick: PropTypes.func
     };
 
     render() {

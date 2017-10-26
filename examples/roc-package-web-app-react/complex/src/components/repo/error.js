@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class RepoError extends Component {
     static propTypes = {
-        error: React.PropTypes.string
+        error: PropTypes.string
     };
 
     render() {

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './style.css';
 
@@ -9,13 +10,13 @@ import RepoUpdateButton from './button';
 
 export default class Repo extends Component {
     static propTypes = {
-        payload: React.PropTypes.oneOfType([React.PropTypes.object, React.PropTypes.array]),
-        loading: React.PropTypes.bool,
-        endpoint: React.PropTypes.string,
-        reposForceFetch: React.PropTypes.func,
-        updateUser: React.PropTypes.func,
-        repoUser: React.PropTypes.string,
-        error: React.PropTypes.bool
+        payload: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+        loading: PropTypes.bool,
+        endpoint: PropTypes.string,
+        reposForceFetch: PropTypes.func,
+        updateUser: PropTypes.func,
+        repoUser: PropTypes.string,
+        error: PropTypes.bool
     };
 
     render() {

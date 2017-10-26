@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Link from 'react-router/lib/Link';
 import IndexLink from 'react-router/lib/IndexLink';
 
 export default class App extends Component {
     static propTypes = {
-        children: React.PropTypes.object
+        children: PropTypes.object
     };
 
     render() {
