@@ -30,7 +30,7 @@ export default function reactRouter({
         throw new Error('stats needs to be defined');
     }
 
-    const renderPage = initRenderPage(stats, dist, dev, Header);
+    const renderPage = initRenderPage(dist, dev, Header);
 
     return function* (next) {
         try {
@@ -86,7 +86,12 @@ export default function reactRouter({
         } catch (error) {
             log('Render error', pretty.render(error));
             this.status = 500;
-            this.body = renderPage();
+            this.body = renderPage({
+                error,
+                status: this.status,
+                request: this.request,
+                stats,
+            });
         }
     };
 }

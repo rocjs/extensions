@@ -159,13 +159,13 @@ export function reactRender({
                     log('Router error', pretty.render(error));
                     return resolve({
                         status: 500,
-                        body: renderPage({ error, request, status: 500 }),
+                        body: renderPage({ error, request, status: 500, stats }),
                     });
                 } else if (!renderProps) {
                     log('No renderProps, most likely the path does not exist');
                     return resolve({
                         status: 404,
-                        body: renderPage({ request, status: 404 }),
+                        body: renderPage({ request, status: 404, stats }),
                     });
                 }
 
