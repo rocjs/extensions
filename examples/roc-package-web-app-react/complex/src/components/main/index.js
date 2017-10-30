@@ -5,10 +5,10 @@ import { connect } from 'react-redux';
 import { provideHooks } from 'redial';
 
 // components
-import Repo from '../repo';
 import Clicker from '../clicker';
 import Bacon from '../bacon';
 import Errors from '../errors';
+import Repos from './repos';
 
 import { createFetchAction } from 'redux-fetcher'
 import { updateUser }  from '../../reducers/repouser';
@@ -69,7 +69,7 @@ export default class Main extends React.Component {
                 <Errors errors={ this.props.errors } resetErrors= { this.props.resetErrors }/>
                 <Clicker className={ styles.clicker } clicker={ this.props.clicker } click={ this.props.click }/>
 
-                <Repo
+                <Repos
                     { ...this.props.repositories }
                     repoUser = { this.props.repoUser }
                     reposForceFetch = { this.props.reposForceFetch }
