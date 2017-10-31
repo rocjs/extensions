@@ -551,6 +551,8 @@ Read docs [here](https://github.com/dlmr/react-router-scroll-async#custom-scroll
 Most applications need to fetch data from external sources. Let's face it, applications without data are not very useful.  
 `web-app-react` aims to make data-fetching a great experience.
 
+### 1. Redux / Fetch
+
 In various tech stacks it is very common to do data-fetching in the `componentDidMount` component lifecycle of React. However this is problematic because of some large limitations: it is only executed on the client and not when server rendering components.
 
 Only fetching data on the client using mechanisms like `componentDidMount` results in delays and visible flash of content because we must wait for the data to arrive before it can be rendered. For creating a good user experience what we **actually** want the abilities to do in different scenarios is:
@@ -777,6 +779,22 @@ Note that the function provides the Roc runtime `settings` and Koa `server` inst
 ### Accessing the Redux store from a Koa middleware
 
 For your convenience the Redux store is made available to you in your own Koa middlewares through `this.state.reduxStore`. This can be used to perform Redux operations on the server. Useful if you need to pass some data from the server side to be used on the client.
+
+### 2. GraphQL / React Apollo
+
+In case your APIs expose a GraphQL endpoint, you may want to use the [React Apollo](http://dev.apollodata.com/react/) library that's provided by `web-app-react`. 
+The library has several advantages over using custom code: it handles client-side caching, subscriptions and more. 
+The [complex example](https://github.com/rocjs/roc-package-web-app-react/blob/master/examples/complex/src/apollo.js) app illustrates all that's necessary to leverage the 
+Apollo client in a Roc app, by simply adding a file matching the `build.apollo` setting in `roc.config.js` (defaults to `src/apollo.js`) which exposes two functions:
+
+```
+export const client = ({}) => ...
+export const server = ({}) => ...
+```
+These functions wil receive the [`createNetworkInterface`](http://dev.apollodata.com/react/api.html#createNetworkInterface) function (among other things) and are expected to return a configuration object that will be passed to the [`ApolloClient`](http://dev.apollodata.com/core/apollo-client-api.html#apollo-client) constructor.
+The linked example app has code to illustrate this fully.
+
+The configuration can differ on the client and server, and SSR can be opted out as well. For more info regarding those topics, we recommend reading the Apollo documentation.
 
 ## Testing your app
 
