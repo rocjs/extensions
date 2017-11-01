@@ -8,6 +8,11 @@ __Version__: ~1.16.0
 __Extension__: roc-package-web-app  
 __Custom resolve function__:  No  
 
+### [graphql](https://www.npmjs.com/package/graphql)
+__Version__: ^0.10.0  
+__Extension__: roc-package-web-app-react  
+__Custom resolve function__:  No  
+
 ### [history](https://www.npmjs.com/package/history)
 __Version__: ^3.0.0  
 __Extension__: roc-package-web-app-react  
@@ -23,20 +28,20 @@ __Version__: ^1.0.0
 __Extension__: roc-package-web-app-react  
 __Custom resolve function__:  No  
 
-### [prop-types](https://www.npmjs.com/package/prop-types)
-__Version__: ^15.5.8  
-__Extension__: roc-plugin-react  
-__Custom resolve function__:  No  
-
 ### [react](https://www.npmjs.com/package/react)
-__Version__: ^15.5.4  
+__Version__: IGNORE THE WARNING THAT YOU SEE  
 __Extension__: roc-plugin-react  
+__Custom resolve function__:  Yes  
+
+### [react-apollo](https://www.npmjs.com/package/react-apollo)
+__Version__: ^1.4.16  
+__Extension__: roc-package-web-app-react  
 __Custom resolve function__:  No  
 
 ### [react-dom](https://www.npmjs.com/package/react-dom)
-__Version__: ^15.5.4  
+__Version__: IGNORE THE WARNING THAT YOU SEE  
 __Extension__: roc-plugin-react  
-__Custom resolve function__:  No  
+__Custom resolve function__:  Yes  
 
 ### [react-helmet](https://www.npmjs.com/package/react-helmet)
 __Version__: ~5.0.3  
@@ -104,7 +109,13 @@ __Extension__: roc-package-web-app-react
 __Custom resolve function__:  No  
 
 ## Requires
-Nothing is required.
+### [react](https://www.npmjs.com/package/react)
+__Version__: ^15.5.4 || ^16.0.0  
+__Extension__: roc-plugin-react  
+
+### [react-dom](https://www.npmjs.com/package/react-dom)
+__Version__: ^15.5.4 || ^16.0.0  
+__Extension__: roc-plugin-react  
 
 ## Uses
 ### roc-package-web-app

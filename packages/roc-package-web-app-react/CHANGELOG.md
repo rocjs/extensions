@@ -1,3 +1,25 @@
+<a name="2.0.0-alpha.0"></a>
+# [2.0.0-alpha.0](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app-react/compare/v1.0.0...v2.0.0-alpha.0) (2017-11-01)
+
+
+### Bug Fixes
+
+* Solve bug introduced in [#6](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app-react/issues/6) ([b40f7e5](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app-react/commit/b40f7e5))
+
+
+### Features
+
+* Expose new stats object to template values ([faeddf4](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app-react/commit/faeddf4))
+* Introduce support for Apollo ([59037bc](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app-react/commit/59037bc))
+* Support React 15 and 16, and making it a peerDependency ([7f44273](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app-react/commit/7f44273))
+
+
+### BREAKING CHANGES
+
+* Projects will now need to install React manually in their projects. `npm install --save react react-dom prop-types`
+
+
+
 <a name="1.0.0"></a>
 # 1.0.0 (2017-10-24)
 
