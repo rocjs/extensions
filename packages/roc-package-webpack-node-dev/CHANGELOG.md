@@ -1,3 +1,13 @@
+<a name="1.0.1-alpha.0"></a>
+## [1.0.1-alpha.0](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-webpack-node-dev/compare/v1.0.0...v1.0.1-alpha.0) (2017-11-01)
+
+
+### Bug Fixes
+
+* Use new stats object format ([9f5d719](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-webpack-node-dev/commit/9f5d719))
+
+
+
 <a name="1.0.0"></a>
 # 1.0.0 (2017-10-24)
 
