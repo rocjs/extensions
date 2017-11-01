@@ -1,3 +1,13 @@
+<a name="1.0.1-alpha.0"></a>
+## [1.0.1-alpha.0](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app-dev/compare/v1.0.0...v1.0.1-alpha.0) (2017-11-01)
+
+
+### Bug Fixes
+
+* Bump dependencies for Roc packages ([fb6a145](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app-dev/commit/fb6a145))
+
+
+
 <a name="1.0.0"></a>
 # 1.0.0 (2017-10-24)
 
