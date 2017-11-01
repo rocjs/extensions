@@ -28,6 +28,17 @@ export default ({
         );
     }
 
+    const hasApollo = !!(buildSettings.apollo && fileExists(buildSettings.apollo));
+    if (hasApollo) {
+        const apolloOptions = getAbsolutePath(buildSettings.apollo);
+
+        newWebpackConfig.plugins.push(
+            new webpack.DefinePlugin({
+                APOLLO: JSON.stringify(apolloOptions),
+            })
+        );
+    }
+
     const hasReducers = !!(buildSettings.reducers && fileExists(buildSettings.reducers));
     if (hasReducers) {
         const reducers = getAbsolutePath(buildSettings.reducers);
@@ -117,6 +128,7 @@ export default ({
             USE_I18N_POLYFILL: buildSettings.i18n.usePolyfill,
             USE_REACT_ROUTER_SCROLL_ASYNC: buildSettings.useReactRouterScrollAsync,
 
+            HAS_APOLLO: hasApollo,
             HAS_REDUX_REDUCERS: hasReducers,
             HAS_REDUX_MIDDLEWARES: hasMiddlewares,
             HAS_REDUX_ENHANCERS: hasEnhancers,

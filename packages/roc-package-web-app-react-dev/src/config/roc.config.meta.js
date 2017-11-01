@@ -3,6 +3,11 @@ import { isString, isBoolean, isPath, isArray, notEmpty, isInteger, required } f
 export default {
     settings: {
         build: {
+            apollo: {
+                description: 'The path to the file containing the Apollo configurations, expected' +
+                    'to export two functions (client, server).',
+                validator: notEmpty(isPath),
+            },
             input: {
                 web: {
                     override: 'roc-package-web-app-dev',

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './style.css';
+import styles from '../shared.css';
 
 export default class RepoData extends Component {
     static propTypes = {

@@ -1,5 +1,6 @@
 /* global __DEV__, HAS_CLIENT_LOADING, ROC_CLIENT_LOADING, ROC_PATH, HAS_REDUX_REDUCERS, document, window,
- HAS_REDUX_SAGA, REDUX_SAGAS, I18N_LOCALES, USE_I18N_POLYFILL, USE_REACT_ROUTER_SCROLL_ASYNC */
+ HAS_REDUX_SAGA, REDUX_SAGAS, I18N_LOCALES, USE_I18N_POLYFILL, USE_REACT_ROUTER_SCROLL_ASYNC,
+ HAS_APOLLO, APOLLO */
 /* eslint-disable global-require */
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -96,12 +97,46 @@ export default function createClient({
         };
         const createComponent = [(component) => component];
         const createDevComponent = [(component) => component];
+        if (HAS_APOLLO && !HAS_REDUX_REDUCERS) {
+            const { ApolloProvider, ApolloClient, createNetworkInterface } = require('react-apollo');
 
-        if (HAS_REDUX_REDUCERS && createStore) {
-            const { Provider } = require('react-redux');
+            const apolloOptions = require(APOLLO).client({ settings: rocConfig, createNetworkInterface });
+            const apollo = new ApolloClient({
+                connectToDevTools: __DEV__,
+                initialState: window.APOLLO_STATE,
+                ...apolloOptions,
+            });
+            createComponent.push((component) => (
+                <ApolloProvider client={apollo}>
+                    {component}
+                </ApolloProvider>
+            ));
+        } else if (HAS_REDUX_REDUCERS && createStore) {
+            let Provider;
+            const extraMiddlewares = [];
+            const extraReducers = {};
+            const providerProps = {};
+
+            if (HAS_APOLLO) {
+                const { ApolloProvider, ApolloClient, createNetworkInterface } = require('react-apollo');
+
+                Provider = ApolloProvider;
+                const apolloOptions = require(APOLLO).client({ settings: rocConfig, createNetworkInterface });
+                const apollo = new ApolloClient({
+                    connectToDevTools: __DEV__,
+                    ...apolloOptions,
+                });
+                extraMiddlewares.push(apollo.middleware());
+                extraReducers.apollo = apollo.reducer();
+                providerProps.client = apollo;
+            } else {
+                Provider = require('react-redux').Provider;
+            }
+
             const { syncHistoryWithStore } = require('react-router-redux');
 
-            const store = createStore(history, window.FLUX_STATE);
+            const store = createStore(history, window.FLUX_STATE, extraReducers, extraMiddlewares);
+            providerProps.store = store;
 
             if (HAS_REDUX_SAGA) {
                 store.runSaga(require(REDUX_SAGAS).default);
@@ -122,7 +157,7 @@ export default function createClient({
             };
 
             createComponent.push((component) => (
-                <Provider store={store}>
+                <Provider {...providerProps}>
                     {component}
                 </Provider>
             ));

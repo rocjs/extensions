@@ -54,9 +54,11 @@ export default {
     dependencies: {
         exports: {
             ...generateDependencies(packageJSON, [
+                'graphql',
                 'history',
                 'intl',
                 'intl-locales-supported',
+                'react-apollo',
                 'react-helmet',
                 'react-redux',
                 'react-router',

@@ -10,7 +10,7 @@ export function prefetchRepos({ dispatch, getState }) {
 
     // createFetchAction creates a redux action for us that will trigger
     // respective types WEATHER_FETCH_SUCCESS, WEATHER_FETCH_PENDING or WEATHER_FETCH_FAILURE.
-    const reposAction = createFetchAction(FETCH_REPOS, userUrl(user));
+    const reposAction = createFetchAction(FETCH_REPOS, userUrl(user), {}, { requestedUser: user});
 
     // dispatch the action
     return dispatch(reposAction);
@@ -24,7 +24,8 @@ export function mergeReposProps(stateProps, dispatchProps, ownProps) {
         reposForceFetch: () => dispatchProps.createFetchAction(
             FETCH_REPOS,
             userUrl(stateProps.repoUser),
-            { force: true, method: 'GET' }
+            { force: true, method: 'GET' },
+            { requestedUser: stateProps.repoUser}
         )
     };
 

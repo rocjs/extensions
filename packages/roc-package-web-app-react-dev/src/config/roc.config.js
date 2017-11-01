@@ -1,6 +1,8 @@
 export default {
     settings: {
         build: {
+            apollo: 'src/apollo.js',
+
             input: { web: undefined, node: undefined },
 
             redux: {

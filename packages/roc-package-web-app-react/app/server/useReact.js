@@ -1,5 +1,5 @@
 /* global __DIST__, __DEV__ HAS_TEMPLATE_VALUES, TEMPLATE_VALUES, ROC_PATH, HAS_REDUX_SAGA, REDUX_SAGAS,
- I18N_LOCALES, USE_I18N_POLYFILL */
+ I18N_LOCALES, USE_I18N_POLYFILL, HAS_APOLLO, APOLLO */
 
 import useReactLib from 'roc-package-web-app-react/lib/app/server/useReact';
 
@@ -12,6 +12,11 @@ export default function useReact(createServer) {
     // eslint-disable-next-line
     const templateValues = HAS_TEMPLATE_VALUES ? require(TEMPLATE_VALUES) : undefined;
     let reduxSagas;
+    let apolloServerOptions;
+
+    if (HAS_APOLLO) {
+        apolloServerOptions = require(APOLLO).server; // eslint-disable-line
+    }
 
     if (HAS_REDUX_SAGA) {
         reduxSagas = require(REDUX_SAGAS).default; // eslint-disable-line
@@ -39,6 +44,7 @@ export default function useReact(createServer) {
             rocPath: ROC_PATH,
             Header,
             reduxSagas,
+            apolloServerOptions,
         })(
             {
                 createRoutes,
