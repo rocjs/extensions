@@ -1,3 +1,13 @@
+<a name="1.1.0-alpha.0"></a>
+# [1.1.0-alpha.0](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-webpack-dev/compare/v1.0.0...v1.1.0-alpha.0) (2017-11-01)
+
+
+### Features
+
+* Export stats as object with all chunks ([8dfdda1](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-webpack-dev/commit/8dfdda1))
+
+
+
 <a name="1.0.0"></a>
 # 1.0.0 (2017-10-24)
 
