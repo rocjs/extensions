@@ -1,3 +1,18 @@
+<a name="2.0.0-alpha.0"></a>
+# [2.0.0-alpha.0](https://github.com/rocjs/roc-extensions/tree/master/plugins/roc-plugin-react/compare/v1.0.0...v2.0.0-alpha.0) (2017-11-01)
+
+
+### Features
+
+* Support React 15 and 16, and making it a peerDependency ([7f44273](https://github.com/rocjs/roc-extensions/tree/master/plugins/roc-plugin-react/commit/7f44273))
+
+
+### BREAKING CHANGES
+
+* Projects will now need to install React manually in their projects. `npm install --save react react-dom prop-types`
+
+
+
 <a name="1.0.0"></a>
 # 1.0.0 (2017-10-24)
 
