@@ -1,3 +1,18 @@
+<a name="1.1.0-alpha.0"></a>
+# [1.1.0-alpha.0](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app-react-dev/compare/v1.0.0...v1.1.0-alpha.0) (2017-11-01)
+
+
+### Bug Fixes
+
+* Bump dependencies for Roc packages ([94e8871](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app-react-dev/commit/94e8871))
+
+
+### Features
+
+* Introduce support for Apollo ([59037bc](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app-react-dev/commit/59037bc))
+
+
+
 <a name="1.0.0"></a>
 # 1.0.0 (2017-10-24)
 
