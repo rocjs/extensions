@@ -15,11 +15,23 @@ function renderSync({ renderProps, createComponent, routerRenderFn }, node) {
     ReactDOM.render(finalComponent, node);
 }
 
-export default function renderAsync({ history, routes, ...rest }, node) {
-    match({ history, routes }, (error, redirectLocation, renderProps) => {
+export default function render(ssr, { history, routes, createComponent, routerRenderFn }, node) {
+    if (!ssr) {
         renderSync({
-            ...rest,
-            renderProps,
+            renderProps: {
+                history,
+                routes,
+            },
+            createComponent,
+            routerRenderFn,
         }, node);
-    });
+    } else {
+        match({ history, routes }, (error, redirectLocation, renderProps) => {
+            renderSync({
+                renderProps,
+                createComponent,
+                routerRenderFn,
+            }, node);
+        });
+    }
 }
