@@ -197,6 +197,7 @@ export default function createClient({
         }
 
         renderToDOM(
+            rocConfig.runtime.ssr,
             {
                 createComponent: compose(createComponent),
                 history,
