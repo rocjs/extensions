@@ -1,3 +1,13 @@
+<a name="1.0.1"></a>
+## [1.0.1](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app-react/compare/v1.0.0...v1.0.1) (2017-11-20)
+
+
+### Bug Fixes
+
+* Solve problem when not using SSR ([fc6a019](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app-react/commit/fc6a019))
+
+
+
 <a name="1.0.0"></a>
 # 1.0.0 (2017-10-24)
 
