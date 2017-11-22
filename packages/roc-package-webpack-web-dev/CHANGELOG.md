@@ -1,3 +1,13 @@
+<a name="1.0.1-alpha.0"></a>
+## [1.0.1-alpha.0](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-webpack-web-dev/compare/v1.0.0...v1.0.1-alpha.0) (2017-11-22)
+
+
+### Bug Fixes
+
+* Set the correct version ranges to get the right version ([b3317e1](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-webpack-web-dev/commit/b3317e1))
+
+
+
 <a name="1.0.0"></a>
 # 1.0.0 (2017-10-24)
 
