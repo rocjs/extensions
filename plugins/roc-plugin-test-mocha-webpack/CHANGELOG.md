@@ -1,3 +1,13 @@
+<a name="1.0.1-alpha.1"></a>
+## [1.0.1-alpha.1](https://github.com/rocjs/roc-extensions/tree/master/plugins/roc-plugin-test-mocha-webpack/compare/v1.0.0...v1.0.1-alpha.1) (2017-11-22)
+
+
+### Bug Fixes
+
+* Set the correct version ranges to get the right version ([b3317e1](https://github.com/rocjs/roc-extensions/tree/master/plugins/roc-plugin-test-mocha-webpack/commit/b3317e1))
+
+
+
 <a name="1.0.1-alpha.0"></a>
 ## [1.0.1-alpha.0](https://github.com/rocjs/roc-extensions/tree/master/plugins/roc-plugin-test-mocha-webpack/compare/v1.0.0...v1.0.1-alpha.0) (2017-11-01)
 
