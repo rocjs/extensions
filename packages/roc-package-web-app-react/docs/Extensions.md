@@ -25,5 +25,5 @@ Package for building web applications using Roc
 ### roc-plugin-start — [v1.0.0](https://www.npmjs.com/package/roc-plugin-start)
 Adds start command with a way to modify the runtime
 
-### roc-plugin-react — [v1.0.0](https://www.npmjs.com/package/roc-plugin-react)
+### roc-plugin-react — [v2.0.0-alpha.0](https://www.npmjs.com/package/roc-plugin-react)
 Adds React support to Webpack and Roc
