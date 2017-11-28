@@ -1,3 +1,13 @@
+<a name="1.0.2"></a>
+## [1.0.2](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app-react/compare/v1.0.0...v1.0.2) (2017-11-28)
+
+
+### Bug Fixes
+
+* Pre-transpile universal-config ([ba63227](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app-react/commit/ba63227))
+
+
+
 <a name="1.0.1"></a>
 ## [1.0.1](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app-react/compare/v1.0.0...v1.0.1) (2017-11-20)
 
