@@ -167,7 +167,7 @@ export default function createClient({
                     const DevTools = require('./dev-tools').default;
 
                     createDevComponent.push((component) => (
-                        <Provider store={store}>
+                        <Provider {...providerProps}>
                             <span>
                                 {component}
                                 <DevTools />
