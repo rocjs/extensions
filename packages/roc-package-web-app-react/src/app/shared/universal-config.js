@@ -21,12 +21,12 @@ export var rocConfig = (function getRocConfig() {
     return typeof window !== 'undefined' ? window.ROC_CONFIG : require('roc').getSettings(); // eslint-disable-line
 }());
 
-var whiteListed = () => (
-    rocConfig.runtime.configWhitelistProperty ?
-        require('config')[rocConfig.runtime.configWhitelistProperty] : // eslint-disable-line
-        undefined
-);
-
 export var appConfig = (function getAppConfig() {
     return typeof window !== 'undefined' ? window.APP_CONFIG : whiteListed();
 }());
+
+function whiteListed() {
+    return rocConfig.runtime.configWhitelistProperty
+        ? require('config')[rocConfig.runtime.configWhitelistProperty] // eslint-disable-line
+        : undefined;
+}
