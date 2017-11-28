@@ -1,3 +1,13 @@
+<a name="1.0.4"></a>
+## [1.0.4](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app-react/compare/v1.0.0...v1.0.4) (2017-11-28)
+
+
+### Bug Fixes
+
+* Don't use () => {} for universal-config ([b4de4b6](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app-react/commit/b4de4b6))
+
+
+
 <a name="1.0.3"></a>
 ## [1.0.3](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app-react/compare/v1.0.0...v1.0.3) (2017-11-28)
 
