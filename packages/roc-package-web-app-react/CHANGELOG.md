@@ -1,3 +1,13 @@
+<a name="1.0.3"></a>
+## [1.0.3](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app-react/compare/v1.0.0...v1.0.3) (2017-11-28)
+
+
+### Bug Fixes
+
+* Use ES5 for universal-config ([3451e5a](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app-react/commit/3451e5a))
+
+
+
 <a name="1.0.2"></a>
 ## [1.0.2](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app-react/compare/v1.0.0...v1.0.2) (2017-11-28)
 
