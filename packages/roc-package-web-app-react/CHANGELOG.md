@@ -1,3 +1,13 @@
+<a name="2.0.0-alpha.2"></a>
+# [2.0.0-alpha.2](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app-react/compare/v1.0.0...v2.0.0-alpha.2) (2017-12-01)
+
+
+### Bug Fixes
+
+* Add client to devProvider if using apollo ([6d6f395](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app-react/commit/6d6f395))
+
+
+
 <a name="2.0.0-alpha.1"></a>
 # [2.0.0-alpha.1](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app-react/compare/v1.0.0...v2.0.0-alpha.1) (2017-11-22)
 
