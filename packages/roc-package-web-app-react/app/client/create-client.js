@@ -166,14 +166,8 @@ export default function createClient({
                 if (rocConfig.dev.redux.devTools.enabled && !window.devToolsExtension) {
                     const DevTools = require('./dev-tools').default;
 
-                    const devProps = { store };
-
-                    if (HAS_APOLLO) {
-                        devProps.client = providerProps.client;
-                    }
-
                     createDevComponent.push((component) => (
-                        <Provider {...devProps}>
+                        <Provider {...providerProps}>
                             <span>
                                 {component}
                                 <DevTools />
