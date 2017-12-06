@@ -286,12 +286,13 @@ export function reactRender({
                     if (err) {
                         log('General error', pretty.render(err));
                     }
+                    const { status = 500 } = err || {};
                     return resolve({
-                        status: 500,
+                        status,
                         body: renderPage({
                             error: err,
                             request,
-                            status: 500,
+                            status,
                             stats,
                             reduxState: store ? store.getState() : {},
                         }),
