@@ -98,12 +98,17 @@ export default function createClient({
         const createComponent = [(component) => component];
         const createDevComponent = [(component) => component];
         if (HAS_APOLLO && !HAS_REDUX_REDUCERS) {
-            const { ApolloProvider, ApolloClient, createNetworkInterface } = require('react-apollo');
+            const { ApolloProvider } = require('react-apollo');
+            const { ApolloClient } = require('apollo-client-preset');
+            const { createHttpLink } = require('apollo-link-http');
+            const { InMemoryCache } = require('apollo-cache-inmemory');
+            console.log("HELLO WORLD");
+            const apolloOptions = require(APOLLO).client({ settings: rocConfig, createHttpLink });
+            const cache = new InMemoryCache();
 
-            const apolloOptions = require(APOLLO).client({ settings: rocConfig, createNetworkInterface });
             const apollo = new ApolloClient({
                 connectToDevTools: __DEV__,
-                initialState: window.APOLLO_STATE,
+                cache: cache.restore(window.APOLLO_STATE),
                 ...apolloOptions,
             });
             createComponent.push((component) => (
@@ -198,7 +203,7 @@ export default function createClient({
         }
 
         const node = document.getElementById(mountNode);
-        let updateScroll = () => {};
+        let updateScroll = () => { };
 
         const middlewares = [
             useRedial({

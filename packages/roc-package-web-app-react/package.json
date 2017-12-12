@@ -25,6 +25,8 @@
   ],
   "license": "MIT",
   "dependencies": {
+    "apollo-cache-inmemory": "^1.1.4",
+    "apollo-client-preset": "^1.0.5",
     "debug": "~2.2.0",
     "error": "~7.0.2",
     "graphql": "^0.10.0",
@@ -34,7 +36,7 @@
     "nunjucks": "~2.4.2",
     "pretty-error": "^2.1.0",
     "prop-types": "^15.6.0",
-    "react-apollo": "^1.4.16",
+    "react-apollo": "^2.0.4",
     "react-helmet": "~5.0.3",
     "react-redux": "^5.0.4",
     "react-router": "^3.0.5",

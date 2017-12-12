@@ -2,7 +2,8 @@
 
 import { createMemoryHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
-import { ApolloClient, createNetworkInterface } from 'react-apollo';
+import { ApolloClient, createHttpLink } from 'apollo-client-preset';
+
 import { getSettings } from 'roc';
 
 export default function setupForRender(createStore, url, rocPath, request, apolloServerOptions) {
@@ -20,7 +21,7 @@ export default function setupForRender(createStore, url, rocPath, request, apoll
     if (apolloServerOptions) {
         const apolloOptions = apolloServerOptions({
             settings: getSettings(),
-            createNetworkInterface,
+            createHttpLink,
             request,
         });
 
