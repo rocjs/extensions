@@ -1,3 +1,13 @@
+<a name="1.0.1"></a>
+## [1.0.1](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app/compare/v1.0.0...v1.0.1) (2017-12-13)
+
+
+### Bug Fixes
+
+* Don't always compress the response ([eb3287b](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app/commit/eb3287b))
+
+
+
 <a name="1.0.0"></a>
 # 1.0.0 (2017-10-24)
 

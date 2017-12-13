@@ -22,9 +22,6 @@ __Version__: ~0.0.2
 #### [koa-add-trailing-slashes](https://www.npmjs.com/package/koa-add-trailing-slashes)
 __Version__: ~1.1.0  
 
-#### [koa-compressor](https://www.npmjs.com/package/koa-compressor)
-__Version__: ~1.0.3  
-
 #### [koa-errors](https://www.npmjs.com/package/koa-errors)
 __Version__: ~1.0.1  
 
