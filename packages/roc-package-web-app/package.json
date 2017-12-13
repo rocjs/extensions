@@ -29,7 +29,7 @@
     "koa": "~1.1.1",
     "koa-accesslog": "~0.0.2",
     "koa-add-trailing-slashes": "~1.1.0",
-    "koa-compressor": "~1.0.3",
+    "koa-compress": "~1.0.9",
     "koa-conditional-get": "~1.0.3",
     "koa-errors": "~1.0.1",
     "koa-etag": "~2.0.0",

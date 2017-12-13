@@ -1,7 +1,7 @@
 import koaErrors from 'koa-errors';
 import helmet from 'koa-helmet';
 import koaEtag from 'koa-etag';
-import koaCompressor from 'koa-compressor';
+import koaCompress from 'koa-compress';
 import koaFavicon from 'koa-favicon';
 import koaAccesslog from 'koa-accesslog';
 import koaLogger from 'koa-logger';
@@ -26,7 +26,7 @@ export default function middlewares(config, { dev, dist }) {
 
     // We only enable gzip in dist
     if (dist) {
-        middlewaresList.push(koaCompressor());
+        middlewaresList.push(koaCompress());
     }
 
     const favicon = config.favicon;
