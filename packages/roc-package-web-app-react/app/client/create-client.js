@@ -96,7 +96,7 @@ export default function createClient({
             history,
         };
         const createComponent = [(component) => component];
-        const createDevComponent = [(component) => component];
+        const createDevComponent = [(component) => <div>{component}</div>];
         if (HAS_APOLLO && !HAS_REDUX_REDUCERS) {
             const { ApolloProvider, ApolloClient, createNetworkInterface } = require('react-apollo');
 
