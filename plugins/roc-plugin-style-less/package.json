@@ -14,7 +14,7 @@
     "less"
   ],
   "license": "MIT",
-  "repository": "https://github.com/rocjs/roc-extensions/tree/master/plugins/roc-plugin-style-less",
+  "repository": "https://github.com/rocjs/extensions",
   "author": "Schibsted",
   "contributors": [
     {

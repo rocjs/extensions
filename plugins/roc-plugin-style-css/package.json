@@ -13,7 +13,7 @@
     "style",
     "css"
   ],
-  "repository": "https://github.com/rocjs/roc-extensions/tree/master/plugins/roc-plugin-style-css",
+  "repository": "https://github.com/rocjs/extensions",
   "author": "Schibsted",
   "contributors": [
     {

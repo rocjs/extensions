@@ -14,7 +14,7 @@
     "client",
     "browser"
   ],
-  "repository": "https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-webpack-web",
+  "repository": "https://github.com/rocjs/extensions",
   "author": "Schibsted",
   "contributors": [
     {

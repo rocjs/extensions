@@ -10,7 +10,7 @@
     "roc",
     "roc-plugin"
   ],
-  "repository": "https://github.com/rocjs/roc-extensions/tree/master/plugins/roc-plugin-react-dev",
+  "repository": "https://github.com/rocjs/extensions",
   "author": "Schibsted",
   "contributors": [
     {

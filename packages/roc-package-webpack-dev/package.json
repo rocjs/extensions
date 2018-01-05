@@ -12,7 +12,7 @@
     "webpack",
     "roc-dev"
   ],
-  "repository": "https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-webpack-dev",
+  "repository": "https://github.com/rocjs/extensions",
   "author": "Schibsted",
   "contributors": [
     {
