@@ -4,13 +4,13 @@
 
 ### Bug Fixes
 
-* Use the coming release everywhere, 1.0.0 ([48dae4a](https://github.com/rocjs/roc-extensions/tree/master/plugins/roc-plugin-test-jest/commit/48dae4a))
+* Use the coming release everywhere, 1.0.0 ([48dae4a](https://github.com/rocjs/extensions/commit/48dae4a))
 
 
 ### Chores
 
-* Update the babel preset to target Node 6 ([67cc7de](https://github.com/rocjs/roc-extensions/tree/master/plugins/roc-plugin-test-jest/commit/67cc7de))
-* Update tooling and structure to work with a monorepo ([34e45bd](https://github.com/rocjs/roc-extensions/tree/master/plugins/roc-plugin-test-jest/commit/34e45bd))
+* Update the babel preset to target Node 6 ([67cc7de](https://github.com/rocjs/extensions/commit/67cc7de))
+* Update tooling and structure to work with a monorepo ([34e45bd](https://github.com/rocjs/extensions/commit/34e45bd))
 
 
 ### BREAKING CHANGES
