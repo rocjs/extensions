@@ -1,20 +1,20 @@
 <a name="1.0.1-alpha.1"></a>
-## [1.0.1-alpha.1](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app-dev/compare/v1.0.0...v1.0.1-alpha.1) (2017-11-22)
+## [1.0.1-alpha.1](https://github.com/rocjs/extensions/compare/v1.0.0...v1.0.1-alpha.1) (2017-11-22)
 
 
 ### Bug Fixes
 
-* Set the correct version ranges to get the right version ([b3317e1](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app-dev/commit/b3317e1))
+* Set the correct version ranges to get the right version ([b3317e1](https://github.com/rocjs/extensions/commit/b3317e1))
 
 
 
 <a name="1.0.1-alpha.0"></a>
-## [1.0.1-alpha.0](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app-dev/compare/v1.0.0...v1.0.1-alpha.0) (2017-11-01)
+## [1.0.1-alpha.0](https://github.com/rocjs/extensions/compare/v1.0.0...v1.0.1-alpha.0) (2017-11-01)
 
 
 ### Bug Fixes
 
-* Bump dependencies for Roc packages ([fb6a145](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app-dev/commit/fb6a145))
+* Bump dependencies for Roc packages ([fb6a145](https://github.com/rocjs/extensions/commit/fb6a145))
 
 
 
@@ -24,13 +24,13 @@
 
 ### Bug Fixes
 
-* Use the coming release everywhere, 1.0.0 ([48dae4a](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app-dev/commit/48dae4a))
+* Use the coming release everywhere, 1.0.0 ([48dae4a](https://github.com/rocjs/extensions/commit/48dae4a))
 
 
 ### Chores
 
-* Update the babel preset to target Node 6 ([67cc7de](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app-dev/commit/67cc7de))
-* Update tooling and structure to work with a monorepo ([34e45bd](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app-dev/commit/34e45bd))
+* Update the babel preset to target Node 6 ([67cc7de](https://github.com/rocjs/extensions/commit/67cc7de))
+* Update tooling and structure to work with a monorepo ([34e45bd](https://github.com/rocjs/extensions/commit/34e45bd))
 
 
 ### BREAKING CHANGES

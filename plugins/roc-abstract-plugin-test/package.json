@@ -12,7 +12,7 @@
     "roc-plugin",
     "test"
   ],
-  "repository": "https://github.com/rocjs/roc-extensions/tree/master/plugins/roc-abstract-plugin-test",
+  "repository": "https://github.com/rocjs/extensions",
   "author": "Schibsted",
   "contributors": [
     {

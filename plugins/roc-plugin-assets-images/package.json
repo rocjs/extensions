@@ -13,7 +13,7 @@
     "images",
     "assets"
   ],
-  "repository": "https://github.com/rocjs/roc-extensions/tree/master/plugins/roc-plugin-assets-images",
+  "repository": "https://github.com/rocjs/extensions",
   "author": "Schibsted",
   "contributors": [
     {

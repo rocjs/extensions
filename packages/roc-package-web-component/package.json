@@ -13,7 +13,7 @@
     "babel",
     "component"
   ],
-  "repository": "https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-component",
+  "repository": "https://github.com/rocjs/extensions",
   "author": "Schibsted",
   "contributors": [
     {

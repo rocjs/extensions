@@ -15,7 +15,7 @@
     "roc-package",
     "babel"
   ],
-  "repository": "https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-module",
+  "repository": "https://github.com/rocjs/extensions",
   "author": "Verdens Gang AS",
   "contributors": [
     {

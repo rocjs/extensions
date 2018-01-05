@@ -13,7 +13,7 @@
     "jest",
     "test"
   ],
-  "repository": "https://github.com/rocjs/roc-extensions/tree/master/plugins/roc-plugin-test-jest",
+  "repository": "https://github.com/rocjs/extensions",
   "author": "Schibsted",
   "contributors": [
     {

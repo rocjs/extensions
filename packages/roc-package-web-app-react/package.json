@@ -16,7 +16,7 @@
     "react",
     "redux"
   ],
-  "repository": "https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app-react",
+  "repository": "https://github.com/rocjs/extensions",
   "author": "Schibsted",
   "contributors": [
     {

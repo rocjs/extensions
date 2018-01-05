@@ -11,7 +11,7 @@
     "roc-plugin",
     "node"
   ],
-  "repository": "https://github.com/rocjs/roc-extensions/tree/master/plugins/roc-plugin-start",
+  "repository": "https://github.com/rocjs/extensions",
   "author": "Schibsted",
   "contributors": [
     {
