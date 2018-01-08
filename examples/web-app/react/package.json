@@ -7,7 +7,7 @@
   "license": "MIT",
   "dependencies": {
     "roc-package-web-app": "^1.0.0",
-    "roc-plugin-react": "^1.0.0"
+    "roc-plugin-react": "^2.0.0"
   },
   "devDependencies": {
     "roc-package-web-app-dev": "^1.0.0",
