@@ -31,17 +31,17 @@ const writeStatsFile = (buildPath, scriptPath) =>
         });
     });
 
-const createWatcher = (verbose, settings, target, webpackConfig, watcher) => {
+const createWatcher = (verbose, settings, target, webpackConfig, rocMetaInfo, watcher) => {
     // Resolve directly if we did not get a webpackConfig back
     if (!webpackConfig) {
         return Promise.resolve();
     }
 
-    return cleanPromise(webpackConfig.rocMetaInfo.outputPath)
+    return cleanPromise(rocMetaInfo.outputPath)
         .then(async function watch() {
             const compiler = webpack(webpackConfig);
             await writeStatsFile(webpackConfig.output.path, webpackConfig.output.publicPath +
-                webpackConfig.output.filename.replace(/\[name\]/, webpackConfig.rocMetaInfo.outputName));
+                webpackConfig.output.filename.replace(/\[name\]/, rocMetaInfo.outputName));
 
             if (!watcher[target]) {
                 return Promise.resolve();
@@ -90,7 +90,11 @@ export default ({ context: { verbose, config: { settings } } }) => (targets) => 
     // Build each one in order
     return Promise.all(targets.map(async function builders(target) {
         const babelConfig = invokeHook('babel-config', target);
-        const webpackConfig = invokeHook('build-webpack', target, babelConfig);
-        return await createWatcher(verbose, newSettings, target, webpackConfig, watchers);
+        const { rocMetaInfo, ...webpackConfig } = invokeHook(
+            'build-webpack',
+            target,
+            babelConfig,
+        );
+        return await createWatcher(verbose, newSettings, target, webpackConfig, rocMetaInfo, watchers);
     }));
 };

@@ -9,8 +9,12 @@ export const roc = {
         description: 'Adds Less support to Webpack.',
         action: ({ context: { config: { settings } } }) => () => () => ({
             extensions: ['less'],
-            loaders: require.resolve('less-loader') +
-                (settings.build.style.sourceMap ? '?sourceMap' : ''),
+            loaders: [{
+                loader: require.resolve('less-loader'),
+                options: {
+                    sourceMap: !!settings.build.style.sourceMap,
+                },
+            }],
         }),
     }],
 };

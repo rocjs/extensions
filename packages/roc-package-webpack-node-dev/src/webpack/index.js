@@ -74,7 +74,7 @@ export default ({ previousValue: webpackConfig }) => (target) => {
 
             if (DEV) {
                 newWebpackConfig.plugins.push(
-                    new webpack.NoErrorsPlugin()
+                    new webpack.NoEmitOnErrorsPlugin()
                 );
             }
 

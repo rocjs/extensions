@@ -118,7 +118,13 @@ export default ({ context: { verbose, config: { settings } } }) => (targets) => 
 
     const promises = validTargets.map((target) => {
         const babelConfig = invokeHook('babel-config', target);
-        const webpackConfig = invokeHook('build-webpack', target, babelConfig);
+        /* eslint-disable no-unused-vars */
+        const { rocMetaInfo: _, ...webpackConfig } = invokeHook(
+            'build-webpack',
+            target,
+            babelConfig,
+        );
+        /* eslint-enable no-unused-vars */
         return build(webpackConfig, target, settings, verbose);
     });
 

@@ -38,8 +38,8 @@
     "roc": "^1.0.0-rc.23",
     "roc-abstract-package-base-dev": "^1.0.0",
     "roc-plugin-babel": "^1.0.0",
-    "webpack": "~1.12.2",
-    "webpack-merge": "0.14.0"
+    "webpack": "~3.10.0",
+    "webpack-merge": "~4.1.1"
   },
   "roc": {
     "packages": [
