@@ -15,7 +15,7 @@
     "react-toggle": "^4.0.2",
     "redux-api-middleware": "~1.0.2",
     "redux-fetcher": "~2.1.0",
-    "roc-package-web-app-react": "^1.0.0"
+    "roc-package-web-app-react": "^2.0.0"
   },
   "devDependencies": {
     "roc-package-web-app-react-dev": "^1.0.0",
