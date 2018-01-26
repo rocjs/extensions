@@ -1,6 +1,6 @@
 {
   "name": "roc-plugin-test-mocha-webpack",
-  "version": "1.0.1-alpha.1",
+  "version": "1.0.1-alpha.2",
   "description": "Adds a way to easily test Webpack projects for Node in Roc",
   "main": "lib/index.js",
   "files": [

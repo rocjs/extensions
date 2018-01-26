@@ -1,3 +1,13 @@
+<a name="1.0.1-alpha.2"></a>
+## [1.0.1-alpha.2](https://github.com/rocjs/extensions/compare/v1.0.0...v1.0.1-alpha.2) (2018-01-26)
+
+
+### Bug Fixes
+
+* Point to the right package versions ([1abae31](https://github.com/rocjs/extensions/commit/1abae31))
+
+
+
 <a name="1.0.1-alpha.1"></a>
 ## [1.0.1-alpha.1](https://github.com/rocjs/extensions/compare/v1.0.0...v1.0.1-alpha.1) (2017-11-22)
 
