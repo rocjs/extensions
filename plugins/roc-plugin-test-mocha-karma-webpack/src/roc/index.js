@@ -10,7 +10,7 @@ const lazyRequire = lazyFunctionRequire(require);
 
 export default {
     required: {
-        'roc-package-webpack-web-dev': '^1.0.0-beta',
+        'roc-package-webpack-web-dev': '^1.0.1-alpha',
     },
     plugins: [
         require.resolve('roc-abstract-plugin-test'),

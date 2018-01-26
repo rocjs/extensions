@@ -28,7 +28,7 @@ Object.keys(jestOptions)
 export default {
     required: {
         roc: '^1.0.0-rc.18',
-        'roc-package-webpack-dev': '^1.0.0-beta.7',
+        'roc-package-webpack-dev': '^1.1.0-alpha',
     },
     config,
     meta,
