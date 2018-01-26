@@ -6,5 +6,5 @@ The extensions that are used in the project, indirect and direct, in the order t
 _No packages._
 
 ## Plugins
-### roc-abstract-plugin-test — [v1.0.0-beta.3](https://www.npmjs.com/package/roc-abstract-plugin-test)
+### roc-abstract-plugin-test — [v1.0.0](https://www.npmjs.com/package/roc-abstract-plugin-test)
 Adds test command
