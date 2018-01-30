@@ -1,10 +1,11 @@
-import koaErrors from 'koa-errors';
-import helmet from 'koa-helmet';
+import koaError from 'koa-error';
+import koaHelmet from 'koa-helmet';
 import koaEtag from 'koa-etag';
-import koaCompressor from 'koa-compressor';
+import koaCompress from 'koa-compress';
 import koaFavicon from 'koa-favicon';
-import koaAccesslog from 'koa-accesslog';
 import koaLogger from 'koa-logger';
+
+import accesslog from './middlewares/accesslog';
 
 /**
  * Returns the middlewares to be used.
@@ -16,17 +17,17 @@ export default function middlewares(config, { dev, dist }) {
     const middlewaresList = [];
 
     if (dev) {
-        middlewaresList.push(koaErrors());
+        middlewaresList.push(koaError());
     }
 
     // Security headers
-    middlewaresList.push(helmet());
+    middlewaresList.push(koaHelmet());
 
     middlewaresList.push(koaEtag());
 
     // We only enable gzip in dist
     if (dist) {
-        middlewaresList.push(koaCompressor());
+        middlewaresList.push(koaCompress());
     }
 
     const favicon = config.favicon;
@@ -35,7 +36,7 @@ export default function middlewares(config, { dev, dist }) {
     }
 
     if (dist) {
-        middlewaresList.push(koaAccesslog());
+        middlewaresList.push(accesslog());
     } else {
         middlewaresList.push(koaLogger());
     }

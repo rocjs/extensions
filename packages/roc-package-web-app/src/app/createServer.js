@@ -3,7 +3,7 @@ import http from 'http';
 import https from 'https';
 
 import debug from 'debug';
-import koa from 'koa';
+import Koa from 'koa';
 import serve from 'koa-static';
 import addTrailingSlash from 'koa-add-trailing-slashes';
 import normalizePath from 'koa-normalize-path';
@@ -11,7 +11,7 @@ import lowercasePath from 'koa-lowercase-path';
 import removeTrailingSlash from 'koa-remove-trailing-slashes';
 import { merge, getSettings, getAbsolutePath } from 'roc';
 
-import basepathSupport from './basepathSupport';
+import basepathSupport from './middlewares/basepathSupport';
 
 /**
  * Creates a server instance.
@@ -41,7 +41,7 @@ export default function createServer(options = {}, beforeUserMiddlewares = [], {
     const logger = debug('roc:server');
     logger.log = console.info.bind(console);
 
-    const server = koa();
+    const server = new Koa();
     const runtimeSettings = merge(getSettings('runtime'), options);
 
     // Add support for rocPath
@@ -49,7 +49,7 @@ export default function createServer(options = {}, beforeUserMiddlewares = [], {
 
     if (useDefaultKoaMiddlewares) {
         // eslint-disable-next-line
-        const middlewares = require('./middlewares').default(runtimeSettings, { dev, dist });
+        const middlewares = require('./defaultKoaMiddlewares').default(runtimeSettings, { dev, dist });
         middlewares.forEach((middleware) => server.use(middleware));
     }
 
