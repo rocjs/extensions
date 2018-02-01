@@ -1,12 +1,13 @@
+import { readFileSync as readFileSyncMock } from 'fs';
+import { createServer as createHttpServerMock } from 'http';
+import { createServer as createHttpsServerMock } from 'https';
+
 import Koa from 'koa';
 import serveMiddlewareMock from 'koa-static';
 import removeTrailingSlashMiddlewareMock from 'koa-remove-trailing-slashes';
 import normalizePathMiddlewareMock from 'koa-normalize-path';
 import lowercasePathMiddlewareMock from 'koa-lowercase-path';
 import addTrailingSlashMiddlewareMock from 'koa-add-trailing-slashes';
-import { readFileSync as readFileSyncMock } from 'fs';
-import { createServer as createHttpServerMock } from 'http';
-import { createServer as createHttpsServerMock } from 'https';
 
 import basepathMiddlewareMock from './middlewares/basepathSupport';
 import createServer from './createServer';
@@ -159,13 +160,13 @@ describe('createServer', () => {
     });
 
     it('should include normalizePath to Koa instance when proper option is set to true', () => {
-       options.koa.normalize.enabled = true;
+        options.koa.normalize.enabled = true;
 
-       const result = createServer(options, beforeUserMiddlewares, params);
+        const result = createServer(options, beforeUserMiddlewares, params);
 
         expect(result.server.middleware.length).toBe(4);
         expect(result.server.middleware.map(f => f.name)).toContain('normalizePath');
-       expect(normalizePathMiddlewareMock).toHaveBeenCalledWith({ defer: options.koa.normalize.defer });
+        expect(normalizePathMiddlewareMock).toHaveBeenCalledWith({ defer: options.koa.normalize.defer });
     });
 
     it('should include normalizePath to Koa instance when proper option is set to true', () => {
