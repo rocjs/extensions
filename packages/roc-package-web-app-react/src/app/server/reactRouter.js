@@ -85,6 +85,9 @@ export default function reactRouter({
                 });
 
                 if (redirect) {
+                    if (rocConfig.runtime.redirectStatusCode) {
+                        this.status = rocConfig.runtime.redirectStatusCode;
+                    }
                     this.redirect(redirect);
                 } else {
                     this.status = status;
