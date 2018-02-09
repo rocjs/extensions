@@ -26,6 +26,7 @@ export default {
                 style: [],
             },
             ssr: true,
+            redirectStatusCode: 302,
             template: {
                 path: undefined,
                 name: 'main.html',

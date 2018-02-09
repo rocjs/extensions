@@ -1,4 +1,15 @@
-import { isString, isBoolean, isPath, isArray, isObject, notEmpty, required, oneOf, isFunction } from 'roc/validators';
+import {
+    isString,
+    isBoolean,
+    isPath,
+    isArray,
+    isObject,
+    notEmpty,
+    required,
+    oneOf,
+    isFunction,
+    isInteger,
+} from 'roc/validators';
 
 export default {
     settings: {
@@ -58,6 +69,10 @@ export default {
             ssr: {
                 description: 'If server side rendering should be enabled.',
                 validator: required(isBoolean),
+            },
+            redirectStatusCode: {
+                description: 'Status code for redirects.',
+                validator: required(isInteger),
             },
             template: {
                 path: {
