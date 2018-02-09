@@ -60,7 +60,7 @@ export default {
                 validator: required(isBoolean),
             },
             redirectStatusCode: {
-                description: 'Status code for redirects',
+                description: 'Status code for redirects.',
                 validator: required(isInteger),
             },
             template: {
