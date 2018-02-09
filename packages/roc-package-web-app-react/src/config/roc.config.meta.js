@@ -1,4 +1,15 @@
-import { isString, isBoolean, isPath, isArray, isObject, notEmpty, required, oneOf, isFunction, isInteger } from 'roc/validators';
+import {
+    isString,
+    isBoolean,
+    isPath,
+    isArray,
+    isObject,
+    notEmpty,
+    required,
+    oneOf,
+    isFunction,
+    isInteger,
+} from 'roc/validators';
 
 export default {
     settings: {
