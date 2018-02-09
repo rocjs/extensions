@@ -23,20 +23,15 @@ __Version__: ^1.0.0
 __Extension__: roc-package-web-app-react  
 __Custom resolve function__:  No  
 
-### [prop-types](https://www.npmjs.com/package/prop-types)
-__Version__: ^15.5.8  
-__Extension__: roc-plugin-react  
-__Custom resolve function__:  No  
-
 ### [react](https://www.npmjs.com/package/react)
-__Version__: ^15.5.4  
+__Version__: IGNORE THE WARNING THAT YOU SEE  
 __Extension__: roc-plugin-react  
-__Custom resolve function__:  No  
+__Custom resolve function__:  Yes  
 
 ### [react-dom](https://www.npmjs.com/package/react-dom)
-__Version__: ^15.5.4  
+__Version__: IGNORE THE WARNING THAT YOU SEE  
 __Extension__: roc-plugin-react  
-__Custom resolve function__:  No  
+__Custom resolve function__:  Yes  
 
 ### [react-helmet](https://www.npmjs.com/package/react-helmet)
 __Version__: ~5.0.3  
@@ -104,7 +99,13 @@ __Extension__: roc-package-web-app-react
 __Custom resolve function__:  No  
 
 ## Requires
-Nothing is required.
+### [react](https://www.npmjs.com/package/react)
+__Version__: ^15.5.4 || ^16.0.0  
+__Extension__: roc-plugin-react  
+
+### [react-dom](https://www.npmjs.com/package/react-dom)
+__Version__: ^15.5.4 || ^16.0.0  
+__Extension__: roc-plugin-react  
 
 ## Uses
 ### roc-package-web-app
@@ -116,9 +117,6 @@ __Version__: ~0.0.2
 
 #### [koa-add-trailing-slashes](https://www.npmjs.com/package/koa-add-trailing-slashes)
 __Version__: ~1.1.0  
-
-#### [koa-compressor](https://www.npmjs.com/package/koa-compressor)
-__Version__: ~1.0.3  
 
 #### [koa-errors](https://www.npmjs.com/package/koa-errors)
 __Version__: ~1.0.1  

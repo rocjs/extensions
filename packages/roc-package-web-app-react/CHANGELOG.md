@@ -1,3 +1,13 @@
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app-react/compare/v1.0.0...v1.1.0) (2018-02-09)
+
+
+### Features
+
+* Customize status code for redirects ([#33](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app-react/issues/33)) ([214765b](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app-react/commit/214765b))
+
+
+
 <a name="1.0.4"></a>
 ## [1.0.4](https://github.com/rocjs/roc-extensions/tree/master/packages/roc-package-web-app-react/compare/v1.0.0...v1.0.4) (2017-11-28)
 
