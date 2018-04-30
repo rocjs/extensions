@@ -24,7 +24,7 @@ __Extension__: roc-package-web-app-react-dev
 __Custom resolve function__:  No  
 
 ### [redux-devtools-log-monitor](https://www.npmjs.com/package/redux-devtools-log-monitor)
-__Version__: ~1.3.0  
+__Version__: ~1.4.0  
 __Extension__: roc-package-web-app-react-dev  
 __Custom resolve function__:  No  
 

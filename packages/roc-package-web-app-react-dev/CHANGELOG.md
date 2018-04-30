@@ -1,3 +1,13 @@
+<a name="1.1.0-alpha.2"></a>
+# [1.1.0-alpha.2](https://github.com/rocjs/extensions/compare/v1.0.0...v1.1.0-alpha.2) (2018-04-30)
+
+
+### Bug Fixes
+
+* Upgrade redux-devtools-log-monitor to ~1.4, avoiding errors in React 16 ([#34](https://github.com/rocjs/extensions/issues/34)) ([c0e56ba](https://github.com/rocjs/extensions/commit/c0e56ba))
+
+
+
 <a name="1.1.0-alpha.1"></a>
 # [1.1.0-alpha.1](https://github.com/rocjs/extensions/compare/v1.0.0...v1.1.0-alpha.1) (2017-11-22)
 
