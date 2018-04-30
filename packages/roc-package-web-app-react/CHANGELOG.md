@@ -1,3 +1,13 @@
+<a name="2.0.0-alpha.3"></a>
+# [2.0.0-alpha.3](https://github.com/rocjs/extensions/compare/v1.0.0...v2.0.0-alpha.3) (2018-04-30)
+
+
+### Bug Fixes
+
+* Fix error when disabling yellowbox ([#18](https://github.com/rocjs/extensions/issues/18)) ([9ebbdaa](https://github.com/rocjs/extensions/commit/9ebbdaa))
+
+
+
 <a name="2.0.0-alpha.2"></a>
 # [2.0.0-alpha.2](https://github.com/rocjs/extensions/compare/v1.0.0...v2.0.0-alpha.2) (2017-12-01)
 
