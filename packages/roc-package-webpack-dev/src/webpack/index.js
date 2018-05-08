@@ -83,44 +83,37 @@ export default () => (target, babelConfig) => (webpackConfig = {}) => {
 
     // Base
     newWebpackConfig.module = {
-        preLoaders: [],
-        loaders: [],
+        rules: [],
     };
 
     // JS LOADER
     const jsLoader = {
-        id: 'babel',
         test: /\.js$/,
-        loader: require.resolve('babel-loader'),
-        query: {
-            ...babelConfig,
-            cacheDirectory: true,
-        },
         include: runThroughBabel,
+        use: [{
+            loader: require.resolve('babel-loader'),
+            options: {
+                ...babelConfig,
+                cacheDirectory: true,
+            },
+        }],
     };
 
-    newWebpackConfig.module.loaders.push(jsLoader);
-
-    // JSON LOADER
-    const jsonLoader = {
-        test: /\.json$/,
-        loader: require.resolve('json-loader'),
-    };
-
-    newWebpackConfig.module.loaders.push(jsonLoader);
+    newWebpackConfig.module.rules.push(jsLoader);
 
     /**
     * Resolve
     */
     newWebpackConfig.resolve = {
-        fallback: [],
-        extensions: ['', '.js'],
+        extensions: ['.js'],
+        modules: ['node_modules'],
+        alias: {},
     };
 
     newWebpackConfig.resolveLoader = {
-        root: [
-            join(__dirname, '..', '..', 'node_modules'),
-        ],
+        modules: ['node_modules', join(__dirname, '..', '..', 'node_modules')],
+        extensions: ['.js', '.json'],
+        mainFields: ['loader', 'main'],
     };
 
     /**
@@ -147,7 +140,7 @@ export default () => (target, babelConfig) => (webpackConfig = {}) => {
 
         newWebpackConfig.plugins.push(
             new webpack.optimize.DedupePlugin(),
-            new webpack.optimize.OccurenceOrderPlugin()
+            new webpack.optimize.OccurrenceOrderPlugin()
         );
     }
 

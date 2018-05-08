@@ -14,7 +14,7 @@
     "eslint-plugin-jsx-a11y": "2.2.1",
     "eslint-plugin-react": "6.2.0",
     "roc": "^1.0.0-rc.23",
-    "roc-plugin-repo": "0.0.25",
+    "roc-plugin-repo": "0.0.28",
     "roc-plugin-repo-roc": "0.0.1"
   }
 }

@@ -13,7 +13,13 @@ export default () => (targets, { grep, watch, coverage, runtime }) => {
 
             // Create Webpack configuration that is to be used in a node.
             const babelConfig = invokeHook('babel-config', 'node', cover);
-            const webpackConfig = invokeHook('build-webpack', 'node', babelConfig);
+            /* eslint-disable no-unused-vars */
+            const { rocMetaInfo: _, ...webpackConfig } = invokeHook(
+                'build-webpack',
+                'node',
+                babelConfig,
+            );
+            /* eslint-enable no-unused-vars */
 
             nycRunner({ grep, watch, coverage: cover, runtime, webpackConfig });
         };

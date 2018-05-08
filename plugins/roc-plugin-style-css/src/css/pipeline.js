@@ -1,49 +1,34 @@
 export default function cssPipeline(
-    base,
+    cssLoader,
     loaders,
     isDist,
     sourceMap = false,
     cssModulesEnabled = true,
     preLoaders,
-    minimize = true
+    minimize = true,
+    postcssPlugins,
 ) {
-    let moduleSettings = '';
-    const sourceMapSettings = sourceMap ?
-        'sourceMap&' :
-        '';
-    const minimizeSettings = minimize ?
-        '' :
-        '-minimize&';
+    const cssLoaderConf = {
+        loader: require.resolve(cssLoader),
+        options: {
+            sourceMap,
+            minimize,
+            importLoaders: loaders.length + preLoaders.length + 1,
+        },
+    };
 
     if (cssModulesEnabled) {
-        moduleSettings = '&modules&localIdentName=';
+        cssLoaderConf.options.modules = true;
 
-        // Define how the class names should be defined
-        if (isDist) {
-            moduleSettings += '[hash:base64:5]';
-        } else {
-            moduleSettings += '[path]_[name]__[local]___[hash:base64:5]';
-        }
+        cssLoaderConf.options.localIdentName = isDist
+            ? '[hash:base64:5]'
+            : '[path]_[name]__[local]___[hash:base64:5]';
     }
 
-    const extraLoaders = loaders.length > 0 ?
-        `!${loaders.join('!')}` :
-        '';
-
-    const ploaders = (preLoaders && preLoaders.length > 0) ?
-        `!${preLoaders.join('!')}` :
-        '';
-
-    const nLoaders = loaders.length + preLoaders.length + 1;
-
-    // We set importLoaders to nr. loaders + 1 to get css-loader to process everything through the pipeline
-    return `${require.resolve(base)}?` +
-        `${minimizeSettings}` +
-        `${sourceMapSettings}` +
-        '-autoprefixer&' +
-        `importLoaders=${nLoaders}` +
-        `${moduleSettings}` +
-        `${ploaders}` +
-        `!${require.resolve('postcss-loader')}` +
-        `${extraLoaders}`;
+    return [
+        ...preLoaders,
+        cssLoaderConf,
+        { loader: 'postcss-loader', options: { plugins: postcssPlugins } },
+        ...loaders,
+    ];
 }

@@ -26,7 +26,6 @@
   "license": "MIT",
   "dependencies": {
     "file-loader": "~0.8.5",
-    "qs": "~6.2.0",
     "roc": "^1.0.0-rc.23",
     "url-loader": "~0.5.7"
   },

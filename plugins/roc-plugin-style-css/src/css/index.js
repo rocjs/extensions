@@ -44,6 +44,9 @@ export default ({ context: { config: { settings } }, previousValue: webpackConfi
         preLoaders = preLoaders.concat(loaders);
     });
 
+    // setup postcss plugins
+    const postcssPlugins = [autoprefixer(settings.build.style.autoprefixer)];
+
     // Create a seperate pipeline for each `add-style` invocation
     styles.forEach(({ extensions, loaders }) => {
         // We allow stylesheet files to end with a query string
@@ -54,18 +57,19 @@ export default ({ context: { config: { settings } }, previousValue: webpackConfi
         const loader = NODE ?
             'css-loader/locals' :
             'css-loader';
-        const styleLoader = (cssModules) => cssPipeline(
+        const styleLoader = cssModules => cssPipeline(
             loader,
             loaders,
             DIST,
             sourceMap,
             cssModules,
             preLoaders,
-            minimize
+            minimize,
+            postcssPlugins,
         );
 
         // Add CSS Modules loader
-        newWebpackConfig.module.loaders.push({
+        newWebpackConfig.module.rules.push({
             test: (absPath) => {
                 if (
                     globalStylePaths.indexOf(absPath) === -1 && toMatch.test(absPath) &&
@@ -81,14 +85,14 @@ export default ({ context: { config: { settings } }, previousValue: webpackConfi
 
                 return false;
             },
-            loader: WEB ?
-                ExtractTextPlugin.extract(require.resolve('style-loader'), styleLoader(true)) :
+            use: WEB ?
+                ExtractTextPlugin.extract({ fallback: require.resolve('style-loader'), use: styleLoader(true) }) :
                 styleLoader(true),
         });
 
         // Create global style loader
         if (WEB) {
-            newWebpackConfig.module.loaders.push({
+            newWebpackConfig.module.rules.push({
                 test: (absPath) => {
                     if (
                         globalStylePaths.indexOf(absPath) === -1 && toMatch.test(absPath) &&
@@ -108,7 +112,7 @@ export default ({ context: { config: { settings } }, previousValue: webpackConfi
 
                     return false;
                 },
-                loader: ExtractTextPlugin.extract(require.resolve('style-loader'), styleLoader(false)),
+                use: ExtractTextPlugin.extract({ fallback: require.resolve('style-loader'), use: styleLoader(false) }),
             });
         } else {
             newWebpackConfig.externals.unshift((context, request, callback) => {
@@ -147,20 +151,16 @@ export default ({ context: { config: { settings } }, previousValue: webpackConfi
         };
     });
 
-    // Configure autoprefixer
-    newWebpackConfig.postcss = [
-        autoprefixer(settings.build.style.autoprefixer),
-    ];
-
     // Configure ExtractTextPlugin
     newWebpackConfig.plugins.push(
-        new ExtractTextPlugin(settings.build.style.name, {
+        new ExtractTextPlugin({
+            filename: settings.build.style.name,
             disable: WEB && DEV,
         })
     );
 
     // We want to be able to use the css-loader in projects without the user needing to install them directly.
-    newWebpackConfig.resolveLoader.root.push(join(__dirname, '../../node_modules'));
+    newWebpackConfig.resolveLoader.modules.push(join(__dirname, '../../node_modules'));
 
     return newWebpackConfig;
 };

@@ -4,6 +4,7 @@ import { getDevPath } from 'roc-package-webpack-dev';
 import { getSettings, getAbsolutePath } from 'roc';
 import qs from 'qs';
 import webpack from 'webpack';
+import UglifyJsPlugin from 'uglifyjs-webpack-plugin';
 
 export default ({ previousValue: webpackConfig }) => (target) => {
     if (target === 'web') {
@@ -55,10 +56,10 @@ export default ({ previousValue: webpackConfig }) => (target) => {
             */
             if (DEV) {
                 // To make sure the client can resolve webpack-hot-middleware correctly
-                newWebpackConfig.resolve.fallback.push(path.join(__dirname, '..', '..', 'node_modules'));
+                newWebpackConfig.resolve.modules.push(path.join(__dirname, '..', '..', 'node_modules'));
             }
 
-            newWebpackConfig.resolveLoader.root.push(
+            newWebpackConfig.resolveLoader.modules.push(
                 path.join(__dirname, '..', '..', 'node_modules')
             );
 
@@ -74,29 +75,21 @@ export default ({ previousValue: webpackConfig }) => (target) => {
 
             if (DEV) {
                 newWebpackConfig.plugins.push(
-                    new webpack.optimize.OccurenceOrderPlugin(),
+                    new webpack.optimize.OccurrenceOrderPlugin(),
                     new webpack.HotModuleReplacementPlugin(),
-                    new webpack.NoErrorsPlugin()
+                    new webpack.NoEmitOnErrorsPlugin()
                 );
             }
 
             if (DIST) {
                 newWebpackConfig.plugins.push(
-                    new webpack.optimize.UglifyJsPlugin({
-                        /* eslint-disable */
-                        compress: {
-                            warnings: false,
-                            screw_ie8: true,
-                            drop_debugger: true
+                    new UglifyJsPlugin({
+                        uglifyOptions: {
+                            ie8: false,
+                            ecma: 8,
+                            mangle: true,
+                            compress: true,
                         },
-                        managle: {
-                            screw_ie8: true,
-                        },
-                        output: {
-                            comments: false,
-                            screw_ie8: true,
-                        }
-                        /* eslint-enable */
                     })
                 );
             }

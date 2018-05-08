@@ -138,7 +138,7 @@ export default ({
         })
     );
 
-    newWebpackConfig.resolveLoader.root.push(join(__dirname, '..', '..', 'node_modules'));
+    newWebpackConfig.resolveLoader.modules.push(join(__dirname, '..', '..', 'node_modules'));
 
     return newWebpackConfig;
 };

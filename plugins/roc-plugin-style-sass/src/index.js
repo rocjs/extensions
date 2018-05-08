@@ -32,16 +32,15 @@ export const roc = {
         extension: 'roc-plugin-style-css',
         hook: 'add-style',
         description: 'Adds Sass support to Webpack.',
-        action: ({ context: { config: { settings } } }) => () => () => {
-            const params = [
-                settings.build.sass.useBourbon ? `includePaths[]=${BOURBON_PATH}` : '',
-                settings.build.style.sourceMap ? 'sourceMap' : '',
-            ].filter(v => v).join('&');
-
-            return {
-                extensions: ['sass', 'scss'],
-                loaders: `${require.resolve('sass-loader')}?${params}`,
-            };
-        },
+        action: ({ context: { config: { settings } } }) => () => () => ({
+            extensions: ['sass', 'scss'],
+            loaders: [{
+                loader: require.resolve('sass-loader'),
+                options: {
+                    includePaths: settings.build.sass.useBourbon ? [...BOURBON_PATH] : [],
+                    sourceMap: !!settings.build.style.sourceMap,
+                },
+            }],
+        }),
     }],
 };

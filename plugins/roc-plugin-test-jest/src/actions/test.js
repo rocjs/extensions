@@ -10,7 +10,13 @@ export default ({ context }) => (targets, managedOptions, extraArgs = []) => {
             let argv = [...extraArgs];
 
             // TODO - Make it not depend on Webpack but work in any project
-            const webpackConfig = invokeHook('build-webpack', 'node', {});
+            /* eslint-disable no-unused-vars */
+            const { rocMetaInfo: _, ...webpackConfig } = invokeHook(
+                'build-webpack',
+                'node',
+                {},
+            );
+            /* eslint-enable no-unused-vars */
             const globals = webpackConfig.plugins.reduce((definitions, plugin) => {
                 if (plugin.definitions) {
                     return {

@@ -28,7 +28,7 @@ export default {
             const targets = invokeHook('get-webpack-targets');
             if (targets.indexOf(target) !== -1) {
                 babelConfig.presets.push(
-                    require.resolve('babel-preset-es2015'),
+                    [require.resolve('babel-preset-es2015'), { modules: false }],
                     require.resolve('babel-preset-stage-1')
                 );
                 babelConfig.plugins.push(
