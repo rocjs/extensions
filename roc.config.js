@@ -1,10 +1,9 @@
 module.exports = {
     settings: {
         repo: {
-            targets: ['cjs'],
             babelPresetEnv: {
                 targets: {
-                    node: '6',
+                    node: '8',
                 },
             },
             mono: [
@@ -13,6 +12,10 @@ module.exports = {
                 'packages',
                 'plugins',
             ],
+            release: {
+                includeBody: true,
+                changelogTypes: true,
+            },
         },
     },
 };

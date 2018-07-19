@@ -26,16 +26,16 @@ export default function basepathSupport(basepath) {
         return newPath;
     }
 
-    return function* (next) {
+    return async function(ctx, next) {
         // Do nothing if the basepath is /
         if (basepath === '/') {
-            return yield next;
+            return await next();
         }
 
-        const newPath = matcher(this.path);
+        const newPath = matcher(ctx.path);
         if (newPath) {
-            this.path = newPath;
-            return yield next;
+            ctx.path = newPath;
+            return await next();
         }
 
         // If the path does not match Koa will render a default 404 Not Found page.
