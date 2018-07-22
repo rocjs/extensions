@@ -45,7 +45,7 @@ The guide covers all the basic elements that you need in order to be productive 
 
 ## Installing Roc
 
-You need `Node.js` 4.x+ and `npm` 3.x+ to use Roc. You can install Roc globally on your system using `npm`.
+You need `Node.js` 8.x+ and `npm` 5.x+ to use Roc. You can install Roc globally on your system using `npm`.
 
 `$ npm i -g roc@next`
 

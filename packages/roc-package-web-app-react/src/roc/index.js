@@ -29,7 +29,7 @@ export default {
         const { packageJSON: { description } } = usedExtensions.find(currentExtension);
         return `${description}\n\nRead the comprehensive user-guide on how to best utilize the tools ` +
           'and libraries provided by this Roc extension' +
-          '[here](https://github.com/rocjs/roc-package-web-app-react/blob/master/GUIDE.md).';
+          '[here] (https://github.com/rocjs/extensions/blob/master/packages/roc-package-web-app-react/GUIDE.md).';
     },
     hooks: {
         'extend-template': {

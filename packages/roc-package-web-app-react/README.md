@@ -2,7 +2,7 @@
 
 Package for building React applications with Roc
 
-Read the comprehensive user-guide on how to best utilize the tools and libraries provided by this Roc extension[here](https://github.com/rocjs/roc-package-web-app-react/blob/master/GUIDE.md).
+Read the comprehensive user-guide on how to best utilize the tools and libraries provided by this Roc extension[here] (https://github.com/rocjs/extensions/blob/master/packages/roc-package-web-app-react/GUIDE.md).
 
 ## Documentation
 - [Actions](docs/Actions.md)
