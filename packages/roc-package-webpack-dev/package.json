@@ -30,7 +30,7 @@
     "chalk": "~1.1.1",
     "dev-ip": "~1.0.1",
     "json-loader": "~0.5.3",
-    "lodash": "~4.5.1",
+    "lodash": "^4.17.15",
     "mkdirp": "~0.5.1",
     "multi-progress": "~2.0.0",
     "node-watch": "~0.3.4",
@@ -39,7 +39,7 @@
     "roc-abstract-package-base-dev": "^1.0.0",
     "roc-plugin-babel": "^1.0.0",
     "webpack": "~1.12.2",
-    "webpack-merge": "0.14.0"
+    "webpack-merge": "^1.0.12"
   },
   "roc": {
     "packages": [
