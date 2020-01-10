@@ -26,7 +26,7 @@
   "dependencies": {
     "config": "~1.16.0",
     "debug": "~2.2.0",
-    "koa": "~1.1.1",
+    "koa": "~1.7.0",
     "koa-accesslog": "~0.0.2",
     "koa-add-trailing-slashes": "~1.1.0",
     "koa-compressor": "~1.0.3",
@@ -40,7 +40,7 @@
     "koa-normalize-path": "~1.0.0",
     "koa-remove-trailing-slashes": "~1.0.0",
     "koa-static": "~2.0.0",
-    "lodash": "4.13.1",
+    "lodash": "~4.17.15",
     "roc": "^1.0.0-rc.23",
     "roc-package-webpack-node": "^1.0.0",
     "roc-package-webpack-web": "^1.0.0"
