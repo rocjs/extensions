@@ -286,7 +286,7 @@ In your universal modules (for example React components) you can read runtime co
 ```javascript
 import { appConfig as config } from 'roc-package-web-app-react/app/shared/universal-config';
 
-console.log(config.backendHost); // www.getroc.org
+console.log(config.backendHost);
 ```
 
 `config` will contain only the configuration that was grouped under `DANGEROUSLY_EXPOSE_TO_CLIENT` in your definition.
