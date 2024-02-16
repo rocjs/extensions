@@ -252,7 +252,7 @@ config/
 {
   "host": "github.com",
   "DANGEROUSLY_EXPOSE_TO_CLIENT": {
-    "backendHost": "www.getroc.org"
+    "backendHost": "www.github.com"
   }
 }
 ```
